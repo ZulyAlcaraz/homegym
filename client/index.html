@@ -17,10 +17,10 @@
       <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,client}) app/app.css -->
-    <link rel="stylesheet" href="app/app.css">
+    <!-- <link rel="stylesheet" href="app/app.css"> -->
       <!-- injector:css -->
-      <link rel="stylesheet" href="app/app.css">
-      <link rel="stylesheet" href="app/main/main.css">
+      <link rel="stylesheet" href="styles/app.css">
+      <link rel="stylesheet" href="styles/main.css">
       <!-- endinjector -->
     <!-- endbuild -->
   </head>
@@ -30,7 +30,9 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
+    <nav-bar></nav-bar>
     <div ui-view=""></div>
+    <footer-site></footer-site>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
@@ -67,8 +69,9 @@
         <script src="app/app.js"></script>
           <!-- injector:js -->
           <script src="app/main/main.controller.js"></script>
-          <script src="app/main/main.js"></script>
-          <script src="components/navbar/navbar.controller.js"></script>
+          <script src="components/footer/footer-directive.js"></script>
+          <script src="components/navbar/navbar-directive.js"></script>
+          <script src="components/navbar/sidenav-directive.js"></script>
           <!-- endinjector -->
         <!-- endbuild -->
 </body>

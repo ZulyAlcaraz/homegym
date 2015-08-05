@@ -1,4 +1,4 @@
-// Generated on 2015-07-29 using generator-angular-fullstack 2.1.0
+// Generated on 2015-07-23 using generator-angular-fullstack 2.1.0
 'use strict';
 
 module.exports = function (grunt) {
@@ -64,7 +64,7 @@ module.exports = function (grunt) {
       },
       injectCss: {
         files: [
-          '<%= yeoman.client %>/{app,components}/**/*.css'
+          '<%= yeoman.client %>/{app,components,styles}/**/*.css'
         ],
         tasks: ['injector:css']
       },
@@ -84,13 +84,13 @@ module.exports = function (grunt) {
       },
       livereload: {
         files: [
-          '{.tmp,<%= yeoman.client %>}/{app,components}/**/*.css',
-          '{.tmp,<%= yeoman.client %>}/{app,components}/**/*.html',
+          '{.tmp,<%= yeoman.client %>}/{app,components,styles}/**/*.css',
+          '{.tmp,<%= yeoman.client %>}/{app,components,styles}/**/*.html',
           
-          '{.tmp,<%= yeoman.client %>}/{app,components}/**/*.js',
+          '{.tmp,<%= yeoman.client %>}/{app,components,styles}/**/*.js',
           
-          '!{.tmp,<%= yeoman.client %>}{app,components}/**/*.spec.js',
-          '!{.tmp,<%= yeoman.client %>}/{app,components}/**/*.mock.js',
+          '!{.tmp,<%= yeoman.client %>}{app,components,styles}/**/*.spec.js',
+          '!{.tmp,<%= yeoman.client %>}/{app,components,styles}/**/*.mock.js',
           '<%= yeoman.client %>/assets/images/{,*//*}*.{png,jpg,jpeg,gif,webp,svg}'
         ],
         options: {
@@ -301,7 +301,7 @@ module.exports = function (grunt) {
     ngtemplates: {
       options: {
         // This should be the name of your apps angular module
-        module: 'homegymApp',
+        module: 'commercialSiteApp',
         htmlmin: {
           collapseBooleanAttributes: true,
           collapseWhitespace: true,
@@ -366,7 +366,7 @@ module.exports = function (grunt) {
         expand: true,
         cwd: '<%= yeoman.client %>',
         dest: '.tmp/',
-        src: ['{app,components}/**/*.css']
+        src: ['{app,components,styles}/**/*.css']
       }
     },
 
@@ -493,7 +493,7 @@ module.exports = function (grunt) {
         },
         files: {
           '<%= yeoman.client %>/index.html': [
-            '<%= yeoman.client %>/{app,components}/**/*.css'
+            '<%= yeoman.client %>/{app,components,styles}/**/*.css'
           ]
         }
       }

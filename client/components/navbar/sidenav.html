@@ -1,0 +1,25 @@
+<div class="lateral-menu" layout="column">
+	<ul class="ul-menu-lat">
+		<li class="li-menu-lat">
+			Features
+			<ul class="ul-sub-menu-lat">
+				<li class="li-sub-menu-lat" ui-sref="enterprise" ng-click="lateralMenu();">Enterprise</li>
+				<li class="li-sub-menu-lat" ui-sref="mobile-website" ng-click="lateralMenu();">Mobile website</li>
+				<li class="li-sub-menu-lat" ui-sref="mobile-app" ng-click="lateralMenu();">Mobile App</li>
+			</ul>
+		</li>
+		<li class="li-menu-lat" ng-click="lateralMenu(); gotoSupport();">Support</li>
+		<li class="li-menu-lat" ui-sref="pricing" ng-click="lateralMenu();">Pricing</li>
+		<li class="li-menu-lat" ui-sref="about-us" ng-click="lateralMenu();">About Us</li>
+		<li class="li-menu-lat" ui-sref="contact-us" ng-click="lateralMenu();">Contact Us</li>
+		<li class="li-menu-lat" ui-sref="blog" ng-click="lateralMenu();">Blog</li>
+		<li layout="row">
+			<div class="lat-login-content" flex="50">
+				<md-button class="menu-lat-login" ng-click="lateralMenu();">Login</md-button>
+			</div>
+			<div class="lat-signup-content" flex="50">
+				<md-button class="menu-lat-signup" ng-click="lateralMenu();">Sign Up</md-button>
+			</div>
+		</li>
+	</ul>
+</div>
