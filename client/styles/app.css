@@ -56,6 +56,7 @@
 /**
  *  Home
  */
+
 .header-home {
 	background-color: #89B91C;
 	color: #FFF;
@@ -63,17 +64,37 @@
 }
 
 .header-home .container .title {
-	font-size: 3em;
+	font-size: 3.5em;
 	font-weight: 100;
 	margin-top: 0;
 	text-align: center;
 }
 
-/*.header-home {
+.container-home {
+	height: 25em;
+}
+
+.about-home {
 	background-size: contain;
   background-color: #FFF;
   background-image: url(../assets/images/home-1.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.recommendation-home {
+	background-size: cover;
+  background-color: #FFF;
+  background-image: url(../assets/images/home-3.jpg);
   background-position: top center;
   background-repeat: no-repeat;
-  height: 20em;
-}*/
+  height: 30em;
+}
+
+.about-eat-home {
+	background-size: contain;
+  background-color: #FFF;
+  background-image: url(../assets/images/home-4.jpg);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+}
