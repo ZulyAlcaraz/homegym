@@ -7,3 +7,4 @@ angular.module('homegymApp')
       templateUrl: 'components/navbar/sidenav.html'
     };
   });
+

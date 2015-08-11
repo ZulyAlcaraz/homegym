@@ -13,6 +13,8 @@ var _ = require('lodash');
 
 // Get list of things
 exports.index = function(req, res) {
+
+	
   res.json([
   {
   name : 'Development Tools',
@@ -31,7 +33,7 @@ exports.index = function(req, res) {
   info : 'Build process packs up your templates as a single JavaScript payload, minifies your scripts/css/images, and rewrites asset names for caching.'
   },{
   name : 'Deployment Ready',
-  info : 'Easily deploy your app to Heroku or Openshift with the heroku and openshift subgenerators'
+  info : 'Easily deploy your app to Heroku or Openshift with the heroku and openshift subgeneratosdrs'
   }
   ]);
 };
