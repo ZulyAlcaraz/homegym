@@ -35,6 +35,10 @@ var all = {
   // List of user roles
   userRoles: ['guest', 'user', 'admin'],
 
+  database:{
+    type:'firebase'
+  },
+
   // MongoDB connection options
   mongo: {
     options: {
