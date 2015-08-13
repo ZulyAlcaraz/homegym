@@ -6,27 +6,23 @@
  * PUT     /things/:id          ->  update
  * DELETE  /things/:id          ->  destroy
  */
- /*
-	medidas del imc: kg/m^2
- */
 
 'use strict';
 
 var _ = require('lodash');
-var calculadora = require('./calculadora.js');
 
-
-exports.index = function(req, res) {
-  var altura=1.72;	//en metros
-  var peso=80;		//en kilogramos
-
-
-  calculadora.imc(altura,peso,function (imc,clasificacion){
-
-	res.json({
-		valor: imc,
-		resultado: clasificacion,
-	});
-  });
+// Get list of things
+exports.index = function(valor,resultado) {
+  var i;
+  var clasificacion;
+  calculadora.imc(imc,clasificacion,70,172);
   
+  
+  
+  //% de masa grasa= 1,2 x (IMC) + 0,23 x (Edad en años) – 10,8 x (sexo) – 5,4
+	
+  res.json({
+	valor: imc,
+	resultado: clasificacion,
+  });
 };
