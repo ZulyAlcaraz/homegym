@@ -5,7 +5,9 @@ var controller = require('./masa.controller');
 
 var router = express.Router();
 
-router.get('/', controller.index);
+router.post('/', controller.index);
+
+router.get('/ingreso/:id', controller.index);
 
 
 
