@@ -12,7 +12,7 @@ angular.module('homegymApp', [
     $locationProvider.html5Mode(true);
 
     $stateProvider
-      .state('main', {
+      .state('home', {
         url: '/',
         templateUrl: 'app/main/main.html',
         controller: 'MainCtrl'

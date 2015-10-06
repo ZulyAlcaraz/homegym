@@ -36,8 +36,9 @@
 /**
  *  General Styles
  *
- *  green: #89B91C;
- *  dark green: #2F8134;
+ * 	== colors ==
+ *  green: ##94CF1A;
+ *  gray: #656565;
  */
 
 
@@ -45,56 +46,11 @@
  *  Navbar
  */
 
-.navbar {
-	background-color: #FFF;
-	border-bottom-color: #89B91C;
-	border-bottom-style: solid;
-	border-bottom-width: 0.1em;
-	color: #89B91C;
-}
 
 /**
  *  Home
  */
 
-.header-home {
-	background-color: #89B91C;
-	color: #FFF;
-	height: 30em;
-}
-
-.header-home .container .title {
-	font-size: 3.5em;
-	font-weight: 100;
-	margin-top: 0;
-	text-align: center;
-}
-
-.container-home {
-	height: 25em;
-}
-
-.about-home {
-	background-size: contain;
-  background-color: #FFF;
-  background-image: url(../assets/images/home-1.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-.recommendation-home {
-	background-size: cover;
-  background-color: #FFF;
-  background-image: url(../assets/images/home-3.jpg);
-  background-position: top center;
-  background-repeat: no-repeat;
-  height: 30em;
-}
-
-.about-eat-home {
-	background-size: contain;
-  background-color: #FFF;
-  background-image: url(../assets/images/home-4.jpg);
-  background-position: bottom center;
-  background-repeat: no-repeat;
+.home {
+	
 }
