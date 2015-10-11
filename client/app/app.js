@@ -24,8 +24,8 @@ angular.module('homegymApp', [
       .state('panel', {
         abstract: true,
         views: {
-          'navbar@': {
-            templateUrl: 'components/navbar/navbar.html'
+          'header@': {
+            templateUrl: 'components/header/header.html'
           }
         }
       })
@@ -39,6 +39,15 @@ angular.module('homegymApp', [
           }
         }
       })
-      ;
+      .state('weight-data', {
+        parent: 'panel',
+        url: '/weight-data',
+        views: {
+          'content@': {
+            templateUrl: 'app/weight-data/weight-data.html'
+            // controller: 'SignUpController'
+          }
+        }
+      });
 
   });

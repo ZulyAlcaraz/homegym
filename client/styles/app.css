@@ -90,6 +90,10 @@ a {
 	white-space: nowrap;
 }
 
+.cursor-pointer {
+	cursor: pointer;
+}
+
 
 /**
  *  Navbar
@@ -245,4 +249,43 @@ a {
 .sign-up .form .polices {
 	padding-top: 1em;
 	padding-bottom: 1em;
+}
+
+/**
+ *  Weight Data
+ */
+
+.weight-data {
+	padding-left: 15em;
+	padding-right: 15em;
+	padding-top: 5em;
+}
+
+.weight-data .title {
+	font-size: 4em;
+	font-weight: 400;
+}
+
+.weight-data .subtitle {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.2em;
+	padding-bottom: 2em;
+}
+
+.weight-data .form-weight {
+	border-top-color: #94CF1A;
+	border-top-style: solid;
+	border-top-width: 0.2em;
+	font-family: 'Roboto', sans-serif;
+	padding-bottom: 5em;
+}
+
+.weight-data .form-weight .button-weight {
+	background-color: #656565;
+	color: #FFF;
+	font-family: 'BebasNeueRegular';
+	font-size: 1.2em;
+	margin-left: 0;
+	margin-right: 0;
+	width: 30%;
 }

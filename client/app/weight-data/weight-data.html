@@ -1,0 +1,37 @@
+<section class="weight-data">
+
+	<header layout="column" layout-padding>
+		<div class="color-green title">!Falta poco!</div>
+		<div class="color-gray subtitle">Antes de empezar queremos conocerte un poco más</div>
+	</header>
+	
+	<div class="form-weight">
+		<form name="formWeight" role="form" layout="column">
+
+			<div layout="row">
+				<md-input-container flex>
+	        <label>¿Cuál es tu peso?</label>
+	        <input type="number" name="name" ng-model="user.weight" required>
+	      </md-input-container>
+
+	      <md-input-container flex>
+	        <label>¿Cuál es tu estatura?</label>
+	        <input type="number" name="name" ng-model="user.height" required>
+	      </md-input-container>
+			</div>
+
+			<div layout="row">
+				<md-input-container flex="">
+	        <label>¿Sufres de alguna enfermedad?</label>
+	        <textarea ng-model="user.biography" columns="1" md-maxlength="150"></textarea>
+	      </md-input-container>
+			</div>
+
+			<div layout="row" layout-align="end center">
+				<md-button class="button-weight" ui-sref="weight-data">Comenzar</md-button>
+			</div>
+
+			
+		</form>
+	</div>
+</section>
