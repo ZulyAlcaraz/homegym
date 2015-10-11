@@ -63,6 +63,7 @@ body, html {
 
 a {
 	color: #000;
+	cursor: pointer;
 	text-decoration: none;
 }
 
@@ -89,6 +90,29 @@ a {
  *  Navbar
  */
 
+/**
+ *  footer
+ */
+.footer {
+	background-color: #000;
+} 
+
+.footer > a, .footer .link-footer {
+	color: #909090 !important;
+}
+
+.footer .link-footer-social {
+	background-color: #909090 !important;
+	border-radius: 100%;
+	margin: 0.2em;
+	text-align: center;
+	width: 2em;
+}
+
+.footer .link-home-gym {
+	color: #707070 !important;
+	font-size: 1.2em;
+}
 
 /**
  *  Home
@@ -106,21 +130,28 @@ a {
 .home .home-sign-up {
 	color: #000;
 	font-weight: 400;
-	padding-left: 20em;
-	padding-right: 20em;
-	padding-top: 3em;
+	padding-top: 2em;
+}
+
+.home .home-sign-up .logo {
+	padding-right: 1em;
+}
+
+.home .home-sign-up .title {
+	font-size: 1.2em;
 }
 
 .home .home-intro {
 	padding-left: 5em;
 	padding-right: 17em;
+	padding-top: 4em;
 	text-align: right;
 }
 
 .home .home-intro .title {
 	font-family: 'BebasNeueRegular';
 	font-size: 4em;
-	font-weight: 600;
+	font-weight: 400;
 	line-height: 1;
 }
 
