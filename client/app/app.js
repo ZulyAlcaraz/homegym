@@ -14,8 +14,31 @@ angular.module('homegymApp', [
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: 'app/main/main.html',
-        controller: 'MainCtrl'
-      });
+        views: {
+          'content@': {
+            templateUrl: 'app/main/main.html',
+            // controller: 'MainCtrl'
+          }
+        }
+      })
+      .state('panel', {
+        abstract: true,
+        views: {
+          'navbar@': {
+            templateUrl: 'components/navbar/navbar.html'
+          }
+        }
+      })
+      .state('sign-up', {
+        parent: 'panel',
+        url: '/sign-up',
+        views: {
+          'content@': {
+            templateUrl: 'app/sign-up/sign-up.html'
+            // controller: 'SignUpController'
+          }
+        }
+      })
+      ;
 
   });

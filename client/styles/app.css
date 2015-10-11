@@ -81,6 +81,11 @@ a {
 .color-gray {
 	color: #656565;
 }
+
+.color-white {
+	color: #FFF;
+}
+
 .nowrap {
 	white-space: nowrap;
 }
@@ -89,6 +94,18 @@ a {
 /**
  *  Navbar
  */
+
+.header {
+	background-color: #94CF1A;
+}
+
+.header .logo{
+	padding-right: 1em;
+}
+
+.header .title{
+	font-size: 2em;
+}
 
 /**
  *  footer
@@ -173,4 +190,59 @@ a {
 .home .home-intro .button:hover {
 	background-color: rgba(6 , 6, 6, 0.4);
 	color: #fff;
+}
+
+/**
+ *  Sign Up
+ */
+
+.sign-up .image {
+	background: #fff;
+	background-image: url(../assets/images/sign-up.jpg);
+	background-position: center center;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	height: 40em;
+}
+
+.sign-up .form {
+	font-family: 'Roboto', sans-serif;
+	padding-left: 3em;
+	padding-right: 15em;
+}
+
+.sign-up .form .button-facebook {
+	border-color: #94CF1A;
+	border-style: solid;
+	border-width: 0.2em;
+	font-family: 'BebasNeueRegular';
+	font-size: 1.2em;
+	margin-left: 0;
+	margin-right: 0;
+	width: 100%;
+}
+
+.sign-up .form .divider {
+	padding-top: 1em;
+	padding-bottom: 1em;
+	text-align: center;
+}
+
+.sign-up .form .button-sign-up {
+	background-color: #656565;
+	color: #FFF;
+	font-family: 'BebasNeueRegular';
+	font-size: 1.2em;
+	margin-left: 0;
+	margin-right: 0;
+	width: 100%;
+}
+
+.sign-up .form .button-sign-up:hover {
+	color: #656565;
+}
+
+.sign-up .form .polices {
+	padding-top: 1em;
+	padding-bottom: 1em;
 }
