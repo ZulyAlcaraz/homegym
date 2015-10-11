@@ -7,9 +7,14 @@ angular.module('homegymApp', [
   'ui.router',
   'ngMaterial'
 ])
-  .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $mdThemingProvider) {
     $urlRouterProvider.otherwise('/');
     $locationProvider.html5Mode(true);
+
+    $mdThemingProvider.theme('default')
+      .accentPalette('lime', {
+        'default': '50'
+      });
 
     $stateProvider
       .state('home', {
@@ -21,7 +26,7 @@ angular.module('homegymApp', [
           }
         }
       })
-      .state('panel', {
+      .state('header', {
         abstract: true,
         views: {
           'header@': {
@@ -30,7 +35,7 @@ angular.module('homegymApp', [
         }
       })
       .state('sign-up', {
-        parent: 'panel',
+        parent: 'header',
         url: '/sign-up',
         views: {
           'content@': {
@@ -40,7 +45,7 @@ angular.module('homegymApp', [
         }
       })
       .state('weight-data', {
-        parent: 'panel',
+        parent: 'header',
         url: '/weight-data',
         views: {
           'content@': {
@@ -48,6 +53,25 @@ angular.module('homegymApp', [
             // controller: 'SignUpController'
           }
         }
+      })
+      .state('panel', {
+        abstract: true,
+        views: {
+          'navbar@': {
+            templateUrl: 'components/navbar/navbar.html'
+          }
+        }
+      })
+      .state('dashboard', {
+        parent: 'panel',
+        url: '/dashboard',
+        views: {
+          'content@': {
+            templateUrl: 'app/dashboard/dashboard.html'
+            // controller: 'SignUpController'
+          }
+        }
       });
+
 
   });

@@ -99,16 +99,30 @@ a {
  *  Navbar
  */
 
-.header {
+.header, .navbar {
 	background-color: #94CF1A;
 }
 
-.header .logo{
+.header .logo, .navbar .logo{
 	padding-right: 1em;
 }
 
-.header .title{
+.header .title, .navbar .title{
 	font-size: 2em;
+}
+
+.navbar {
+	padding-left: 15em;
+	padding-right: 15em;
+}
+
+.navbar .tabs {
+	font-size: 1.2em;
+	padding-top: 0.1em;
+}
+
+.navbar .tabs a {
+	font-size: 1.2em;
 }
 
 /**
@@ -278,6 +292,7 @@ a {
 	border-top-width: 0.2em;
 	font-family: 'Roboto', sans-serif;
 	padding-bottom: 5em;
+	padding-top: 2em;
 }
 
 .weight-data .form-weight .button-weight {
@@ -289,3 +304,8 @@ a {
 	margin-right: 0;
 	width: 30%;
 }
+
+/**
+ *  Dashboard
+ */
+
