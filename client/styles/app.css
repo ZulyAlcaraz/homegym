@@ -309,3 +309,72 @@ a {
  *  Dashboard
  */
 
+.dashboard {
+	padding-left: 15em;
+	padding-right: 15em;
+	padding-top: 5em;
+}
+
+.dashboard .user-info .profile-picture {
+	width: 5em;
+	height: 5em;
+}
+
+.dashboard .user-info .name {
+	color: #94CF1A;
+	font-size: 2em;
+}
+
+.dashboard .user-info .edge {
+	color: #656565;
+	font-size: 1.2em;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 200;
+}
+
+.dashboard .user-info .city {
+	color: #707070;
+	font-family: 'Roboto', sans-serif;
+}
+
+.dashboard .user-sicknesses {
+	color: #656565;
+	font-family: 'Roboto', sans-serif;
+	padding-bottom: 2em;
+	padding-top: 3em;
+}
+
+.dashboard .user-sicknesses .title {
+	font-weight: 600;
+}
+
+.dashboard .user-weight {
+	border-color: #94CF1A;
+	border-style: solid;
+	border-width: 0.2em;
+	font-family: 'Roboto', sans-serif;
+	margin-bottom: 2em;
+	margin-top: 2em;
+	padding: 1em;
+}
+
+.dashboard .user-weight .data {
+	padding: 1em;
+}
+
+.dashboard .user-weight .data .value {
+	color: #707070;
+	font-size: 3em;
+	font-weight: 600;
+}
+
+.dashboard .user-weight .data:not(:last-child) {
+  border-right-color: #94CF1A;
+  border-right-style: solid;
+  border-right-width: 0.1em;
+} 
+
+.dashboard .user-statistics {
+	padding-bottom: 3em;
+	padding-top: 2em;
+}
