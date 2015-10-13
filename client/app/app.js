@@ -64,10 +64,30 @@ angular.module('homegymApp', [
       })
       .state('dashboard', {
         parent: 'panel',
-        url: '/dashboard',
+        url: '/dashboard/status',
         views: {
           'content@': {
             templateUrl: 'app/dashboard/dashboard.html'
+            // controller: 'SignUpController'
+          }
+        }
+      })
+      .state('routines', {
+        parent: 'panel',
+        url: '/dashboard/routines',
+        views: {
+          'content@': {
+            templateUrl: 'app/routines/routines.html'
+            // controller: 'SignUpController'
+          }
+        }
+      })
+      .state('diet', {
+        parent: 'panel',
+        url: '/dashboard/diet',
+        views: {
+          'content@': {
+            templateUrl: 'app/diet/diet.html'
             // controller: 'SignUpController'
           }
         }

@@ -306,7 +306,7 @@ a {
 }
 
 /**
- *  Dashboard
+ *  Dashboard - My Status
  */
 
 .dashboard {
@@ -378,3 +378,46 @@ a {
 	padding-bottom: 3em;
 	padding-top: 2em;
 }
+
+/**
+ *  My Routines 
+ */
+.routines {
+	padding-left: 15em;
+	padding-right: 15em;
+	padding-top: 4em;
+}
+
+.routines .month .name {
+	color: #94CF1A;
+	font-size: 2em;
+	padding: 1em;
+}
+
+.routines .month .previous {
+	font-size: 1.2em;
+}
+
+.routines .month .next {
+	font-size: 1.2em;
+}
+
+.routines .weeks, .routines .days {
+	font-family: 'Roboto', sans-serif;
+}
+
+.routines .weeks .tabs {
+	border-color: #94CF1A;
+	border-style: solid;
+	border-width: 0.2em;
+}
+
+/*.routines .weeks .tabs md-pagination-wrapper.md-center-tabs {
+	background: black;
+	width: 100%;
+	margin: 0;
+}*/
+
+/**
+ *  Diet 
+ */
