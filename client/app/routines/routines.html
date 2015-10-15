@@ -15,19 +15,28 @@
 	  </md-tabs>
 	</section>
 
-	<!-- <section class="days" layout="row" layout-align="center center">
-		<div class="data" layout="column" layout-align="center center" flex>
-			<div class="value">60 KG</div>
-			<div class="description">Peso</div>
+	<section class="days" layout="column">
+
+		<div class="routine-day">
+			<md-checkbox layout="row" ng-model="data.cb1" aria-label="Checkbox 1">
+	      Lunes: {{ data.cb1 }}
+	    </md-checkbox>
+
+			<div layout="row">
+				<div layout="column" layout-align="center center" flex>
+					<div>Video</div>
+				</div>
+				<div class="routine-data" layout="column" layout-align="start center" flex>
+					<div class="title">En esta rutina vamos a trabajar:</div>
+					<div class="description">Cardio, gluteos y abdomen</div>
+				</div>
+				<div class="routine-data" layout="column" layout-align="start center" flex>
+					<div class="title">Calorias quemadas después de hacer esta rutina:</div>
+					<div class="description calorie">200</div>
+				</div> 
+			</div>
 		</div>
-		<div class="data" layout="column" layout-align="center center" flex>
-			<div class="value">1,70 M</div>
-			<div class="description">Estatura</div>
-		</div>
-		<div class="data" layout="column" layout-align="center center" flex>
-			<div class="value">276</div>
-			<div class="description">Masa muscular</div>
-		</div>
-	</section> -->
+
+	</section>
 	
 </section>
