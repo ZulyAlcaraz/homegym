@@ -82,6 +82,16 @@ angular.module('homegymApp', [
           }
         }
       })
+      .state('detail-routine', {
+        parent: 'panel',
+        url: '/dashboard/routines/detail-routine',
+        views: {
+          'content@': {
+            templateUrl: 'app/routines/detail-routine/detail-routine.html'
+            // controller: 'SignUpController'
+          }
+        }
+      })
       .state('diet', {
         parent: 'panel',
         url: '/dashboard/diet',

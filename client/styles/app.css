@@ -478,5 +478,16 @@ a {
 }
 
 /**
+ *  Detail Routine
+ */
+
+.detail-routine {
+	background-color: #656565;
+	padding-left: 15em;
+	padding-right: 15em;
+	padding-top: 4em;
+}
+
+/**
  *  Diet 
  */
