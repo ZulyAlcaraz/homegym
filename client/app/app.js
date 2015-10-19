@@ -17,20 +17,21 @@ angular.module('homegymApp', [
       });
 
     $stateProvider
-      .state('home', {
-        url: '/',
-        views: {
-          'content@': {
-            templateUrl: 'app/main/main.html',
-            // controller: 'MainCtrl'
-          }
-        }
-      })
       .state('header', {
         abstract: true,
         views: {
           'header@': {
             templateUrl: 'components/header/header.html'
+          }
+        }
+      })
+      .state('home', {
+        parent: 'header',
+        url: '/',
+        views: {
+          'content@': {
+            templateUrl: 'app/main/main.html',
+            // controller: 'MainCtrl'
           }
         }
       })

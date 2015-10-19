@@ -100,15 +100,25 @@ a {
  */
 
 .header, .navbar {
-	background-color: #94CF1A;
+	background-color: #000;
+	padding: 0.3em;
 }
 
 .header .logo, .navbar .logo{
-	padding-right: 1em;
+	padding-right: 0.5em;
 }
 
 .header .title, .navbar .title{
-	font-size: 2em;
+	padding-bottom: 0.1em;
+	text-transform: none;
+}
+
+.header .button {
+	border-color: #FFF;
+	border-style: solid;
+	border-width: 0.1em;
+	line-height: 25px;
+	min-height: 25px;
 }
 
 .navbar {
@@ -141,7 +151,7 @@ a {
 	border-radius: 100%;
 	margin: 0.2em;
 	text-align: center;
-	width: 2em;
+	width: 2.2em;
 }
 
 .footer .link-home-gym {
@@ -160,20 +170,6 @@ a {
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	height: 40em;
-}
-
-.home .home-sign-up {
-	color: #000;
-	font-weight: 400;
-	padding-top: 2em;
-}
-
-.home .home-sign-up .logo {
-	padding-right: 1em;
-}
-
-.home .home-sign-up .title {
-	font-size: 1.2em;
 }
 
 .home .home-intro {
