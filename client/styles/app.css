@@ -18,6 +18,7 @@
 /**
  *  Font Bebas Neue
  */
+
 @font-face {
 	font-family: 'BebasNeueRegular';
 	src: url('../assets/fonts/BebasNeue.otf');
@@ -70,6 +71,7 @@ a {
 /**
  *  General Classes
  */
+
 .color-green {
 	color: #94CF1A;
 }
@@ -93,7 +95,6 @@ a {
 .cursor-pointer {
 	cursor: pointer;
 }
-
 
 /**
  *  Navbar
@@ -138,6 +139,7 @@ a {
 /**
  *  footer
  */
+
 .footer {
 	background-color: #000;
 } 
@@ -222,7 +224,12 @@ a {
 .sign-up .form {
 	font-family: 'Roboto', sans-serif;
 	padding-left: 3em;
-	padding-right: 15em;
+	padding-right: 16em;
+}
+
+.sign-up .form md-input-container {
+	font-size: 0.8em;
+	padding: 0;
 }
 
 .sign-up .form .button-facebook {
@@ -237,6 +244,7 @@ a {
 }
 
 .sign-up .form .divider {
+	font-size: 0.8em;
 	padding-top: 1em;
 	padding-bottom: 1em;
 	text-align: center;
@@ -257,8 +265,13 @@ a {
 }
 
 .sign-up .form .polices {
+	font-size: 0.8em;
 	padding-top: 1em;
 	padding-bottom: 1em;
+}
+
+.sign-up .account-now {
+	font-size: 0.8em;
 }
 
 /**
