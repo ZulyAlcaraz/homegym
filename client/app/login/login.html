@@ -1,21 +1,21 @@
-<section class="login" layout-fill>
+<section class="login" layout-fill layout="row" layout-align="center center">
 
-	<form name="loginForm" class="form" layout="column" layout-align="center center">
-		<md-input-container>
-      <label>Correo Electrónico</label>
-      <input name="name" ng-model="user.email" required>
-    </md-input-container>
-    
-    <md-input-container>
-      <label>Contraseña</label>
-      <input name="name" ng-model="user.password" required>
-    </md-input-container>
+		<form name="loginForm" class="form" layout="column" >
+			<md-input-container>
+	      <label>Correo Electrónico</label>
+	      <input name="name" ng-model="user.email" required>
+	    </md-input-container>
 
-    <md-checkbox ng-model="user.rememberMe" aria-label="recuerdame">
-      Recuerdame
-    </md-checkbox>
+	    <md-input-container>
+	      <label>Contraseña</label>
+	      <input name="name" ng-model="user.password" required>
+	    </md-input-container>
 
-    <md-button class="button-login" ui-sref="weight-data">Inicia Sesión</md-button>
-	</form>
+	    <md-checkbox ng-model="user.rememberMe" aria-label="recuerdame">
+	      Recuerdame
+	    </md-checkbox>
 
+	    <md-button class="button-login" ui-sref="weight-data">Inicia Sesión</md-button>
+		</form>
+		
 </section>

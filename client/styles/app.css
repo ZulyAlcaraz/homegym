@@ -287,13 +287,34 @@ a {
 	height: 40em;
 }
 
+.login .form {
+	background-color: rgba(225, 225, 225, 0.4);
+	font-family: 'Roboto', sans-serif;
+	font-size: 0.8em;
+	padding: 1em;
+	width: 20em;
+}
+
+.login .form md-input-container {
+	padding: 0;
+}
+
+.login .form md-input-container label {
+	color: #656565;
+}
+
+.login .form md-checkbox.md-checked .md-icon {
+	background-color: #656565;
+}
+
 .login .form .button-login {
-	background-color: #000;
+	background-color: rgba(0, 0, 0, 0.7);
 	color: #FFF;
 	font-family: 'BebasNeueRegular';
 	font-size: 1.2em;
 	margin-left: 0;
 	margin-right: 0;
+	width: 100%
 }
 
 /**
