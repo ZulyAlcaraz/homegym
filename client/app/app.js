@@ -45,13 +45,23 @@ angular.module('homegymApp', [
           }
         }
       })
+      .state('login', {
+        parent: 'header',
+        url: '/login',
+        views: {
+          'content@': {
+            templateUrl: 'app/login/login.html'
+            // controller: 'LoginController'
+          }
+        }
+      })
       .state('weight-data', {
         parent: 'header',
         url: '/weight-data',
         views: {
           'content@': {
             templateUrl: 'app/weight-data/weight-data.html'
-            // controller: 'SignUpController'
+            // controller: 'WeightDataController'
           }
         }
       })
@@ -69,7 +79,7 @@ angular.module('homegymApp', [
         views: {
           'content@': {
             templateUrl: 'app/dashboard/dashboard.html'
-            // controller: 'SignUpController'
+            // controller: 'DashboardController'
           }
         }
       })
@@ -79,7 +89,7 @@ angular.module('homegymApp', [
         views: {
           'content@': {
             templateUrl: 'app/routines/routines.html'
-            // controller: 'SignUpController'
+            // controller: 'RoutinesController'
           }
         }
       })
@@ -89,7 +99,7 @@ angular.module('homegymApp', [
         views: {
           'content@': {
             templateUrl: 'app/routines/detail-routine/detail-routine.html'
-            // controller: 'SignUpController'
+            // controller: 'RoutinesDetailController'
           }
         }
       })
@@ -99,7 +109,7 @@ angular.module('homegymApp', [
         views: {
           'content@': {
             templateUrl: 'app/diet/diet.html'
-            // controller: 'SignUpController'
+            // controller: 'DietController'
           }
         }
       });

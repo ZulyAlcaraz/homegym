@@ -275,6 +275,28 @@ a {
 }
 
 /**
+ *  Login
+ */
+
+.login {
+	background: #fff;
+	background-image: url(../assets/images/sign-up.jpg);
+	background-position: center center;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	height: 40em;
+}
+
+.login .form .button-login {
+	background-color: #000;
+	color: #FFF;
+	font-family: 'BebasNeueRegular';
+	font-size: 1.2em;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+/**
  *  Weight Data
  */
 
