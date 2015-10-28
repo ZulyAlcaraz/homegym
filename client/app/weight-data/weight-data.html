@@ -1,36 +1,47 @@
 <section class="weight-data">
 
-	<header layout="column" layout-padding>
-		<div class="color-green title">!Falta poco!</div>
-		<div class="color-gray subtitle">Antes de empezar queremos conocerte un poco más</div>
+	<header class="header" layout="column" layout-align="center center" layout-padding>
+		<div class="color-white title">!Falta poco!</div>
+		<div class="color-white subtitle">Antes de empezar queremos conocerte un poco más</div>
 	</header>
 	
 	<div class="form-weight">
 		<form name="formWeight" role="form" layout="column">
 
-			<div layout="row">
-				<md-input-container flex>
-	        <label>¿Cuál es tu peso?</label>
-	        <input type="number" name="name" ng-model="user.weight" required>
-	      </md-input-container>
-
-	      <md-input-container flex>
-	        <label>¿Cuál es tu estatura?</label>
-	        <input type="number" name="name" ng-model="user.height" required>
-	      </md-input-container>
+			<div class="weight" layout="row">
+					<md-input-container flex>
+		        <label>¿Cuál es tu peso?</label>
+		        <input type="number" name="name" ng-model="user.weight" required>
+		        <i class="fa fa-balance-scale"></i>
+		      </md-input-container>
+					<md-input-container flex>
+		        <label>¿Cuál es tu estatura?</label>
+		        <input type="number" name="name" ng-model="user.height" required>
+		        <i class="fa fa-arrow-up"></i>
+		      </md-input-container>
 			</div>
 
-			<div layout="row">
-				<md-input-container flex="">
-	        <label>¿Sufres de alguna enfermedad?</label>
-	        <textarea ng-model="user.biography" columns="1" md-maxlength="150"></textarea>
-	      </md-input-container>
+			<div class="sickness" layout="row">
+				<div layout="column">
+					<label>¿Sufres de alguna enfermedad?</label>
+					<md-checkbox ng-model="data.cb1" aria-label="Checkbox 1">
+	          Hipoglicemia
+	        </md-checkbox>
+	        <md-checkbox ng-model="data.cb1" aria-label="Checkbox 1">
+	          Diabetes
+	        </md-checkbox>
+	        <md-checkbox ng-model="data.cb1" aria-label="Checkbox 1">
+	          Asma
+	        </md-checkbox>
+	        <md-checkbox ng-model="data.cb1" aria-label="Checkbox 1">
+	          Sinusitis
+	        </md-checkbox>
+				</div>
 			</div>
 
 			<div layout="row" layout-align="end center">
 				<md-button class="button-weight" ui-sref="dashboard">Comenzar</md-button>
 			</div>
-
 			
 		</form>
 	</div>

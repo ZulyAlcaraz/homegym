@@ -1,6 +1,14 @@
 <section class="login" layout-fill layout="row" layout-align="center center">
 
 		<form name="loginForm" class="form" layout="column" >
+
+			<md-button class="button-facebook" ui-sref="home">
+				<i class="fa fa-facebook"></i>
+				INICIA SESIÓN CON FACEBOOK
+			</md-button>
+
+			<div class="divider color-white">O ingresa con tu correo electrónico</div>
+
 			<md-input-container>
 	      <label>Correo Electrónico</label>
 	      <input name="name" ng-model="user.email" required>
@@ -15,7 +23,8 @@
 	      Recuerdame
 	    </md-checkbox>
 
-	    <md-button class="button-login" ui-sref="weight-data">Inicia Sesión</md-button>
+	    <md-button class="button-login" ui-sref="dashboard">Inicia Sesión</md-button>
+	    <a class="forgot-password-link  color-white">¿Olvidó su contraseña?</a>
 		</form>
 		
 </section>

@@ -114,6 +114,10 @@ a {
 	text-transform: none;
 }
 
+.header .container-logo {
+	padding-top: 0.1em;
+}
+
 .header .button {
 	border-color: #FFF;
 	border-style: solid;
@@ -279,7 +283,7 @@ a {
  */
 
 .login {
-	background: #fff;
+	background: #000;
 	background-image: url(../assets/images/login.jpg);
 	background-position: center center;
 	background-size: 100% 100%;
@@ -288,11 +292,28 @@ a {
 }
 
 .login .form {
-	background-color: rgba(225, 225, 225, 0.4);
+	background-color: rgba(0, 0, 0, 0.6);
 	font-family: 'Roboto', sans-serif;
-	font-size: 0.8em;
 	padding: 1em;
 	width: 20em;
+}
+
+.login .form .button-facebook {
+	border-color: #94CF1A;
+	border-style: solid;
+	border-width: 0.1em;
+	color: #fff;
+	font-family: 'BebasNeueRegular';
+	font-size: 1.2em;
+	margin-left: 0;
+	margin-right: 0;
+	width: 100%;
+}
+
+.login .form .divider {
+	font-size: 0.8em;
+	text-align: center;
+	padding-top: 1em;
 }
 
 .login .form md-input-container {
@@ -300,15 +321,25 @@ a {
 }
 
 .login .form md-input-container label {
-	color: #656565;
+	color: #fff;
+	font-size: 0.8em;
+}
+
+.login .form md-checkbox .md-label span {
+	color: #fff;
+	font-size: 0.8em;
+}
+
+.login .form md-checkbox .md-icon {
+	border-color: #94CF1A;
 }
 
 .login .form md-checkbox.md-checked .md-icon {
-	background-color: #656565;
+	background-color: #94CF1A;
 }
 
 .login .form .button-login {
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: #000;
 	color: #FFF;
 	font-family: 'BebasNeueRegular';
 	font-size: 1.2em;
@@ -317,34 +348,76 @@ a {
 	width: 100%
 }
 
+.login .form .forgot-password-link {
+	font-size: 0.8em;
+}
+
 /**
  *  Weight Data
  */
 
-.weight-data {
-	padding-left: 15em;
-	padding-right: 15em;
-	padding-top: 5em;
+.weight-data .header {
+	background-color:  #94CF1A;
+	padding-bottom: 3em;
+	padding-top: 3em;
 }
 
-.weight-data .title {
-	font-size: 4em;
+.weight-data .header .title {
+	font-size: 2em;
 	font-weight: 400;
 }
 
-.weight-data .subtitle {
+.weight-data .header .subtitle {
 	font-family: 'Roboto', sans-serif;
 	font-size: 1.2em;
-	padding-bottom: 2em;
 }
 
 .weight-data .form-weight {
-	border-top-color: #94CF1A;
-	border-top-style: solid;
-	border-top-width: 0.2em;
 	font-family: 'Roboto', sans-serif;
 	padding-bottom: 5em;
-	padding-top: 2em;
+	padding-left: 15em;
+	padding-right: 15em;
+}
+
+.weight-data .form-weight .weight {
+	border-bottom-color: #cbcbcb;
+	border-bottom-style: solid; 
+	border-bottom-width: 0.1em;
+	margin-bottom: 3em;
+	padding-bottom: 2em;
+}
+
+.weight-data .form-weight .weight md-input-container {
+	padding: 3em 0 2em 3em;
+}
+
+.weight-data .form-weight .weight md-input-container label{
+	color: #656565;
+}
+
+.weight-data .form-weight .weight md-input-container i {
+	color: #656565;
+	font-size: 1.5em;
+	position: absolute;
+	left: 0.8em;
+	bottom: 1.5em;
+}
+
+.weight-data .form-weight .sickness label {
+	color: #656565;	
+	padding-bottom: 2em;
+}
+
+.weight-data .form-weight .sickness md-checkbox .md-label span {
+	color: #656565;	
+}
+
+.weight-data .form-weight .sickness md-checkbox .md-icon {
+	border-color: #656565;	
+}
+
+.weight-data .form-weight .sickness md-checkbox.md-checked .md-icon {
+	background-color: #656565;	
 }
 
 .weight-data .form-weight .button-weight {
