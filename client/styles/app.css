@@ -48,8 +48,14 @@
  *  General Styles
  *
  * 	== colors ==
+ * 	black: #000000;
  *  green: #94CF1A;
  *  gray: #656565;
+ *  gray-light: #909090;
+ *  gray other: #707070;
+ *  gray other: #444444;
+ *  gray: #2A2A2A;
+ *  white: #FFFFF;
  *  font-family: 'Roboto', sans-serif;
  *  font-family: 'BebasNeueRegular';
  */
@@ -97,10 +103,10 @@ a {
 }
 
 /**
- *  Navbar
+ *  Navbar / Header
  */
 
-.header, .navbar {
+.header {
 	background-color: #000;
 	padding: 0.3em;
 }
@@ -127,8 +133,16 @@ a {
 }
 
 .navbar {
-	padding-left: 15em;
-	padding-right: 15em;
+	background-color: #000;
+}
+
+.navbar .container-logo {
+	padding-top: 0.5em;
+}
+
+.navbar, .header {
+	padding-left: 10em;
+	padding-right: 10em;
 }
 
 .navbar .tabs {
@@ -136,8 +150,22 @@ a {
 	padding-top: 0.1em;
 }
 
+.navbar  md-tabs .md-tab.md-active a {
+	color: #FFF;
+}
+
 .navbar .tabs a {
 	font-size: 1.2em;
+}
+
+.navbar .profile-picture {
+	border-color: #94CF1A;
+	border-style: solid;
+	border-width: 0.1em;
+	border-radius: 50%;
+	margin: 0 0.5em !important;
+	width: 2.5em;
+	height: 2.5em;
 }
 
 /**
@@ -179,15 +207,15 @@ a {
 }
 
 .home .home-intro {
-	padding-left: 5em;
-	padding-right: 17em;
+	padding-left: 10em;
+	padding-right: 10em;
 	padding-top: 4em;
-	text-align: right;
+	text-align: left;
 }
 
 .home .home-intro .title {
 	font-family: 'BebasNeueRegular';
-	font-size: 4em;
+	font-size: 5em;
 	font-weight: 400;
 	line-height: 1;
 }
@@ -201,10 +229,9 @@ a {
 	background-color: rgba(224,224,224, 0.4);
 	border-radius: 3px;
 	color: #444444;
-	font-size: 1em;
+	font-size: 1.2em;
 	margin: 0.3em 0;
-	padding-left: 2em;
-	padding-right: 2em;
+	width: 100%
 }
 
 .home .home-intro .button:hover {
@@ -321,12 +348,12 @@ a {
 }
 
 .login .form md-input-container label {
-	color: #fff;
+	color: #FFF;
 	font-size: 0.8em;
 }
 
 .login .form md-checkbox .md-label span {
-	color: #fff;
+	color: #FFF;
 	font-size: 0.8em;
 }
 
@@ -431,77 +458,133 @@ a {
 }
 
 /**
- *  Dashboard - My Status
+ *  Dashboard / My Status
  */
 
-.dashboard {
-	padding-left: 15em;
-	padding-right: 15em;
-	padding-top: 5em;
+.dashboard .user-info {
+	background-color: #2A2A2A;
+	padding-bottom: 2em;
+	padding-left: 10em;
+	padding-right: 10em;
+	padding-top: 2em;
 }
 
-.dashboard .user-info .profile-picture {
+.dashboard .user-info .profile-info {
+	background-color: #94CF1A;
+}
+
+.dashboard .user-info .profile-info .profile-picture {
 	width: 5em;
 	height: 5em;
 }
 
-.dashboard .user-info .name {
-	color: #94CF1A;
+.dashboard .user-info .profile-info .name {
+	color: #2A2A2A;
 	font-size: 2em;
 }
 
-.dashboard .user-info .edge {
-	color: #656565;
+.dashboard .user-info .profile-info .edge {
+	color: #2A2A2A;
 	font-size: 1.2em;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 200;
 }
 
-.dashboard .user-info .city {
-	color: #707070;
-	font-family: 'Roboto', sans-serif;
-}
-
-.dashboard .user-sicknesses {
+.dashboard .user-info .profile-info .city {
 	color: #656565;
 	font-family: 'Roboto', sans-serif;
-	padding-bottom: 2em;
-	padding-top: 3em;
 }
 
-.dashboard .user-sicknesses .title {
-	font-weight: 600;
-}
-
-.dashboard .user-weight {
-	border-color: #94CF1A;
-	border-style: solid;
-	border-width: 0.2em;
+.dashboard .user-info .profile-info .data {
+	color: #FFF;
 	font-family: 'Roboto', sans-serif;
-	margin-bottom: 2em;
-	margin-top: 2em;
-	padding: 1em;
+	padding: 0.1em;
 }
 
-.dashboard .user-weight .data {
-	padding: 1em;
+.dashboard .user-info .profile-info .data .description {
+	 background-color: #1D1D1D;
+	 padding: 0.5em;
+	 text-align: center;
 }
 
-.dashboard .user-weight .data .value {
-	color: #707070;
-	font-size: 3em;
-	font-weight: 600;
+.dashboard .user-info .profile-info .data .value {
+	 background-color: #2A2A2A;
+	 font-size: 2em;
+	 font-weight: 600;
+	 padding: 0.5em;
+	 text-align: center;
 }
 
-.dashboard .user-weight .data:not(:last-child) {
-  border-right-color: #94CF1A;
-  border-right-style: solid;
-  border-right-width: 0.1em;
-} 
-
-.dashboard .user-statistics {
-	padding-bottom: 3em;
+.dashboard .user-info .user-sicknesses {
+	color: #909090;
+	font-family: 'Roboto', sans-serif;
 	padding-top: 2em;
+}
+
+.dashboard .user-info .user-sicknesses .title {
+	font-weight: 600;
+	padding-right: 1em;
+}
+
+.dashboard .user-info .user-sicknesses .list-sicknesses {
+ margin: 0;	
+}
+
+.dashboard .statistics {
+	padding-bottom: 2em;
+	padding-left: 10em;
+	padding-right: 10em;
+	padding-top: 2em;
+}
+
+.dashboard .calorie-statistics {
+	padding-bottom: 1em;
+}
+
+.dashboard .calorie-statistics .date {
+	padding-bottom: 1em;
+	padding-top: 1em;
+}
+
+.dashboard .calorie-statistics .date .title {
+	border-right-color: #909090;
+	border-right-style: solid;
+	border-right-width: 1px;
+	font-size: 2em;
+	padding-right: 1em;
+}
+
+.dashboard .calorie-statistics .date .month {
+	padding: 0.2em 1em; 
+}
+
+.dashboard .calorie-statistics .date .month .previous {
+	font-size: 1.2em;
+}
+
+.dashboard .calorie-statistics .date .month .next {
+	font-size: 1.2em;
+}
+
+.dashboard .calorie-statistics .date .month .name {
+	color: #94CF1A;
+	font-size: 1.5em;
+	padding: 0 1em;
+
+}
+
+.dashboard .calorie-statistics .weeks {
+	border-bottom-color: #909090;
+	border-bottom-style: solid;
+	border-bottom-width: 0.1em;
+	border-top-color: #909090;
+	border-top-style: solid;
+	border-top-width: 0.1em;
+	color: #1D1D1D;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 600;
+	padding-bottom: 1em;
+	padding-top: 1em;
 }
 
 /**

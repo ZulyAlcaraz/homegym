@@ -1,16 +1,21 @@
-<header class="color-white navbar" layout-fill layout="row">
-
-		<div layout="row" ui-sref="home" flex="20">
-			<img class="logo" src="../../assets/images/logo-blanco.png" height="50" width="40" alt="">
-			<span class="title" layout="column" layout-align="end end">HomeGym</span>
+<nav class="color-white navbar" layout-fill layout="row">
+		
+		<div class="cursor-pointer" flex="20" layout="column">
+			<div class="container-logo" layout="row" ui-sref="home">
+				<img class="logo" src="../../assets/images/logo-verde.png" height="30" width="25" alt="">
+				<span class="title" layout="column" layout-align="end end">HomeGym</span>
+			</div>
 		</div>
 
-		<md-tabs class="tabs" md-stretch-tabs md-selected="selectedIndex" flex>
+		<md-tabs class="tabs" md-stretch-tabs md-selected="selectedIndex" layout="row" flex>
 	     <md-tab>  <a ui-sref="dashboard" class="color-gray">Mi Estado</a> </md-tab> 
 	     <md-tab>  <a ui-sref="routines" class="color-gray">Mis Rutinas</a> </md-tab>
 	     <md-tab>  <a ui-sref="diet" class="color-gray">Nutricion</a> </md-tab>  
 	  </md-tabs>
 
-	  <div flex="20"></div>
+	  <div flex="20" layout="row" layout-align="end center">
+      <img src="../../assets/images/home.png" class="profile-picture">	
+      <i class="fa fa-chevron-down color-green"></i>  	
+	  </div>
 
-</header>
+</nav>

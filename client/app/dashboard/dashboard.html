@@ -1,7 +1,8 @@
 <section class="dashboard">
 
 	<header class="user-info">
-		<md-list-item class="md-3-line">
+		<section class="profile-info" layout="row">
+			<md-list-item class="md-3-line" flex="50">
         <img src="../../assets/images/home.png" class="md-avatar profile-picture">
         <div class="md-list-item-text" layout="column">
           <h3 class="name">Susana Marqués</h3>
@@ -9,35 +10,63 @@
           <p class="city">Medellín > Colombia</p>
         </div>
       </md-list-item>
+
+      <div class="data" layout="column" flex="20">
+				<div class="description" flex="20">Peso</div>
+				<div class="value" flex>60 KG</div>
+			</div>
+
+			<div class="data" layout="column" flex="20">
+				<div class="description" flex="20">Estatura</div>
+				<div class="value" flex>1,70 M</div>
+			</div>
+
+			<div class="data" layout="column" flex="20">
+				<div class="description" flex="20">Masa muscular</div>
+				<div class="value" flex>276</div>
+			</div>
+
+		</section>
+
+		<section class="user-sicknesses" layout="row">
+			<span class="title">Enfermedades: </span>
+			<span class="list-sicknesses">Lorem ipsum dolor sit amet</span>,
+			<span class="list-sicknesses">Lorem ipsum dolor sit amet</span>
+		</section>
+		
 	</header>
 
-	<section class="user-sicknesses">
-		<span class="title">Enfermedades:</span>
-		<ul>
-			<li>Lorem ipsum dolor sit amet</li>
-			<li>Lorem ipsum dolor sit amet</li>
-			<li>Lorem ipsum dolor sit amet</li>
-			<li>Lorem ipsum dolor sit amet</li>
-		</ul>
+	<section class="statistics">
+		<section class="calorie-statistics">
+			<div layout="row" class="date">
+				<div class="title">Calorías quemadas</div>
+				<div class="month">
+					<i class="fa fa-angle-left previous"></i>
+					<span class="name">JUNIO 2015</span>
+					<i class="fa fa-angle-right next"></i>
+				</div>
+			</div>
+
+			<div layout="row" class="weeks">
+				<div layout="column" layout-align="center center" flex>Semana 1</div>
+				<div layout="column" layout-align="center center" flex>Semana 2</div>
+				<div layout="column" layout-align="center center" flex>Semana 3</div>
+				<div layout="column" layout-align="center center" flex>Semana 4</div>
+			</div>
+
+			<div layout="row">
+				<div layout="column" layout-align="center center" flex>1</div>
+				<div layout="column" layout-align="center center" flex>2</div>
+				<div layout="column" layout-align="center center" flex>3</div>
+				<div layout="column" layout-align="center center" flex>4</div>
+			</div>
+		</section>
+
+		<section class="user-statistics">
+			Peso
+		</section>
 	</section>
 
-	<section class="user-weight" layout="row" layout-align="center center">
-		<div class="data" layout="column" layout-align="center center" flex>
-			<div class="value">60 KG</div>
-			<div class="description">Peso</div>
-		</div>
-		<div class="data" layout="column" layout-align="center center" flex>
-			<div class="value">1,70 M</div>
-			<div class="description">Estatura</div>
-		</div>
-		<div class="data" layout="column" layout-align="center center" flex>
-			<div class="value">276</div>
-			<div class="description">Masa muscular</div>
-		</div>
-	</section>
-
-	<section class="user-statistics">
-		Gráfica
-	</section>
+	
 	
 </section>
