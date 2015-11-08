@@ -17,18 +17,20 @@
 
 	<section class="days" layout="column">
 
-		<div class="routine-day" ui-sref="detail-routine">
-			<md-checkbox layout="row" ng-model="data.cb1" aria-label="Checkbox 1">
-	      Lunes: {{ data.cb1 }}
+		<div class="routine-day">
+			<md-checkbox layout="row" ng-model="true" aria-label="Checkbox 1">
+	      Lunes
 	    </md-checkbox>
 
 			<div layout="row">
-				<div layout="column" layout-align="center center" flex>
-					<div>Video</div>
+				<div class="routine-data" layout="column" layout-align="center center" ui-sref="detail-routine" flex>
+					<img src="../../assets/images/exercise-video.jpg" width="190">
 				</div>
-				<div class="routine-data" layout="column" layout-align="start center" flex>
+				<div class="routine-data" layout="column" layout-align="start start" flex>
 					<div class="title">En esta rutina vamos a trabajar:</div>
-					<div class="description">Cardio, gluteos y abdomen</div>
+					<div class="description">Cardio</div>
+					<div class="description">Cardio</div>
+					<div class="description">Abdomen</div>
 				</div>
 				<div class="routine-data" layout="column" layout-align="start center" flex>
 					<div class="title">Calorias quemadas después de hacer esta rutina:</div>

@@ -658,26 +658,29 @@ a {
  *  My Routines 
  */
 .routines {
-	padding-left: 15em;
-	padding-right: 15em;
-	padding-top: 4em;
+	padding-bottom: 2em;
+	padding-left: 10em;
+	padding-right: 10em;
+	padding-top: 2em;
 }
 
 .routines .month .name {
-	color: #94CF1A;
 	font-size: 2em;
 	padding: 1em;
 }
 
 .routines .month .previous {
+	color: #94CF1A;
 	font-size: 1.2em;
 }
 
 .routines .month .next {
+	color: #94CF1A;
 	font-size: 1.2em;
 }
 
-.routines .weeks, .routines .days {
+.routines .weeks, 
+.routines .days {
 	font-family: 'Roboto', sans-serif;
 }
 
@@ -702,11 +705,13 @@ a {
 	border-right-color: #94CF1A;
   border-right-style: solid;
   border-right-width: 0.2em;
+  font-size: 1.2em;
+  text-transform: none;
 }
 
 .routines .weeks md-tabs .md-tab.md-active, 
 .routines .weeks md-tabs .md-tab.md-focused {
-	background-color: #656565 !important;
+	background-color: #94CF1A !important;
 }
 
 .routines .weeks md-tabs .md-tab.md-active a, 
@@ -715,15 +720,19 @@ a {
 }
 
 .routines .days .routine-day {
-	background-color: #f2f2f2;
+	color: #FFFFFF !important;
+	background-color: #2A2A2A;
 	margin-bottom: 1em;
 	margin-top: 1em;
-	padding-bottom: 1em;
-	padding-top: 1em;
+	padding: 1em;
 }
 
 .routines .days md-checkbox.md-checked .md-icon {
 	background-color: #94CF1A !important;
+}
+
+.routines .days md-checkbox .md-icon {
+	border-color: #FFFFFF !important;
 }
 
 .routines .days .routine-day .routine-data {
@@ -739,7 +748,7 @@ a {
 .routines .days .routine-day .routine-data .title {
 	font-size: 0.8em;
 	font-weight: 600;
-	color: #656565;
+	color: #FFFFFF;
 }
 
 .routines .days .routine-day .routine-data .description {
