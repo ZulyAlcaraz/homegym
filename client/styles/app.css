@@ -767,10 +767,71 @@ a {
 
 .detail-routine {
 	background-color: #656565;
-	padding-left: 15em;
-	padding-right: 15em;
+	padding-left: 10em;
+	padding-right: 10em;
 	padding-top: 4em;
+	padding-bottom: 4em;
+	font-family: 'Roboto', sans-serif;
 }
+
+.detail-routine .video {
+	height: 100%;
+} 
+
+.detail-routine .detail {
+	min-height: 400px;
+	max-height: 400px;
+	height: 400px;
+}
+
+.detail-routine .detail .list-videos{
+	background-color: #1E1E1E;
+	height: 100%;
+	width: 100%;
+}
+
+.detail-routine .detail .list-videos .title {
+	background-color: #070607;
+	font-size: 1.2em;
+	padding: 1em;
+	width: 100%;
+}
+
+.detail-routine .detail .list-videos .subtitle {
+	padding: 1em;
+	width: 100%;
+} 
+
+.detail-routine .detail .list-videos .content-list {
+	width: 100%;
+	padding: 0 1em;
+}
+
+.detail-routine .detail .list-videos .content-list .list {
+	width: 100%;
+}
+
+.detail-routine .detail .list-videos .content-list .list .item {
+	padding: 0.5em 1em;
+}
+
+.detail-routine .detail .list-videos .content-list .list .item:hover {
+	cursor: pointer;
+	background-color: #2D2D2D;
+}
+
+.detail-routine .detail .list-videos .content-list .list .item .md-list-item-text {
+	padding-left: 1em;
+}
+
+.detail-routine .detail .list-videos .content-list .list .item .md-list-item-text h3{
+	color: #FFFFFF !important;
+}
+
+.detail-routine .detail .list-videos .content-list .list .item .md-list-item-text h4{
+	color: #A0A0A0 !important;
+}
+
 
 /**
  *  Diet 
