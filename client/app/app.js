@@ -1,12 +1,16 @@
 'use strict';
 
 angular.module('homegymApp', [
+
   'ngCookies',
   'ngResource',
   'ngSanitize',
   'ui.router',
-  'ngMaterial'
+  'ngMaterial',
+  'angular-svg-round-progress'
+
 ])
+
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $mdThemingProvider) {
     $urlRouterProvider.otherwise('/');
     $locationProvider.html5Mode(true);
@@ -79,7 +83,7 @@ angular.module('homegymApp', [
         views: {
           'content@': {
             templateUrl: 'app/dashboard/dashboard.html'
-            // controller: 'DashboardController'
+           // controller: 'DashboardController'
           }
         }
       })
