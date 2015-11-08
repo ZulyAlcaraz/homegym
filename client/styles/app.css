@@ -542,8 +542,7 @@ a {
 }
 
 .dashboard .calorie-statistics .date {
-	padding-bottom: 1em;
-	padding-top: 1em;
+	padding-bottom: 2em;
 }
 
 .dashboard .calorie-statistics .date .title {
@@ -624,6 +623,31 @@ a {
 	border-style: solid;
 	border-width: 1px;
 	width: 50%;
+}
+
+.dashboard .user-statistics {
+	font-family: 'Roboto', sans-serif;
+}
+
+.dashboard .user-statistics .title {
+	border-bottom-color: #909090;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	font-size: 2em;
+	font-family: 'BebasNeueRegular';
+	padding-right: 1em;
+	padding-top: 2em;
+	padding-bottom: 0.5em;
+}
+
+.dashboard .user-statistics .upload-weigth {
+	font-family: 'BebasNeueRegular';
+	padding-top: 1em;
+}
+
+.dashboard .user-statistics .upload-weigth .button-upload-weigth {
+	background-color: #656565 !important;
+	width: 25%;
 }
 
 /**

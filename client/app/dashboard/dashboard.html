@@ -38,6 +38,7 @@
 
 	<section class="statistics">
 		<section class="calorie-statistics">
+
 			<div layout="row" class="date">
 				<div class="title">Calorías quemadas</div>
 				<div class="month">
@@ -225,13 +226,31 @@
 				</div>
 
 			</div>
+
 		</section>
 
 		<section class="user-statistics">
-			Peso
+			<div layout="row" class="title">
+				<div >Peso Actual</div>
+			</div>
+
+			
+			<form action="" layout="row">
+				<md-input-container flex="50">
+	        <label>Escribe tu peso actual</label>
+	        <input name="lastName" ng-model="user.lastName" required>
+	        <div ng-show="signUpForm.lastName.$error && submitted">
+	          <div ng-message="required">Este campo es requerido.</div>
+	        </div>
+	      </md-input-container>
+	      <div flex="50" class="upload-weigth" >
+	      	<md-button class="button-upload-weigth color-white">ACTUALIZAR</md-button>
+	      </div>
+			</form>
+			
+
 		</section>
+
 	</section>
 
-	
-	
 </section>
