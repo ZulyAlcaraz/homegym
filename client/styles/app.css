@@ -587,6 +587,45 @@ a {
 	padding-top: 1em;
 }
 
+.dashboard .calorie-statistics .calorie-progress .progress {
+	padding: 1em;
+	position: relative;
+	width: 100%
+}
+
+.dashboard .calorie-statistics .calorie-progress .progress .progress-inside {
+	padding: 1em;
+	position: absolute;
+	opacity: 0.5;
+	top: 0.6em;
+	left: 0.6em;
+	z-index: 1;
+}
+
+.dashboard .calorie-statistics .calorie-progress .progress-info {
+	background-color: #2A2A2A;
+	border-radius: 50%;
+	font-family: 'Roboto', sans-serif;
+	padding: 1em;
+	position: absolute;
+	top: 3.1em;
+	left: 3.1em;
+	width: 130px;
+	height: 130px;
+	z-index: 1;
+}
+
+.dashboard .calorie-statistics .calorie-progress .disable {
+	background-color: #909090;
+} 
+
+.dashboard .calorie-statistics .calorie-progress .button-complete {
+	border-color: #94CF1A;
+	border-style: solid;
+	border-width: 1px;
+	width: 50%;
+}
+
 /**
  *  My Routines 
  */
