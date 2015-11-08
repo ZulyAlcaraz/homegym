@@ -587,18 +587,23 @@ a {
 }
 
 .dashboard .calorie-statistics .calorie-progress .progress {
-	padding: 1em;
 	position: relative;
-	width: 100%
+	width: 100%;
+	height: 250px;
 }
 
 .dashboard .calorie-statistics .calorie-progress .progress .progress-inside {
-	padding: 1em;
 	position: absolute;
 	opacity: 0.5;
-	top: 0.6em;
-	left: 0.6em;
+	top: 2.2em;
+	left: 2.2em;
 	z-index: 1;
+}
+
+.dashboard .calorie-statistics .calorie-progress .progress .progress-outside {
+	position: absolute;
+	top: 1.5em;
+	left: 1.5em;
 }
 
 .dashboard .calorie-statistics .calorie-progress .progress-info {
@@ -607,10 +612,10 @@ a {
 	font-family: 'Roboto', sans-serif;
 	padding: 1em;
 	position: absolute;
-	top: 3.1em;
-	left: 3.1em;
-	width: 130px;
-	height: 130px;
+	top: 3.4em;
+	left: 3.4em;
+	width: 120px;
+	height: 120px;
 	z-index: 1;
 }
 
@@ -636,7 +641,6 @@ a {
 	font-size: 2em;
 	font-family: 'BebasNeueRegular';
 	padding-right: 1em;
-	padding-top: 2em;
 	padding-bottom: 0.5em;
 }
 
