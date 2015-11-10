@@ -35,7 +35,7 @@ angular.module('homegymApp', [
         views: {
           'content@': {
             templateUrl: 'app/main/main.html',
-            // controller: 'MainCtrl'
+            controller: 'MainCtrl'
           }
         }
       })

@@ -5,7 +5,12 @@ var controller = require('./datos.controller');
 
 var router = express.Router();
 
+router.route('/usuario')
+  .post(controller.crearUsuario);
 
+
+router.route('/autenticar')
+  .post(controller.autenticarUsuario);
 
 
 

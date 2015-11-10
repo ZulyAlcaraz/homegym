@@ -1,4 +1,4 @@
-exports.guardarUsuario = function(nombre,apellido,correo,contrasena,genero,fechaNacimiento,altura,peso,ciudad,pais,condicion,enfermedades,rutinas,plan,callback) {
+exports.guardarUsuario = function(req,callback) {
 
 	var Firebase = require("firebase");
     var ref = new Firebase("https://dazzling-inferno-7243.firebaseio.com/");
@@ -6,35 +6,39 @@ exports.guardarUsuario = function(nombre,apellido,correo,contrasena,genero,fecha
     usersRef.push({
      
 
-	    'nombre' : nombre,
-	    'apellido': apellido,
-	    'correo': correo,
-	    'contrasena': contrasena,
-	    'genero': genero,
-	    'fechaNacimiento': fechaNacimiento,
-	    'altura': altura,
-	    'peso': peso,
-	    'ciudad': ciudad,
-	    'pais': pais,
-	    'condicion': condicion,
+	    'nombre' : req.body.nombre,
+	    'apellido': req.body.apellido,
+	    'correo': req.body.correo,
+	    'contrasena': req.body.contrasena,
+	    'genero': req.body.genero,
+	    'fechaNacimiento': req.body.fechaNacimiento,
+	    'altura': req.body.altura,
+	    'peso': req.body.peso,
+	    'ciudad': req.body.ciudad,
+	    'pais': req.body.pais,
+	    'condicion': req.body.condicion,
 	    'enfermedades': {},
 	    'rutinas': {},
 	    'plan' : {}
   
-    });
-
-	callback(imc,clasificacion);
+    },function(error) {
+  		if (error) {
+   			callback(error,null);
+  		} else {
+   			callback(null,null);
+ 		}
+	});
 };
 
 
 
-exports.autenticacion = function(usuario,contrasena,callback){
+exports.autenticarUsuario = function(req,callback){
 	var Firebase = require("firebase");
     var ref = new Firebase("https://dazzling-inferno-7243.firebaseio.com/");
 
 	ref.authWithPassword({
-	email    : usuario,
-	password : contrasena
+	email    : req.body.usuario,
+	password : req.body.contrasena
 	}, function(error, authData) {
   		if (error) {
     		callback(error, null);
