@@ -23,3 +23,25 @@ exports.autenticarUsuario = function (req, res){
     });
   });
 }
+
+
+exports.crearUsuarioBD = function (req,res){
+  datos.crearUsuarioBD(req,function (error,respuesta,datosUsuario){
+     res.json({
+      error: error,
+      respuesta: respuesta,
+      datos: datosUsuario,
+    });
+  });
+}
+
+
+exports.autenticarUsuarioFB = function (req,res){
+  datos.autenticarUsuarioFB(req,function (error,respuesta,datosUsuario){
+    /* res.json({
+      error: error,
+      respuesta: respuesta,
+      datos: datosUsuario,
+    });*/
+  });
+}

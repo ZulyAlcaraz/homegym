@@ -1,3 +1,4 @@
+//crea un usuario en la tabla usuario
 exports.guardarUsuario = function(req,callback) {
 
 	var Firebase = require("firebase");
@@ -31,7 +32,7 @@ exports.guardarUsuario = function(req,callback) {
 };
 
 
-
+//autentica un usuario usando la autenticación de firebase
 exports.autenticarUsuario = function(req,callback){
 	var Firebase = require("firebase");
     var ref = new Firebase("https://dazzling-inferno-7243.firebaseio.com/");
@@ -46,4 +47,47 @@ exports.autenticarUsuario = function(req,callback){
 			callback(null, authData);
   		}
 	});
+}
+
+
+exports.autenticarUsuarioFB = function(req,callback){
+	var Firebase = require("firebase");
+	var ref = new Firebase("https://dazzling-inferno-7243.firebaseio.com/");
+    ref.authWithOAuthPopup("facebook", function(error, authData) {
+      if (error) {
+        console.log("Login Failed!", error);
+      } else {
+        console.log("Authenticated successfully with payload:", authData);
+      }
+    });
+}
+
+//crea un usuario usando las tablas de firebase
+exports.crearUsuarioBD = function(req,callback){
+	var Firebase = require("firebase");
+	var ref = new Firebase("https://dazzling-inferno-7243.firebaseio.com/");
+	var error = null;
+	var respuesta = null;
+	var datosUsuario = null;
+    ref.createUser({
+      email: req.body.correo,
+      password: req.body.contrasena
+    }, function(errorr, userData) {
+      if (errorr) {
+        switch (errorr.code) {
+          case "EMAIL_TAKEN":
+            error="La nueva cuenta de usuario no se puede crear porque el correo electrónico ya está en uso.";
+            break;
+          case "INVALID_EMAIL":
+            error="El correo electrónico especificado no es un correo electrónico válido.";
+            break;
+          default:
+            error="Error creando el usuario:" + errorr;
+        }
+      } else {
+        respuesta="Cuenta creada con éxito";
+    	datosUsuario=userData.uid;
+      }
+      callback(error,respuesta,datosUsuario);
+    });
 }

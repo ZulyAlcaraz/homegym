@@ -71,7 +71,31 @@ $http.post('/api/datos/otro', {nombre : "req.body.nombre",
     alert(JSON.stringify(data));
   })*/
 
+/*crea un usuario en las tablas de firebase    
+
+    $http.post('/api/datos/crearUsuarioBD', {
+        correo: "pepito@hotmail.com",
+        contrasena: "1234"
+    }).
+  success(function(data, status, headers, config) {
+    alert(JSON.stringify(data));
+  })
+
+*/
+alert("hola");
+ $http.post('/api/datos/autenticarUsuarioFB', {
+       
+    }).
+  success(function(data, status, headers, config) {
+    alert(JSON.stringify(data));
+  })*/
+
+
+
 //---------------------------------------------------------------------------------
+
+
+
 
 
   });
