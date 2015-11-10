@@ -13,6 +13,9 @@ module.exports = function(app) {
   app.use('/api/things', require('./api/thing'));
   app.use('/api/masa', require('./api/masa'));
   app.use('/api/firebase', require('./api/firebase'));
+
+  
+  app.use('/api/datos', require('./api/datos'));
   
   // All undefined asset or api routes should return a 404
   app.route('/:url(api|auth|components|app|bower_components|assets)/*')

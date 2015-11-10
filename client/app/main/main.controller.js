@@ -40,4 +40,3 @@ angular.module('homegymApp')
      // });
 	
   });
-
