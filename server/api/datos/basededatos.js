@@ -53,12 +53,17 @@ exports.autenticarUsuario = function(req,callback){
 exports.autenticarUsuarioFB = function(req,callback){
 	var Firebase = require("firebase");
 	var ref = new Firebase("https://dazzling-inferno-7243.firebaseio.com/");
+	var err=null;
+	var respuesta=null;
+	var datosUsuario=null;
     ref.authWithOAuthPopup("facebook", function(error, authData) {
       if (error) {
-        console.log("Login Failed!", error);
+        err="Error" + error;
       } else {
-        console.log("Authenticated successfully with payload:", authData);
+        respuesta="Authenticated successfully";
+        datosUsuario = authData;
       }
+      callback(err,respuesta,datosUsuario);
     });
 }
 
@@ -90,4 +95,30 @@ exports.crearUsuarioBD = function(req,callback){
       }
       callback(error,respuesta,datosUsuario);
     });
+}
+
+
+
+exports.consultarUsuarios = function(req,callback){
+  var Firebase = require("firebase");
+  var ref = new Firebase("https://dazzling-inferno-7243.firebaseio.com/");
+ // Attach an asynchronous callback to read the data at our posts reference
+  ref.child("usuario").on("value", function(snapshot) {
+    callback(null,snapshot.val());
+  }, function (errorObject) {
+    callback("The read failed: " + errorObject.code,null);
+  });
+}
+
+
+exports.consultarUsuario = function(req,callback){
+  var Firebase = require("firebase");
+  var ref = new Firebase("https://dazzling-inferno-7243.firebaseio.com/usuario/"+req.params.id);
+ 
+ // Attach an asynchronous callback to read the data at our posts reference
+  ref.on("value", function(snapshot) {
+    callback(null,snapshot.val());
+  }, function (errorObject) {
+    callback("The read failed: " + errorObject.code,null);
+  });
 }

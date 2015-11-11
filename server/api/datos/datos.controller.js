@@ -35,13 +35,32 @@ exports.crearUsuarioBD = function (req,res){
   });
 }
 
-
+/*
 exports.autenticarUsuarioFB = function (req,res){
   datos.autenticarUsuarioFB(req,function (error,respuesta,datosUsuario){
     /* res.json({
       error: error,
       respuesta: respuesta,
       datos: datosUsuario,
-    });*/
+    });
   });
+}*/
+
+exports.consultarUsuarios = function(req,res){
+    datos.consultarUsuarios(req,function(error,usuarios){
+      
+      res.json({
+        usuario: usuarios,
+      });
+    });
+}
+
+
+exports.consultarUsuario = function(req,res){
+  datos.consultarUsuario(req,function(error,datosUsuario){
+      
+      res.json({
+        usuario: datosUsuario,
+      });
+    });
 }

@@ -41,8 +41,8 @@ angular.module('homegymApp')
 	   
  
   //------------------------------------------------------------------------- esto lo hiso diego
-     /* crear usuario
-$http.post('/api/datos/otro', {nombre : "req.body.nombre",
+     // crear usuario
+/*$http.post('/api/datos/usuario', {nombre : "req.body.nombre",
         apellido: "req.body.apellido",
         correo: "req.body.correo",
         contrasena: "req.body.contrasena",
@@ -58,8 +58,8 @@ $http.post('/api/datos/otro', {nombre : "req.body.nombre",
         plan : {}   }).
   success(function(data, status, headers, config) {
     alert(JSON.stringify(data));
-  })
-*/
+  })*/
+
 
 
 /*autenticar usuario
@@ -82,6 +82,9 @@ $http.post('/api/datos/otro', {nombre : "req.body.nombre",
   })
 
 */
+
+
+/*autenticacion por facebook (mala)
 alert("hola");
  $http.post('/api/datos/autenticarUsuarioFB', {
        
@@ -91,11 +94,31 @@ alert("hola");
   })*/
 
 
+/*
+// consulta todos los usuarios
+$http.post('/api/datos/consultarUsuarios', {
 
+  }).
+  success(function(data, status, headers, config) {
+ 
+    alert();
+  })
+
+
+});
+*/
+/*
+//consulta de un usuario por su id
+$http.get('/api/datos/consultarUsuario-K2oTTIYO4WDuqdrOL87', {
+
+  }).
+  success(function(data, status, headers, config) {
+ 
+    alert(JSON.stringify(data));
+  })
+
+
+});
+*/
 //---------------------------------------------------------------------------------
 
-
-
-
-
-  });

@@ -18,8 +18,22 @@ router.route('/autenticar')
 router.route('/crearUsuarioBD')
   .post(controller.crearUsuarioBD);
 
+/*
 //autenticar usuario por medio de facebook
 router.route('/autenticarUsuarioFB')
   .post(controller.autenticarUsuarioFB);
+*/
+
+router.route('/consultarUsuarios')
+  .post(controller.consultarUsuarios);
+
+router.route('/consultarUsuario:id')
+  .get(controller.consultarUsuario);
+
+
 
 module.exports = router;
+
+
+
+
