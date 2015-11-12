@@ -64,3 +64,55 @@ exports.consultarUsuario = function(req,res){
       });
     });
 }
+
+
+
+exports.buscarDato = function (req,res){
+  datos.buscarDato(req.body.ruta,req.body.variable,req.body.valor,function(key,datosUsuario){
+      console.log(datosUsuario);
+      res.json({
+        key: key,
+        usuario: datosUsuario,
+      });
+    });
+}
+
+
+exports.actualizarDato = function (req,res){
+   datos.actualizarDato(req,function(err){
+      console.log("\n\n"+err+"\n\n");
+      res.json({
+        error: err,
+      });
+    });
+}
+
+
+exports.crearEnfermedad = function (req, res){
+  datos.crearEnfermedad(req,function(error,respuesta){
+      res.json({
+        error: error,
+        respuesta: respuesta,
+    });
+  });
+}
+
+// crear plan con los datos: nombre, descripcion, monto y descuento
+exports.crearPlan = function(req,res){
+  datos.crearPlan(req,function(error,respuesta){
+      res.json({
+        error: error,
+        respuesta: respuesta,
+    });
+  });
+}
+
+// crear ejercicio con los datos nombre,descripcion, calorias, video
+exports.crearEjercicio = function(req,res){
+  datos.crearEjercicio(req,function(error,respuesta){
+      res.json({
+        error: error,
+        respuesta: respuesta,
+    });
+  });
+}

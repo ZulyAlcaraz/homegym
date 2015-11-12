@@ -29,7 +29,68 @@ exports.guardarUsuario = function(req,callback) {
    			callback(null,null);
  		}
 	});
-};
+}
+
+//crea una enfermedad con los datos nombre,descripcion,recomendaciones,tipo
+exports.crearEnfermedad = function(req,callback){
+  var Firebase = require("firebase");
+    var ref = new Firebase("https://dazzling-inferno-7243.firebaseio.com/");
+    var usersRef = ref.child("enfermedad");
+    usersRef.push({
+      
+      'nombre' : req.body.nombre,
+      'descripcion': req.body.descripcion,
+      'recomendaciones': req.body.recomendaciones,
+      'tipo': req.body.tipo
+
+      
+  
+    },function(error) {
+      if (error) {
+        callback(error,null);
+      } else {
+        callback(null,null);
+    }
+  });
+}
+
+// crear ejercicio con los datos nombre,descripcion, calorias, video
+exports.crearEjercicio = function(req,callback){
+  var Firebase = require("firebase");
+    var ref = new Firebase("https://dazzling-inferno-7243.firebaseio.com/");
+    var usersRef = ref.child("ejercicio");
+    usersRef.push({
+      'nombre' : req.body.nombre,
+      'descripcion': req.body.descripcion,
+      'calorias': req.body.calorias,
+      'video': req.body.video
+    },function(error) {
+      if (error) {
+        callback(error,null);
+      } else {
+        callback(null,null);
+    }
+  });
+}
+
+// crear plan con los datos: nombre, descripcion, monto y descuento
+exports.crearPlan = function(req,callback){
+    var Firebase = require("firebase");
+    var ref = new Firebase("https://dazzling-inferno-7243.firebaseio.com/");
+    var usersRef = ref.child("plan");
+    usersRef.push({
+      'nombre' : req.body.nombre,
+      'descripcion': req.body.descripcion,
+      'monto': req.body.monto,
+      'descuento': req.body.descuento
+    },function(error) {
+      if (error) {
+        callback(error,null);
+      } else {
+        callback(null,null);
+    }
+  });
+}
 
 
 //autentica un usuario usando la autenticación de firebase
@@ -121,4 +182,92 @@ exports.consultarUsuario = function(req,callback){
   }, function (errorObject) {
     callback("The read failed: " + errorObject.code,null);
   });
+}
+
+/*exports.buscarDato = function (ruta,variable,valor){
+   var Firebase = require("firebase");
+  var rutaRef = new Firebase("https://dazzling-inferno-7243.firebaseio.com/"+ruta);
+    rutaRef.on("value", function(snapshot) {
+      snapshot.child(key()).forEach(function(data) {
+        if(data.val().variable == valor ){
+          console.log("The " + data.key() + " dinosaur's score is " + data.val());
+        }else{
+           console.log("valor: " + data.val() + " = valor: " + valor);
+        }
+        
+      });
+    });
+}
+*/
+
+
+/*exports.buscarDato = function (ruta,variable,valor,callback){
+  var Firebase = require("firebase");
+
+  var rutaRef = new Firebase("https://dazzling-inferno-7243.firebaseio.com/"+ruta);
+  var datosUsuarioss = new Array();
+
+    rutaRef.on("value", function(snapshot) {
+      var datosUsuario = snapshot.val();
+
+      snapshot.forEach(function(data) {
+        
+        if(data.val()[variable] == valor ){
+        //console.log("\n\nel usuario con id: " + data.key() + " \ncorreo " + data.val()[variable]+"\nvalor: "+valor);
+          datosUsuarioss[data.key()] = data.val();
+          
+         // console.log("\n\n"+datosUsuario);
+        }
+        
+      });
+      callback(datosUsuarioss);
+    });
+}*/
+
+
+exports.buscarDato = function (ruta,variable,valor,callback){
+  var Firebase = require("firebase");
+
+  var rutaRef = new Firebase("https://dazzling-inferno-7243.firebaseio.com/"+ruta);
+  var datosUsuario;
+  var key;
+
+    rutaRef.on("value", function(snapshot) {
+
+
+      snapshot.forEach(function(data) {
+        
+        if(data.val()[variable] == valor ){
+        //console.log("\n\nel usuario con id: " + data.key() + " \ncorreo " + data.val()[variable]+"\nvalor: "+valor);
+         // datosUsuario = data.val();
+         key=data.key();
+         datosUsuario= data.val();
+          
+         // console.log("\n\n"+datosUsuario);
+        }
+        
+      });
+      callback(key, datosUsuario);
+    });
+}
+
+
+exports.actualizarDato = function(req, callback){
+  var Firebase = require("firebase");
+  var idd=req.body.id;
+  var rutaRef = new Firebase("https://dazzling-inferno-7243.firebaseio.com/"+req.body.ruta+"/"+req.body.id);
+  var err=null;
+  rutaRef.update(
+
+     req.body
+  ,function(error) {
+    if (error) {
+      err = error;
+    }
+  });
+
+  rutaRef.child("id").remove();
+  rutaRef.child("ruta").remove();
+  callback(err);
+  
 }
