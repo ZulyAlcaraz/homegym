@@ -2,6 +2,9 @@
 
 angular.module('homegymApp')
   .controller('MainCtrl', function ($scope, $http, $resource) {
+
+
+
     // $scope.awesomeThings = [];
 
     // $http.get('/api/things').success(function(awesomeThings) {
@@ -41,8 +44,8 @@ angular.module('homegymApp')
 	   
  
   //------------------------------------------------------------------------- esto lo hiso diego
-     /* crear usuario
-$http.post('/api/datos/otro', {nombre : "req.body.nombre",
+     // crear usuario
+/*$http.post('/api/datos/usuario', {nombre : "req.body.nombre",
         apellido: "req.body.apellido",
         correo: "req.body.correo",
         contrasena: "req.body.contrasena",
@@ -58,8 +61,8 @@ $http.post('/api/datos/otro', {nombre : "req.body.nombre",
         plan : {}   }).
   success(function(data, status, headers, config) {
     alert(JSON.stringify(data));
-  })
-*/
+  })*/
+
 
 
 /*autenticar usuario
@@ -71,7 +74,132 @@ $http.post('/api/datos/otro', {nombre : "req.body.nombre",
     alert(JSON.stringify(data));
   })*/
 
-//---------------------------------------------------------------------------------
+/*crea un usuario en las tablas de firebase    
 
+    $http.post('/api/datos/crearUsuarioBD', {
+        correo: "pepito@hotmail.com",
+        contrasena: "1234"
+    }).
+  success(function(data, status, headers, config) {
+    alert(JSON.stringify(data));
+  })
+
+*/
+
+
+/*autenticacion por facebook (mala)
+alert("hola");
+ $http.post('/api/datos/autenticarUsuarioFB', {
+       
+    }).
+  success(function(data, status, headers, config) {
+    alert(JSON.stringify(data));
+  })*/
+
+
+/*
+// consulta todos los usuarios
+$http.post('/api/datos/consultarUsuarios', {
+
+  }).
+  success(function(data, status, headers, config) {
+ 
+    alert();
+  })
+
+
+});
+*/
+/*
+//consulta de un usuario por su id
+$http.get('/api/datos/consultarUsuario-K2oTTIYO4WDuqdrOL87', {
+
+  }).
+  success(function(data, status, headers, config) {
+ 
+    alert(JSON.stringify(data));
+  })
+
+
+});
+*/
+
+
+/*
+//consulta parametrisada usando ruta(url del registro que se quiere encontrar), variable(nombre de la variable), valor(valor de la variable)
+$http.post('/api/datos/buscarDato', {
+    ruta: "usuario",
+    variable: "correo",
+    valor: "juanito1@hotmail.comsasd",
+  }).
+  success(function(data, status, headers, config) {
+   // document.getElementById("prueba").innerHTML = JSON.stringify(data);
+    alert(JSON.stringify(data));
+  })
+
+
+});*/
+
+
+//actualiza datos enviando la ruta(donde esta ubicado el recurso), id(la clave que da firebase) y los datos (con igual nombre donde esta en la base de datos)
+/*$http.post('/api/datos/actualizarDato', {
+    ruta: "usuario",
+    id: "-K2oTTIYO4WDuqdrOL87",
+    altura: "1000",
+    apellido: "gregoriano",
+  }).
+  success(function(data, status, headers, config) {
+   // document.getElementById("prueba").innerHTML = JSON.stringify(data);
+    alert(JSON.stringify(data));
+  })
+
+
+});*/
+
+/*
+// crear enfermedad
+$http.post('/api/datos/crearEnfermedad', {
+    'nombre' : 'hipoglicemia',
+    'descripcion': 'Los niveles normales de glucosa en  sangre de una persona son de 60 a 110 mg Dl . Un indicador menor al anterior puede indicar la presencia de una hipoglicemia en la persona.',
+    'recomendaciones': 'Bebe mucha agua todos los días. Lleva caramelos o alimentos dulces en caso de una repentina baja de azúcar en la sangre. Si haces mucho ejercicio, no dejes de comer. Lleva una dieta balanceada.',
+    'tipo': 'azucar'
+  }).
+  success(function(data, status, headers, config) {
+    alert(JSON.stringify(data));
+  })
+  
+
+
+*/
+
+/*
+// crear plan con los datos: nombre, descripcion, monto y descuento
+$http.post('/api/datos/crearPlan', {
+    'nombre' : 'Premiun',
+    'descripcion': 'super mega duper plan, con este plan baja hasta lo que no tiene',
+    'monto': '100000',
+    'descuento': '0'
+  }).
+  success(function(data, status, headers, config) {
+    alert(JSON.stringify(data));
+  })
+  
+*/
+
+/*
+// crear ejercicio con los datos nombre,descripcion, calorias, video
+$http.post('/api/datos/crearEjercicio', {
+    'nombre' : 'lagartija',
+    'descripcion': 'ejercicio solo apto para los que no son novatos, si eres novato mi mas sentido pesame',
+    'calorias': '0.5',
+    'video': 'aca/no/hay/lagartija.mp4'
+  }).
+  success(function(data, status, headers, config) {
+    alert(JSON.stringify(data));
+  })
+
+*/
+
+//---------------------------------------------------------------------------------
 
   });
