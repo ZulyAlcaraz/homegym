@@ -1,19 +1,19 @@
 'use strict';
 
 angular.module('homegymApp', [
-
   'ngCookies',
   'ngResource',
   'ngSanitize',
   'ui.router',
   'ngMaterial',
-  'angular-svg-round-progress'
-
+  'angular-svg-round-progress',
+  'LocalStorageModule'
 ])
 
-  .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $mdThemingProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $mdThemingProvider, localStorageServiceProvider) {
     $urlRouterProvider.otherwise('/');
     $locationProvider.html5Mode(true);
+    localStorageServiceProvider.setPrefix('homegymApp');
 
     $mdThemingProvider.theme('default')
       .accentPalette('lime', {
@@ -61,11 +61,11 @@ angular.module('homegymApp', [
       })
       .state('weight-data', {
         parent: 'header',
-        url: '/weight-data',
+        url: '/weight-data/:id',
         views: {
           'content@': {
-            templateUrl: 'app/weight-data/weight-data.html'
-            // controller: 'WeightDataController'
+            templateUrl: 'app/weight-data/weight-data.html',
+            controller: 'WeightDataCtrl'
           }
         }
       })
@@ -79,7 +79,7 @@ angular.module('homegymApp', [
       })
       .state('dashboard', {
         parent: 'panel',
-        url: '/dashboard/status',
+        url: '/dashboard/status/:id',
         views: {
           'content@': {
             templateUrl: 'app/dashboard/dashboard.html'
@@ -89,7 +89,7 @@ angular.module('homegymApp', [
       })
       .state('routines', {
         parent: 'panel',
-        url: '/dashboard/routines',
+        url: '/dashboard/routines/:id',
         views: {
           'content@': {
             templateUrl: 'app/routines/routines.html'

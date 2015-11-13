@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('homegymApp')
-  .service('RegisterSrv', function ($resource) {
+  .service('WeightDataSrv', function ($resource) {
 
-  	var User = $resource('/api/user/register');
+  	var User = $resource('/api/user/update');
 
   	this.createAccount = function (user, cb) {
      	return User.save(user, cb);

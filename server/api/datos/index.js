@@ -7,7 +7,7 @@ var router = express.Router();
 
 
 //ruta para crear tabla de usuario
-router.route('/usuario')
+router.route('/usuario/registrar')
   .post(controller.crearUsuario);
 
 

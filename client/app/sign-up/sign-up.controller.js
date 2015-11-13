@@ -1,21 +1,25 @@
 'use strict';
 
 angular.module('homegymApp')
-  .controller('SignUpCtrl', function ($scope, $http, $resource, RegisterSrv) {
+  .controller('SignUpCtrl', function ($scope, $state, RegisterSrv, localStorageService) {
 
   	$scope.signUpForm = {};
 
   	$scope.register = function () {
-      
-      if ($scope.signUpForm) {
-      	RegisterSrv.createAccount(user.email, user.password, {rememberMe: true})
-	        .then(function () {
-	          $scope.showLoading = false;
-	          $state.go('profile');
-	        }).catch(function (error) {
-	          $scope.showLoading = false;
-	          $rootScope.$emit('alert', { msg: error.message });
-	        });
-			}
-      
+      if (!$scope.signUpForm.$valid) {
+      	$scope.submitted = true;
+        return;
+      }
+
+    	RegisterSrv.createAccount($scope.user, function (data) {
+        if (data.error) {
+          $scope.messageError = data.error;
+          return;
+        }
+        console.log('data', data);
+    		localStorageService.set('uid', data);
+    		$state.go('weight-data', { id: data.uid });
+      });
+    }
+			
   });

@@ -1,6 +1,6 @@
 <section class="login" layout-fill layout="row" layout-align="center center">
 
-		<form name="loginForm" class="form" layout="column" >
+		<form name="loginForm" class="form" layout="column" novalidate>
 
 			<md-button class="button-facebook" ui-sref="home">
 				<i class="fa fa-facebook"></i>
@@ -11,19 +11,29 @@
 
 			<md-input-container>
 	      <label>Correo Electrónico</label>
-	      <input name="name" ng-model="user.email" required>
+	      <input name="email" ng-model="user.email" required>
+	      <div ng-messages="loginForm.$submitted || loginForm.email.$touched" 
+        		 ng-show="loginForm.email.$error && loginForm.email.$invalid &&  submitted">
+          <div ng-message="required">Este campo es requerido.</div>
+        </div>
 	    </md-input-container>
 
 	    <md-input-container>
 	      <label>Contraseña</label>
-	      <input name="name" ng-model="user.password" required>
+	      <input type="password" name="password" ng-model="user.password" required>
+	      <div ng-messages="loginForm.$submitted || loginForm.password.$touched" 
+        		 ng-show="loginForm.password.$error && loginForm.password.$invalid &&  submitted">
+          <div ng-message="required">Este campo es requerido.</div>
+        </div>
 	    </md-input-container>
 
-	    <md-checkbox ng-model="user.rememberMe" aria-label="recuerdame">
+	    <md-checkbox ng-model="user.rememberMe" name="rememberMe">
 	      Recuerdame
 	    </md-checkbox>
 
-	    <md-button class="button-login" ui-sref="dashboard">Inicia Sesión</md-button>
+	    <div class="error" ng-if="messageError">{{ messageError }}</div>
+
+	    <md-button class="button-login" ng-click="login()">Inicia Sesión</md-button>
 	    <a class="forgot-password-link  color-white">¿Olvidó su contraseña?</a>
 		</form>
 		

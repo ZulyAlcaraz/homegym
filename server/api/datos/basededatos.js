@@ -1,23 +1,22 @@
 //crea un usuario en la tabla usuario
-exports.guardarUsuario = function(req,callback) {
+exports.guardarUsuario = function (req, callback) {
 
 	var Firebase = require("firebase");
     var ref = new Firebase("https://dazzling-inferno-7243.firebaseio.com/");
     var usersRef = ref.child("usuario");
     usersRef.push({
      
-
-	    'nombre' : req.body.nombre,
-	    'apellido': req.body.apellido,
-	    'correo': req.body.correo,
-	    'contrasena': req.body.contrasena,
-	    'genero': req.body.genero,
-	    'fechaNacimiento': req.body.fechaNacimiento,
-	    'altura': req.body.altura,
-	    'peso': req.body.peso,
-	    'ciudad': req.body.ciudad,
-	    'pais': req.body.pais,
-	    'condicion': req.body.condicion,
+	    'nombre' : req.body.name,
+	    'apellido': req.body.lastName,
+	    'correo': req.body.email,
+	    'contrasena': req.body.password,
+	    'genero': req.body.genero || null,
+	    'fechaNacimiento': req.body.fechaNacimiento || null,
+	    'altura': req.body.altura || null,
+	    'peso': req.body.peso || null,
+	    'ciudad': req.body.ciudad || null,
+	    'pais': req.body.pais || null,
+	    'condicion': req.body.condicion || null,
 	    'enfermedades': {},
 	    'rutinas': {},
 	    'plan' : {}
@@ -235,7 +234,7 @@ exports.buscarDato = function (ruta,variable,valor,callback){
     rutaRef.on("value", function(snapshot) {
 
 
-      snapshot.forEach(function(data) {
+      snapshot.forEach(function (data) {
         
         if(data.val()[variable] == valor ){
         //console.log("\n\nel usuario con id: " + data.key() + " \ncorreo " + data.val()[variable]+"\nvalor: "+valor);
