@@ -36,7 +36,7 @@
 
 	      <md-input-container>
 	        <label>Correo Electrónico</label>
-	        <input name="mail" ng-model="user.mail" required>
+	        <input name="mail" ng-model="user.email" required>
 	        <div ng-show="signUpForm.mail.$error && submitted">
 	          <div ng-message="required">Este campo es requerido.</div>
 	        </div>
@@ -54,7 +54,7 @@
 	      	Al registrarte estas aceptando los <span class="color-green">Términos y Condiciones, Políticas de Privacidad</span> y los <span class="color-green">Términos de Servicio</span> de HomeGym.
 	      </div>
 
-	      <md-button class="button-sign-up" ui-sref="weight-data">Unirte</md-button>
+	      <md-button class="button-sign-up" ng-click="register()">Unirte</md-button>
 			</form>
 			
 			<hr>

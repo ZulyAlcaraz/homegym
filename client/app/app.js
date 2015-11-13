@@ -44,8 +44,8 @@ angular.module('homegymApp', [
         url: '/sign-up',
         views: {
           'content@': {
-            templateUrl: 'app/sign-up/sign-up.html'
-            // controller: 'SignUpController'
+            templateUrl: 'app/sign-up/sign-up.html',
+            controller: 'SignUpCtrl'
           }
         }
       })
@@ -54,8 +54,8 @@ angular.module('homegymApp', [
         url: '/login',
         views: {
           'content@': {
-            templateUrl: 'app/login/login.html'
-            // controller: 'LoginController'
+            templateUrl: 'app/login/login.html',
+            controller: 'LoginCtrl'
           }
         }
       })
