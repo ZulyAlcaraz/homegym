@@ -201,12 +201,7 @@ $http.post('/api/datos/crearEjercicio', {
 */
 
 
-$http.post('/api/datos/searchRoutine', {
-    id : 
-  }).
-  success(function(data, status, headers, config) {
-    alert(JSON.stringify(data));
-  })
+
 
 //---------------------------------------------------------------------------------
 
