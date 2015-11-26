@@ -270,3 +270,19 @@ exports.actualizarDato = function(req, callback){
   callback(err);
   
 }
+
+
+
+exports.searchRoutine = function (id,week,callback){
+  var Firebase = require("firebase");
+  var rutaRef = new Firebase("https://dazzling-inferno-7243.firebaseio.com/routine"+id);
+
+  var routine;
+
+  rutaRef.child("routine").child(id).on("value", function(routineData) {
+    routine = userData.val();  
+    callback(routine);
+  });
+}
+
+

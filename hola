@@ -1,0 +1,258 @@
+[33mcommit 469dc79e0a1219bb90ea0043b29f737123856df8[m
+Author: diegoxdc99 <diegoxdc99@hotmail.com>
+Date:   Wed Nov 11 20:09:54 2015 -0500
+
+    crear enfermedad, plan y ejercicio. busqueda de un solo datos(si hay varios trae el ultimo). actualizar datos
+
+[33mcommit e30c2a4cc817fa4f59a5997d55ea55b26caba079[m
+Author: diegoxdc99 <diegoxdc99@hotmail.com>
+Date:   Tue Nov 10 23:12:14 2015 -0500
+
+    consulta de todos los usuarios y de uno especifico por el id
+
+[33mcommit be424138fb54e2a899cd9e3591dec2fbb993713f[m
+Author: diegoxdc99 <diegoxdc99@hotmail.com>
+Date:   Tue Nov 10 13:32:47 2015 -0500
+
+    crear usuario en firebase
+
+[33mcommit 1af396d662544cd5b8841af95730848275c065dc[m
+Author: diegoxdc99 <diegoxdc99@hotmail.com>
+Date:   Tue Nov 10 00:17:21 2015 -0500
+
+    parametrisando los servicios
+
+[33mcommit 0edb21666f2ba1bc4e4bc7bd8219c07514762426[m
+Author: diegoxdc99 <diegoxdc99@hotmail.com>
+Date:   Mon Nov 9 22:24:24 2015 -0500
+
+    crear usuario y autenticacion con firebase
+
+[33mcommit 1de6a59c13d6b3492309b3c1509a0a6c6e35ad2b[m
+Author: Zuly Alcaraz <zulyalcaraz@gmail.com>
+Date:   Sun Nov 8 15:10:32 2015 -0500
+
+    Comentando el link de nutricion
+
+[33mcommit e4729be43072a20782b2bb21fe2f56bdaabf8e88[m
+Author: Zuly Alcaraz <zulyalcaraz@gmail.com>
+Date:   Sun Nov 8 15:08:51 2015 -0500
+
+    Resproduccion de las rutinas
+
+[33mcommit 98d0ab0e588d89d71fd71e9af66de90347f9dbb5[m
+Author: Zuly Alcaraz <zulyalcaraz@gmail.com>
+Date:   Sun Nov 8 14:13:18 2015 -0500
+
+    Lista de rutinas semanales
+
+[33mcommit 3f638ce416c6f1d54ec50c38a563022cff4fbba8[m
+Author: Zuly Alcaraz <zulyalcaraz@gmail.com>
+Date:   Sun Nov 8 13:50:05 2015 -0500
+
+    seccion de calorias en el estado del usuario
+
+[33mcommit 9efe727d5f73e95689f04652d4e488441e98ea70[m
+Author: Zuly Alcaraz <zulyalcaraz@gmail.com>
+Date:   Sun Nov 8 13:20:04 2015 -0500
+
+    Peso actual
+
+[33mcommit 4c77fcbe0318041a5b37e9f45f955672bf2d532a[m
+Author: Zuly Alcaraz <zulyalcaraz@gmail.com>
+Date:   Sun Nov 8 13:02:11 2015 -0500
+
+    seccion de calorias en el estado del usuario
+
+[33mcommit 994f899c76c575d0a4a1ce5d4dfad73756800a2b[m
+Author: diegoxdc99 <diegoxdc99@hotmail.com>
+Date:   Sun Nov 8 11:49:00 2015 -0500
+
+    barra de progreso
+
+[33mcommit 2d913b02386669f6ed35531f8fdb235ad0676c33[m
+Author: Zuly Alcaraz <zulyalcaraz@gmail.com>
+Date:   Wed Oct 28 16:36:15 2015 -0500
+
+    cambios en la pagina de mi estado
+
+[33mcommit f78535a22abae0e78ee4ff492683bdf7a0eea637[m
+Author: Zuly Alcaraz <zulyalcaraz@gmail.com>
+Date:   Wed Oct 28 14:40:34 2015 -0500
+
+    Cambios en estilos de las paginas de login, sign up, y datos de peso
+
+[33mcommit 3bbe22e5ef32b076fa84554b3951ac9fc71645b2[m
+Author: Zuly Alcaraz <zulyalcaraz@gmail.com>
+Date:   Thu Oct 22 17:00:54 2015 -0500
+
+    No me acuerdo
+
+[33mcommit 0e1acbf587fcf9cb52adbcfc18880bf2fb66c577[m
+Author: Zuly Alcaraz <zulyalcaraz@gmail.com>
+Date:   Thu Oct 22 11:57:21 2015 -0500
+
+    Favicon
+
+[33mcommit 27ad7458223580068709f3e99994f6f8874f6ad2[m
+Author: Zuly Alcaraz <zulyalcaraz@gmail.com>
+Date:   Thu Oct 22 11:48:27 2015 -0500
+
+    Algunos estilos para la pagina del login
+
+[33mcommit aaa0f62fa7c3a3604d30ad28d53abef77f16d4b5[m
+Author: Zuly Alcaraz <zulyalcaraz@gmail.com>
+Date:   Thu Oct 22 11:20:14 2015 -0500
+
+    Imagen de fondo para la pagina de login
+
+[33mcommit d7361252aa157f8defaa66f40f6bd2548ad0f048[m
+Author: Zuly Alcaraz <zulyalcaraz@gmail.com>
+Date:   Thu Oct 22 11:07:31 2015 -0500
+
+    Vista de login
+
+[33mcommit 982a9068d356f8d3ebfd1ac044d6f3e1782e6af8[m
+Author: Zuly Alcaraz <zulyalcaraz@gmail.com>
+Date:   Mon Oct 19 14:05:27 2015 -0500
+
+    Cambios en el formulario de registro
+
+[33mcommit 71c4817a6384bdd37de21b046661fe787f401f56[m
+Author: Zuly Alcaraz <zulyalcaraz@gmail.com>
+Date:   Mon Oct 19 12:33:06 2015 -0500
+
+    Cambios de diseño en el home
+
+[33mcommit a22fed0b264541fb2d571638353f5afe6052cc9b[m
+Author: Zuly Alcaraz <zulyalcaraz@gmail.com>
+Date:   Thu Oct 15 10:14:32 2015 -0500
+
+    Comienzo del detalle de las rutinas
+
+[33mcommit c1758d229a4de5358897b740e2188c1a5a76d9fc[m
+Author: Zuly Alcaraz <zulyalcaraz@gmail.com>
+Date:   Thu Oct 15 09:54:28 2015 -0500
+
+    Maquetación de la página de rutinas
+
+[33mcommit b3189c804c562695eef3e4a2dbff3346416dcadd[m
+Author: Zuly Alcaraz <zulyalcaraz@gmail.com>
+Date:   Tue Oct 13 18:31:06 2015 -0500
+
+    Empezando con la pagina de rutinas
+
+[33mcommit e8892c65c4c1051055e8bda136b3a64dd4af8e71[m
+Author: Zuly Alcaraz <zulyalcaraz@gmail.com>
+Date:   Tue Oct 13 12:49:36 2015 -0500
+
+    Pagina de Mi Estado
+
+[33mcommit 5519b52750ce1bae8567237551220c199e251916[m
+Author: Zuly Alcaraz <zulyalcaraz@gmail.com>
+Date:   Sun Oct 11 17:35:14 2015 -0500
+
+    Barra de navegaciòn del usuario logueado
+
+[33mcommit a589316f433d9500ded33316c790a022fcd251db[m
+Author: Zuly Alcaraz <zulyalcaraz@gmail.com>
+Date:   Sun Oct 11 16:27:07 2015 -0500
+
+    Formulario acerca de los datos de peso del usuario
+
+[33mcommit 756feef8e44274b6e6b2e5bf506db3b0555e8a1f[m
+Author: Zuly Alcaraz <zulyalcaraz@gmail.com>
+Date:   Sun Oct 11 15:16:19 2015 -0500
+
+    Maquetación del formulario de registro finalizado
+
+[33mcommit f8eb60659e50a5be03b8af4aa3d5e3ce2e80e6c3[m
+Author: Zuly Alcaraz <zulyalcaraz@gmail.com>
+Date:   Sun Oct 11 12:33:13 2015 -0500
+
+    Logo verde del home
+
+[33mcommit 50447b9b0d4cf453eb7fdcbc447eb366deca3daa[m
+Author: Zuly Alcaraz <zulyalcaraz@gmail.com>
+Date:   Sun Oct 11 12:32:50 2015 -0500
+
+    MAquetación de la página principal finalizado
+
+[33mcommit 895df5c11513c3fbdf2652827bc8cb7c90d12905[m
+Author: Zuly Alcaraz <zulyalcaraz@gmail.com>
+Date:   Wed Oct 7 10:50:35 2015 -0500
+
+    Iniciando maquetación del home
+
+[33mcommit 46b0e88c284c45b3f671ef4f38086455bbae583e[m
+Author: Zuly Alcaraz <zulyalcaraz@gmail.com>
+Date:   Tue Oct 6 09:34:08 2015 -0500
+
+    Delete images and new home
+
+[33mcommit 1558f197cee10aed24fab1f478073c59a8fcc332[m
+Author: Zuly Alcaraz <zulyalcaraz@gmail.com>
+Date:   Sat Aug 15 10:53:55 2015 -0500
+
+    aprendizaje de nodejs
+
+[33mcommit 99e253d8f294514d87d905884fe3046935e01011[m
+Merge: 8ad371a 9ea5c6b
+Author: diegoxdc99 <diegoxdc99@hotmail.com>
+Date:   Wed Aug 12 20:25:11 2015 -0500
+
+    k
+
+[33mcommit 8ad371a244072c42de1fc15023d0272dd2dfe48c[m
+Author: diegoxdc99 <diegoxdc99@hotmail.com>
+Date:   Wed Aug 12 20:09:46 2015 -0500
+
+    modular
+
+[33mcommit 9ea5c6ba4c4bd8a1d41bc15d1c121e59e89ea2dd[m
+Author: Zuly Alcaraz <zulyalcaraz@gmail.com>
+Date:   Wed Aug 12 09:49:19 2015 -0500
+
+    configuración para firebase
+
+[33mcommit 546cf073e2815925dc4bfb06e1494cba4f8d7a8f[m
+Author: Zuly Alcaraz <zulyalcaraz@gmail.com>
+Date:   Wed Aug 12 09:27:33 2015 -0500
+
+    Libreria de firebase y una imagen
+
+[33mcommit c3b405cb8d62b1bef0792610347b1a26f27d61e6[m
+Author: diegoxdc99 <diegoxdc99@hotmail.com>
+Date:   Tue Aug 11 11:52:36 2015 -0500
+
+    indice de masa corporal
+
+[33mcommit e3a250290e3219472a5d9e22072ca4693864a570[m
+Author: Zuly Alcaraz <zulyalcaraz@gmail.com>
+Date:   Wed Aug 5 13:42:08 2015 -0500
+
+    Home page so so
+
+[33mcommit e638ae23a1298839f9d808df28758d90508c3c3e[m
+Author: Zuly Alcaraz <zulyalcaraz@gmail.com>
+Date:   Wed Aug 5 10:46:44 2015 -0500
+
+    Nav and footer directives, stating home page
+
+[33mcommit 02a1f3f2d16f1491a254fc723b2dce997d35a4bb[m
+Author: Zuly Alcaraz <zulyalcaraz@gmail.com>
+Date:   Wed Aug 5 08:40:13 2015 -0500
+
+    Angular material
+
+[33mcommit 807b060cbf0dcbd5525e78652c0185af1cdd597e[m
+Author: Zuly Alcaraz <zulyalcaraz@gmail.com>
+Date:   Thu Jul 30 08:46:16 2015 -0500
+
+    generate project
+
+[33mcommit 9192a78a8d8e21a9799fe771f7da0b849ba5990c[m
+Author: ZulyAlcaraz <zulyalcaraz@gmail.com>
+Date:   Wed Jul 29 09:33:25 2015 -0500
+
+    Initial commit

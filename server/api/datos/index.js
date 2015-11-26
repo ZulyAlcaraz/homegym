@@ -54,6 +54,13 @@ router.route('/buscarDato')
 router.route('/actualizarDato')
   .post(controller.actualizarDato);
 
+/*--------------------------------------------------------
+v2
+
+*/
+router.route('/searchRoutine')
+  .post(controller.actualizarDato);
+
 
 
 module.exports = router;

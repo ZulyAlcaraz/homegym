@@ -85,6 +85,22 @@ function searchUser (req, callback) {
 //   callback(err);
 // }
 
+function createRoutine (req, callback){
+  var isNewUser = true;
+  ref.onAuth(function (authData) {
+    if (authData && isNewUser) {
+      ref.child("users").child(authData.uid).set({
+        name: req.body.name,
+        lastName: req.body.lastName,
+        email: req.body.email
+      });
+      callback(authData);
+    }
+  });
+}
+
+
+
 exports.createUserDB = createUserDB;
 exports.login = login;
 exports.searchUser = searchUser;

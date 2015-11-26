@@ -11,6 +11,7 @@ exports.crearUsuario = function (req, res){
       respuesta: respuesta,
     });
   });
+  console.log("hola,  creando usuario");
 }
 
 
@@ -113,6 +114,16 @@ exports.crearEjercicio = function(req,res){
       res.json({
         error: error,
         respuesta: respuesta,
+    });
+  });
+}
+
+
+
+function searchRoutine(req,res){
+  datos.searchRoutine(req.body.id,function(dataRoutine){
+     res.json({
+        routine: dataRoutine
     });
   });
 }
