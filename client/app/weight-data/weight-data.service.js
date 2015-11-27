@@ -5,7 +5,7 @@ angular.module('homegymApp')
 
   	var User = $resource('/api/user/update');
 
-  	this.createAccount = function (user, cb) {
+  	this.updateData = function (user, cb) {
      	return User.save(user, cb);
     };
       

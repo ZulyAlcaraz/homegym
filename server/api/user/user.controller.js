@@ -21,12 +21,12 @@ exports.searchUser = function (req, res) {
   });
 }
 
-// exports.updateUser = function (req, res) {
-//   Service.updateUser(req, function (data, error){
-//   	if(error) res.json(error);
-//     res.json(data);
-//   });
-// }
+exports.updateUser = function (req, res) {
+  Service.updateUser(req, function (data, error){
+  	if(error) res.json(error);
+    res.json(data);
+  });
+}
 
 
 

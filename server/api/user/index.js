@@ -7,8 +7,6 @@ var router = express.Router();
 
 router.post('/register', controller.registerUser);
 router.post('/login', controller.login);
-// router.post('/update', controller.updateUser);
-
-// router.post('/login', controller.login);
+router.post('/update', controller.updateUser);
 
 module.exports = router;

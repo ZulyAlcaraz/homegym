@@ -2,6 +2,7 @@
 var Firebase = require('firebase');
 var environment = require('../../config/environment');
 var ref = new Firebase(environment.database.url);
+var ServiceMasa = require('../masa/calculadora');
 
 //crea un usuario usando las tablas de firebase
 function createUserDB (req, callback){
@@ -70,22 +71,21 @@ function searchUser (req, callback) {
   });
 }
 
-// function updateUser (req, callback) {
-//   var idd=req.body.id;
-//   var rutaRef = new Firebase("https://dazzling-inferno-7243.firebaseio.com/"+req.body.ruta+"/"+req.body.id);
-//   var err=null;
-//   rutaRef.update(
-
-//      req.body
-//   ,function(error) {
-//     if (error) {
-//       err = error;
-//     }
-//   });
-//   rutaRef.child("id").remove();
-//   rutaRef.child("ruta").remove();
-//   callback(err);
-// }
+function updateUser (req, callback) {
+  ServiceMasa.imc(req.body.height, req.body.weight, function (imc, type) {
+    ref.child("users").child(req.body.id).child("physical-condition").set({
+      weight: req.body.weight,
+      illnesses: req.body.illnesses,
+      height: req.body.height,
+      imc: imc,
+      type: type
+    }, function (error, data) {
+      if (error) callback(null, error);
+      callback(data);
+    });
+  });
+  
+}
 
 function createRoutine (id){
   var f = new Date();
@@ -110,11 +110,9 @@ function createRoutine (id){
         
     });
   }
-
 }
 
-function week(day,month,year,callback)
-{
+function week(day,month,year,callback){
 
   var f1 = new Date(year,0,1,0,0);
   var dayf1 = f1.getDay();
@@ -147,4 +145,4 @@ function week(day,month,year,callback)
 exports.createUserDB = createUserDB;
 exports.login = login;
 exports.searchUser = searchUser;
-// exports.updateUser = updateUser;
+exports.updateUser = updateUser;
