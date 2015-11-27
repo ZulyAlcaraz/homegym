@@ -142,7 +142,48 @@ function week(day,month,year,callback){
 } 
 
 
+
+
+function searchRoutineMonth(id,year,month,callback){
+  // Attach an asynchronous callback to read the data at our posts reference
+  var firstWeek=-5;
+  var lastWeek;
+  var orderDay = new Array();
+  var isFirstDay=true;
+  var rootDay;
+  ref.child("users").child(id).child("year").child(year).child("month").child(month).child("week").on("value", function(snapshot) {
+   
+    snapshot.forEach(function (week) {
+      if(firstWeek==-5){
+        firstWeek = week.key();
+      }
+      lastWeek = week.key();
+      isFirstDay = true;
+      orderDay[lastWeek] = new Array();
+      week.ref().child("day").on("value", function(days) {
+       
+        days.forEach(function (itemDay) {
+          
+          if(isFirstDay){
+            orderDay[lastWeek][0] = itemDay.key();
+      
+            isFirstDay=false;
+          }
+          orderDay[lastWeek][1]=itemDay.key();
+        });
+
+      });
+
+    });
+   
+    callback(null,firstWeek,lastWeek,orderDay,snapshot.val());
+  }, function (errorObject) {
+    callback("The read failed: " + errorObject.code,null);
+  });
+}
+
 exports.createUserDB = createUserDB;
 exports.login = login;
 exports.searchUser = searchUser;
 exports.updateUser = updateUser;
+exports.searchRoutineMonth = searchRoutineMonth;
