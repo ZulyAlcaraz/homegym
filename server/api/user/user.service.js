@@ -64,16 +64,17 @@ function login (req, callback) {
 };
 
 function searchUser (req, callback) {
-	var usersRef = ref.child('users');
+  console.log('req.body', req.body);
+	var usersRef = ref.child('users').child(req.body.userId);
   usersRef.on('value', function(snapshot) {
-    console.log('snapshot', snapshot);
-    callback(true);
+    console.log('snapshot', snapshot.val());
+    callback(snapshot.val());
   });
 }
 
 function updateUser (req, callback) {
   ServiceMasa.imc(req.body.height, req.body.weight, function (imc, type) {
-    ref.child("users").child(req.body.id).child("physical-condition").set({
+    ref.child("users").child(req.body.id).child("physicalCondition").set({
       weight: req.body.weight,
       illnesses: req.body.illnesses,
       height: req.body.height,

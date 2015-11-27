@@ -199,6 +199,9 @@ $http.post('/api/datos/crearEjercicio', {
   })
 
 */
+
+
+/*
 $http.post('/api/user/searchRoutineMonth', {
     'id' : '3c84b2f1-143e-4031-8c00-4449b136acac',
     'year': '2015',
@@ -213,7 +216,7 @@ $http.post('/api/user/searchRoutineMonth', {
   })
 
 
-
+*/
 //---------------------------------------------------------------------------------
 
   });

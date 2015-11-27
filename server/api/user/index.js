@@ -8,6 +8,10 @@ var router = express.Router();
 router.post('/register', controller.registerUser);
 router.post('/login', controller.login);
 router.post('/update', controller.updateUser);
+
 router.post('/searchRoutineMonth',controller.searchRoutineMonth);
+
+router.post('/get', controller.searchUser);
+
 
 module.exports = router;

@@ -82,8 +82,8 @@ angular.module('homegymApp', [
         url: '/dashboard/status/:id',
         views: {
           'content@': {
-            templateUrl: 'app/dashboard/dashboard.html'
-           // controller: 'DashboardController'
+            templateUrl: 'app/dashboard/dashboard.html',
+            controller: 'DashboardCtrl'
           }
         }
       })

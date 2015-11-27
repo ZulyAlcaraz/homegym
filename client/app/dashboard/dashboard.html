@@ -5,7 +5,7 @@
 			<md-list-item class="md-3-line" flex="50">
         <img src="../../assets/images/home.png" class="md-avatar profile-picture">
         <div class="md-list-item-text" layout="column">
-          <h3 class="name">Susana Marqués</h3>
+          <h3 class="name">{{user.name}} {{user.lastName}}</h3>
           <h4 class="edge">23 años</h4>
           <p class="city">Medellín > Colombia</p>
         </div>
@@ -13,25 +13,27 @@
 
       <div class="data" layout="column" flex="20">
 				<div class="description" flex="20">Peso</div>
-				<div class="value" flex>60 KG</div>
+				<div class="value" flex>{{user.physicalCondition.weight | number : 2}} KG</div>
 			</div>
 
 			<div class="data" layout="column" flex="20">
 				<div class="description" flex="20">Estatura</div>
-				<div class="value" flex>1,70 M</div>
+				<div class="value" flex>{{user.physicalCondition.height | number : 2}} M</div>
 			</div>
 
 			<div class="data" layout="column" flex="20">
 				<div class="description" flex="20">Masa muscular</div>
-				<div class="value" flex>276</div>
+				<div class="value" flex>{{user.physicalCondition.imc | number : 2}}</div>
 			</div>
 
 		</section>
 
 		<section class="user-sicknesses" layout="row">
 			<span class="title">Enfermedades: </span>
-			<span class="list-sicknesses">Lorem ipsum dolor sit amet</span>,
-			<span class="list-sicknesses">Lorem ipsum dolor sit amet</span>
+			<span class="list-sicknesses" ng-if="user.physicalCondition.illnesses.hipoglicemia">hipoglicemia</span>
+			<span class="list-sicknesses" ng-if="user.physicalCondition.illnesses.diabetes">diabetes</span>
+			<span class="list-sicknesses" ng-if="user.physicalCondition.illnesses.asma">Asma</span>
+			<span class="list-sicknesses" ng-if="user.physicalCondition.illnesses.sinusitis">sinusitis</span>
 		</section>
 		
 	</header>
@@ -248,7 +250,7 @@
 			<form action="" layout="row">
 				<md-input-container flex="50">
 	        <label>Escribe tu peso actual</label>
-	        <input name="lastName" ng-model="user.lastName" required>
+	        <input name="weight" ng-model="user.weigth" required>
 	        <div ng-show="signUpForm.lastName.$error && submitted">
 	          <div ng-message="required">Este campo es requerido.</div>
 	        </div>
