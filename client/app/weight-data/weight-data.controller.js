@@ -17,10 +17,6 @@ angular.module('homegymApp')
           localStorageService.set('user', data);
           $state.go('dashboard', { id: $state.params.id });
       });
-    	// RegisterSrv.createAccount($scope.user, function (data) {
-    	// 	localStorageService.set('user', data);
-    	// 	$state.go('weight-data');
-    	// });
     }
-			
+      
   });
