@@ -201,8 +201,24 @@ $http.post('/api/datos/crearEjercicio', {
 */
 
 
+/*
+$http.post('/api/user/searchRoutineMonth', {
+    'id' : '3c84b2f1-143e-4031-8c00-4449b136acac',
+    'year': '2015',
+    'month': '10'
+  }).
+  success(function(data, status, headers, config) {
+    for(var i=data.firstWeek;i<=data.lastWeek;i++){
+     for(var j=data.days[i][0];j<=data.days[i][1];j++){
+      document.getElementById("prueba").innerHTML = document.getElementById("prueba").innerHTML + "nombre del día: " + data.data[i].day[j].name + " - número: "+ j + " - ejercicio: "+data.data[i].day[j].url +" - semana_ " + i + "<br />";
+    }
+  }
+  })
 
+ 
+*/
 
+$http.post('/api/user/logOut')
 //---------------------------------------------------------------------------------
 
   });
