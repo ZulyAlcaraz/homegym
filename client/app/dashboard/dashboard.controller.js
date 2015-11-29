@@ -14,4 +14,8 @@ angular.module('homegymApp')
       localStorageService.set('user-info', $scope.user);
     });
 
+
+
+   
+
   });

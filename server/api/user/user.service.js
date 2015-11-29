@@ -183,8 +183,16 @@ function searchRoutineMonth(id,year,month,callback){
   });
 }
 
+function logOut () {
+  ref.unauth();
+}
+
+
+
+
 exports.createUserDB = createUserDB;
 exports.login = login;
 exports.searchUser = searchUser;
 exports.updateUser = updateUser;
 exports.searchRoutineMonth = searchRoutineMonth;
+exports.logOut = logOut;

@@ -14,4 +14,8 @@ router.post('/searchRoutineMonth',controller.searchRoutineMonth);
 router.post('/get', controller.searchUser);
 
 
+
+router.post('/logOut', controller.logOut);
+
+
 module.exports = router;
