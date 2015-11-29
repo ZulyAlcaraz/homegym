@@ -1,8 +1,8 @@
 <section class="dashboard">
 
 	<header class="user-info">
-		<section class="profile-info" layout="row">
-			<md-list-item class="md-3-line" flex="50">
+		<section class="profile-info" layout="row" layout-sm="column">
+			<md-list-item class="md-3-line" flex-gt-sm="50" layout-sm="row">
         <img src="../../assets/images/home.png" class="md-avatar profile-picture">
         <div class="md-list-item-text" layout="column">
           <h3 class="name">{{user.name}} {{user.lastName}}</h3>
@@ -11,17 +11,17 @@
         </div>
       </md-list-item>
 
-      <div class="data" layout="column" flex="20">
+      <div class="data" layout="column" flex-gt-sm="20" flex-sm="100">
 				<div class="description" flex="20">Peso</div>
 				<div class="value" flex>{{user.physicalCondition.weight | number : 2}} KG</div>
 			</div>
 
-			<div class="data" layout="column" flex="20">
+			<div class="data" layout="column" flex-gt-sm="20" flex-sm="100">
 				<div class="description" flex="20">Estatura</div>
 				<div class="value" flex>{{user.physicalCondition.height | number : 2}} M</div>
 			</div>
 
-			<div class="data" layout="column" flex="20">
+			<div class="data" layout="column" flex-gt-sm="20" flex-sm="100">
 				<div class="description" flex="20">Masa muscular</div>
 				<div class="value" flex>{{user.physicalCondition.imc | number : 2}}</div>
 			</div>
@@ -50,16 +50,16 @@
 				</div>
 			</div>
 
-			<div layout="row" class="weeks">
+			<div layout="row" class="weeks" hide-sm>
 				<div layout="column" layout-align="center center" flex>Semana 1</div>
 				<div layout="column" layout-align="center center" flex>Semana 2</div>
 				<div layout="column" layout-align="center center" flex>Semana 3</div>
 				<div layout="column" layout-align="center center" flex>Semana 4</div>
 			</div>
 
-			<div layout="row" class="calorie-progress">
+			<div layout="row" layout-sm="column" class="calorie-progress">
 
-				<!-- <div layout="column" layout-align="center center" flex="25">
+				<div layout="column" layout-sm="row" layout-align="center center" flex="25">
 					<div class="progress" layout="row" layout-align="center center">
 						<div class="progress-inside">
 							<div round-progress
@@ -103,7 +103,7 @@
 					<md-button></md-button>
 				</div>
 
-				<div layout="column" layout-align="center center" flex="25">
+				<div layout="column" layout-sm="row" layout-align="center center" flex="25">
 					<div class="progress" layout="row" layout-align="center center">
 						<div class="progress-inside">
 							<div round-progress
@@ -148,7 +148,7 @@
 					<md-button class="button-complete">Completar</md-button>
 				</div>
 
-				<div layout="column" layout-align="center center" flex="25">
+				<div layout="column" layout-sm="row" layout-align="center center" flex="25">
 					<div class="progress" layout="row" layout-align="center center">
 						<div class="progress-inside">
 							<div round-progress
@@ -190,9 +190,9 @@
 						</div>
 					</div>
 					<md-button></md-button>
-				</div> -->
+				</div>
 
-				<div layout="column" layout-align="center center" flex="25">
+				<div layout="column" layout-sm="row" layout-align="center center" flex="25">
 					<div class="progress" layout="row" layout-align="center center">
 						<div class="progress-inside">
 							<div round-progress
@@ -247,15 +247,15 @@
 			</div>
 
 			
-			<form action="" layout="row">
-				<md-input-container flex="50">
+			<form novalidate layout-gt-sm="row" layout-sm="column">
+				<md-input-container flex-gt-sm="50">
 	        <label>Escribe tu peso actual</label>
 	        <input name="weight" ng-model="user.weigth" required>
 	        <div ng-show="signUpForm.lastName.$error && submitted">
 	          <div ng-message="required">Este campo es requerido.</div>
 	        </div>
 	      </md-input-container>
-	      <div flex="50" class="upload-weigth" >
+	      <div class="upload-weigth" flex-gt-sm="50">
 	      	<md-button class="button-upload-weigth color-white">ACTUALIZAR</md-button>
 	      </div>
 			</form>
@@ -266,3 +266,4 @@
 	</section>
 
 </section>
+<footer-site></footer-site>

@@ -137,7 +137,7 @@ a {
 }
 
 
-.header .button {
+.header .button, .navbar .button {
 	border-color: #FFFFFF;
 	border-style: solid;
 	border-width: 1px;
@@ -152,7 +152,7 @@ a {
 	background-color: #909090;
 }
 
-/*.navbar {
+.navbar {
 	background-color: #000000;
 }
 
@@ -160,13 +160,13 @@ a {
 	padding-top: 0.5em;
 }
 
-.navbar, .header {
-	padding-left: 10em;
-	padding-right: 10em;
+.navbar {
+	padding-left: 30px;
+	padding-right: 30px;
 }
 
 .navbar .tabs {
-	font-size: 1.2em;
+	font-size: 18px;
 	padding-top: 0.1em;
 }
 
@@ -175,7 +175,7 @@ a {
 }
 
 .navbar .tabs a {
-	font-size: 1.2em;
+	font-size: 18px;
 }
 
 .navbar .profile-picture {
@@ -187,7 +187,6 @@ a {
 	width: 2.5em;
 	height: 2.5em;
 }
-*/
 
 /**
  *  footer
@@ -406,27 +405,27 @@ a {
  *  Weight Data
  */
 
-/*.weight-data .header {
+.weight-data .header {
 	background-color:  #94CF1A;
-	padding-bottom: 3em;
-	padding-top: 3em;
+	font-size: 32px;
+	padding-bottom: 60px;
+	padding-top: 60px;
 }
 
 .weight-data .header .title {
-	font-size: 2em;
 	font-weight: 400;
 }
 
 .weight-data .header .subtitle {
 	font-family: 'Roboto', sans-serif;
-	font-size: 1.2em;
+	font-size: 18px;
 }
 
 .weight-data .form-weight {
 	font-family: 'Roboto', sans-serif;
 	padding-bottom: 5em;
-	padding-left: 15em;
-	padding-right: 15em;
+	padding-left: 30px;
+	padding-right: 30px;
 }
 
 .weight-data .form-weight .weight {
@@ -449,7 +448,7 @@ a {
 	color: #656565;
 	font-size: 1.5em;
 	position: absolute;
-	left: 0.8em;
+	left: 0.5em;
 	bottom: 1.5em;
 }
 
@@ -474,22 +473,23 @@ a {
 	background-color: #656565;
 	color: #FFF;
 	font-family: 'Bebas Neue';
-	font-size: 1.2em;
+	font-size: 18px;
 	margin-left: 0;
 	margin-right: 0;
 	width: 30%;
-}*/
+}
+
+.weight-data .form-weight .button-weight:hover {
+	opacity: 0.5;
+}
 
 /**
  *  Dashboard / My Status
  */
 
-/*.dashboard .user-info {
+.dashboard .user-info {
 	background-color: #2A2A2A;
-	padding-bottom: 2em;
-	padding-left: 10em;
-	padding-right: 10em;
-	padding-top: 2em;
+	padding: 2em 30px;
 }
 
 .dashboard .user-info .profile-info {
@@ -503,12 +503,12 @@ a {
 
 .dashboard .user-info .profile-info .name {
 	color: #2A2A2A;
-	font-size: 2em;
+	font-size: 32px;
 }
 
 .dashboard .user-info .profile-info .edge {
 	color: #2A2A2A;
-	font-size: 1.2em;
+	font-size:18px;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 200;
 }
@@ -519,7 +519,7 @@ a {
 }
 
 .dashboard .user-info .profile-info .data {
-	color: #FFF;
+	color: #FFFFFF;
 	font-family: 'Roboto', sans-serif;
 	padding: 0.1em;
 }
@@ -532,7 +532,7 @@ a {
 
 .dashboard .user-info .profile-info .data .value {
 	 background-color: #2A2A2A;
-	 font-size: 2em;
+	 font-size: 32px;
 	 font-weight: 600;
 	 padding: 0.5em;
 	 text-align: center;
@@ -554,10 +554,7 @@ a {
 }
 
 .dashboard .statistics {
-	padding-bottom: 2em;
-	padding-left: 10em;
-	padding-right: 10em;
-	padding-top: 2em;
+	padding: 2em 30px;
 }
 
 .dashboard .calorie-statistics {
@@ -572,36 +569,30 @@ a {
 	border-right-color: #909090;
 	border-right-style: solid;
 	border-right-width: 1px;
-	font-size: 2em;
+	font-size: 32px;
 	padding-right: 1em;
 }
 
 .dashboard .calorie-statistics .date .month {
 	padding: 0.2em 1em; 
+	white-space: nowrap;
 }
 
-.dashboard .calorie-statistics .date .month .previous {
-	font-size: 1.2em;
-}
-
+.dashboard .calorie-statistics .date .month .previous,
 .dashboard .calorie-statistics .date .month .next {
-	font-size: 1.2em;
+	font-size: 18px;
 }
 
 .dashboard .calorie-statistics .date .month .name {
 	color: #94CF1A;
-	font-size: 1.5em;
+	font-size: 20px;
 	padding: 0 1em;
 
 }
 
 .dashboard .calorie-statistics .weeks {
-	border-bottom-color: #909090;
-	border-bottom-style: solid;
-	border-bottom-width: 0.1em;
-	border-top-color: #909090;
-	border-top-style: solid;
-	border-top-width: 0.1em;
+	border-bottom: #909090 solid 0.1em;
+	border-top: #909090 solid 0.1em;
 	color: #1D1D1D;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 600;
@@ -647,9 +638,7 @@ a {
 } 
 
 .dashboard .calorie-statistics .calorie-progress .button-complete {
-	border-color: #94CF1A;
-	border-style: solid;
-	border-width: 1px;
+	border: #94CF1A solid 1px;
 	width: 50%;
 }
 
@@ -661,7 +650,7 @@ a {
 	border-bottom-color: #909090;
 	border-bottom-style: solid;
 	border-bottom-width: 1px;
-	font-size: 2em;
+	font-size: 32px;
 	font-family: 'Bebas Neue';
 	padding-right: 1em;
 	padding-bottom: 0.5em;
@@ -675,7 +664,10 @@ a {
 .dashboard .user-statistics .upload-weigth .button-upload-weigth {
 	background-color: #656565 !important;
 	width: 25%;
-}*/
+}
+.dashboard .user-statistics .upload-weigth .button-upload-weigth:hover {
+	opacity: 0.5;
+}
 
 /**
  *  My Routines 

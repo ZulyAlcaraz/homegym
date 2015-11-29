@@ -8,8 +8,8 @@
 	<div class="form-weight">
 		<form name="weightDataForm" role="form" layout="column" novalidate>
 
-			<div class="weight" layout="row">
-					<md-input-container flex>
+			<div class="weight" layout="row" layout-sm="column">
+					<md-input-container flex flex-sm="100">
 		        <label>¿Cuál es tu peso?</label>
 		        <input type="number" name="weight" ng-model="user.weight" required>
 		        <i class="fa fa-balance-scale"></i>
@@ -18,7 +18,7 @@
 		          <div ng-message="required">Este campo es requerido.</div>
 		        </div>
 		      </md-input-container>
-					<md-input-container flex>
+					<md-input-container flex flex-sm="100">
 		        <label>¿Cuál es tu estatura?</label>
 		        <input type="number" name="height" ng-model="user.height" required>
 		        <i class="fa fa-arrow-up"></i>
@@ -54,3 +54,4 @@
 		</form>
 	</div>
 </section>
+<footer-site></footer-site>

@@ -2,9 +2,6 @@
 
 angular.module('homegymApp')
   .controller('MainCtrl', function ($scope, $http, $resource) {
-
-
-
     // $scope.awesomeThings = [];
 
     // $http.get('/api/things').success(function(awesomeThings) {
@@ -218,7 +215,7 @@ $http.post('/api/user/searchRoutineMonth', {
  
 */
 
-$http.post('/api/user/logOut')
+// $http.post('/api/user/logOut')
 //---------------------------------------------------------------------------------
 
   });

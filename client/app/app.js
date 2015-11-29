@@ -67,7 +67,8 @@ angular.module('homegymApp', [
             templateUrl: 'app/weight-data/weight-data.html',
             controller: 'WeightDataCtrl'
           }
-        }
+        },
+        auth: true
       })
       .state('panel', {
         abstract: true,
@@ -85,7 +86,8 @@ angular.module('homegymApp', [
             templateUrl: 'app/dashboard/dashboard.html',
             controller: 'DashboardCtrl'
           }
-        }
+        },
+        auth: true
       })
       .state('routines', {
         parent: 'panel',
@@ -95,7 +97,8 @@ angular.module('homegymApp', [
             templateUrl: 'app/routines/routines.html'
             // controller: 'RoutinesController'
           }
-        }
+        },
+        auth: true
       })
       .state('detail-routine', {
         parent: 'panel',
@@ -105,7 +108,8 @@ angular.module('homegymApp', [
             templateUrl: 'app/routines/detail-routine/detail-routine.html'
             // controller: 'RoutinesDetailController'
           }
-        }
+        },
+        auth: true
       })
       .state('diet', {
         parent: 'panel',
@@ -115,8 +119,10 @@ angular.module('homegymApp', [
             templateUrl: 'app/diet/diet.html'
             // controller: 'DietController'
           }
-        }
+        },
+        auth: true
       });
-
-
-  });
+  })
+  .run([function () {
+    
+  }]);
