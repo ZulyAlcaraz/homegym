@@ -672,26 +672,23 @@ a {
 /**
  *  My Routines 
  */
-/*.routines {
-	padding-bottom: 2em;
-	padding-left: 10em;
-	padding-right: 10em;
-	padding-top: 2em;
+.routines {
+	padding: 2em 30px;
 }
 
 .routines .month .name {
-	font-size: 2em;
+	font-size: 20px;
 	padding: 1em;
 }
 
 .routines .month .previous {
 	color: #94CF1A;
-	font-size: 1.2em;
+	font-size: 18px;
 }
 
 .routines .month .next {
 	color: #94CF1A;
-	font-size: 1.2em;
+	font-size: 18px;
 }
 
 .routines .weeks, 
@@ -700,9 +697,7 @@ a {
 }
 
 .routines .weeks .tabs {
-	border-color: #94CF1A;
-	border-style: solid;
-	border-width: 0.2em;
+	border: #94CF1A solid 0.2em;
 }
 
 .routines .weeks .tabs md-pagination-wrapper.md-center-tabs {
@@ -774,23 +769,21 @@ a {
 
 .routines .days .routine-day .routine-data .calorie {
 	font-size: 3em;
-}*/
+}
 
 /**
  *  Detail Routine
  */
 
-/*.detail-routine {
+.detail-routine {
 	background-color: #656565;
-	padding-left: 10em;
-	padding-right: 10em;
-	padding-top: 4em;
-	padding-bottom: 4em;
+	padding: 60px 30px;
 	font-family: 'Roboto', sans-serif;
 }
 
 .detail-routine .video {
-	height: 100%;
+	background-color: #1E1E1E;
+	min-height: 100%;
 } 
 
 .detail-routine .detail {
@@ -807,7 +800,7 @@ a {
 
 .detail-routine .detail .list-videos .title {
 	background-color: #070607;
-	font-size: 1.2em;
+	font-size: 18px;
 	padding: 1em;
 	width: 100%;
 }
@@ -833,6 +826,7 @@ a {
 .detail-routine .detail .list-videos .content-list .list .item:hover {
 	cursor: pointer;
 	background-color: #2D2D2D;
+	opacity: 0.5;
 }
 
 .detail-routine .detail .list-videos .content-list .list .item .md-list-item-text {
@@ -848,6 +842,6 @@ a {
 }
 
 
-*//**
+/**
  *  Diet 
  */
