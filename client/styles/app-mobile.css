@@ -36,4 +36,28 @@
 	}
 }
 
+/**
+ *  Sign Up
+ */
 
+@media screen and (max-width:641px) { 
+	.sign-up .form {
+		padding: 30px !important;
+	}
+}
+
+/**
+ *  Login
+ */
+
+ @media screen and (max-width:641px) { 
+	.login  {
+		padding: 0 !important;
+		width: 100%;
+	}
+
+	.login .form {
+		padding: 60px 30px !important;
+		width: 100% !important;
+	}
+}

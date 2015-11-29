@@ -144,6 +144,7 @@ a {
 	font-size: 18px;
 	line-height: 25px;
 	min-height: 25px;
+	margin-right: 0;
 }
 
 .header .button:hover {
@@ -212,7 +213,7 @@ a {
 
 .footer .link-home-gym {
 	color: #FFFFFF !important;
-	font-size: 1.2em;
+	font-size: 20px;
 }
 
 /**
@@ -240,7 +241,7 @@ a {
 
 .home .home-intro .subtitle {
 	font-family: 'Roboto', sans-serif;
-	font-size: 1.5em;
+	font-size: 20px;
 	white-space: nowrap;
 }
 
@@ -248,7 +249,7 @@ a {
 	background-color: rgba(6 , 6, 6, 0.4);
 	border-radius: 3px;
 	color: #FFFFFF;
-	font-size: 1.2em;
+	font-size: 18px;
 	margin: 0.3em 0;
 	width: 100%;
 }
@@ -262,39 +263,35 @@ a {
  *  Sign Up
  */
 
-/*.sign-up .image {
-	background: #fff;
+.sign-up .image {
+	background: #FFFFFF;
 	background-image: url(../assets/images/sign-up.jpg);
 	background-position: center center;
-	background-size: 100% 100%;
+	background-size: cover;
 	background-repeat: no-repeat;
-	height: 40em;
 }
 
 .sign-up .form {
 	font-family: 'Roboto', sans-serif;
-	padding-left: 3em;
-	padding-right: 16em;
+	padding: 60px 100px;
 }
 
 .sign-up .form md-input-container {
-	font-size: 0.8em;
-	padding: 0 0 1.5em 0;
+	font-size: 12px;
+	padding-bottom: 1.5em;
 }
 
 .sign-up .form .button-facebook {
-	border-color: #94CF1A;
-	border-style: solid;
-	border-width: 0.2em;
+	border: #94CF1A solid 0.1em;
 	font-family: 'Bebas Neue';
-	font-size: 1.2em;
+	font-size: 18px;
 	margin-left: 0;
 	margin-right: 0;
 	width: 100%;
 }
 
 .sign-up .form .divider {
-	font-size: 0.8em;
+	font-size: 12px;
 	padding-top: 1em;
 	padding-bottom: 1em;
 	text-align: center;
@@ -302,78 +299,81 @@ a {
 
 .sign-up .form .button-sign-up {
 	background-color: #656565;
-	color: #FFF;
+	color: #FFFFFF;
 	font-family: 'Bebas Neue';
-	font-size: 1.2em;
+	font-size: 18px;
 	margin-left: 0;
 	margin-right: 0;
 	width: 100%;
 }
 
 .sign-up .form .button-sign-up:hover {
-	color: #656565;
+	background-color: #909090;
 }
 
+
 .sign-up .form .polices {
-	font-size: 0.8em;
+	font-size: 12px;
 	padding-top: 1em;
 	padding-bottom: 1em;
 }
 
 .sign-up .account-now {
-	font-size: 0.8em;
-}*/
+	font-size: 12px;
+}
 
 /**
  *  Login
  */
 
-/*.login {
-	background: #000;
+.login {
+	background: #000000;
 	background-image: url(../assets/images/login.jpg);
 	background-position: center center;
-	background-size: 100% 100%;
+	background-size: cover;
 	background-repeat: no-repeat;
-	height: 40em;
+	padding: 80px;
 }
 
 .login .form {
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0.7);
 	font-family: 'Roboto', sans-serif;
 	padding: 1em;
 	width: 20em;
 }
 
 .login .form .button-facebook {
-	border-color: #94CF1A;
-	border-style: solid;
-	border-width: 0.1em;
-	color: #fff;
+	border: #94CF1A solid 0.1em;
+	color: #FFFFFF;
 	font-family: 'Bebas Neue';
-	font-size: 1.2em;
+	font-size: 18px;
 	margin-left: 0;
 	margin-right: 0;
 	width: 100%;
 }
 
 .login .form .divider {
-	font-size: 0.8em;
+	font-size: 12px;
 	text-align: center;
 	padding-top: 1em;
 }
-
+/
 .login .form md-input-container {
-	padding: 0 0 1.5em 0;
+	padding-bottom: 1.5em;
 }
 
 .login .form md-input-container label {
-	color: #FFF;
-	font-size: 0.8em;
+	color: #FFFFFF;
+	font-size: 12px;
+}
+
+.login .form md-input-container .md-input {
+	color: #FFFFFF;
 }
 
 .login .form md-checkbox .md-label span {
 	color: #FFF;
-	font-size: 0.8em;
+	font-size: 12px;
 }
 
 .login .form md-checkbox .md-icon {
@@ -385,19 +385,23 @@ a {
 }
 
 .login .form .button-login {
-	background-color: #000;
+	background-color: #000000;
 	color: #FFF;
 	font-family: 'Bebas Neue';
-	font-size: 1.2em;
+	font-size: 18px;
 	margin-left: 0;
 	margin-right: 0;
 	width: 100%
 }
 
-.login .form .forgot-password-link {
-	font-size: 0.8em;
+.login .form .button-login:hover {
+	opacity: 0.5;
 }
-*/
+
+.login .form .forgot-password-link {
+	font-size: 12px;
+}
+
 /**
  *  Weight Data
  */
