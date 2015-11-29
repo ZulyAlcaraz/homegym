@@ -1,3 +1,6 @@
+/**	
+*	 ================== HOME GYM - DESKTOP STYLES  ==================
+*/
 
 
 /**
@@ -20,7 +23,7 @@
  */
 
 @font-face {
-	font-family: 'BebasNeueRegular';
+	font-family: 'Bebas Neue';
 	src: url('../assets/fonts/BebasNeue.otf');
 	font-weight: normal;
 	font-style: normal;
@@ -61,15 +64,23 @@
  */
 
 body, html {
-	background: #fff;
-	font-family: 'BebasNeueRegular';
-	font-size: 1em;
+	background: #FFFFFF;
+	font-family: 'Bebas Neue';
+	height: 100%;
+	width: 100%;
+}
+
+.header-content, .navbar-content, .content, .footer{
+	font-family: 'Bebas Neue';
+}
+
+.content {
 	height: 100%;
 	width: 100%;
 }
 
 a {
-	color: #000;
+	color: #000000;
 	cursor: pointer;
 	text-decoration: none;
 }
@@ -83,7 +94,7 @@ a {
 }
 
 .color-black {
-	color: #000;
+	color: #000000;
 }
 
 .color-gray {
@@ -91,7 +102,7 @@ a {
 }
 
 .color-white {
-	color: #FFF;
+	color: #FFFFFF;
 }
 
 .nowrap {
@@ -112,31 +123,35 @@ a {
 
 .header {
 	background-color: #000;
-	padding: 0.3em;
+	font-size: 18px;
+	padding: 10px 30px;
 }
 
 .header .logo, .navbar .logo{
-	padding-right: 0.5em;
+	padding-right: 15px;
 }
 
 .header .title, .navbar .title{
-	padding-bottom: 0.1em;
+	padding-bottom: 1px;
 	text-transform: none;
 }
 
-.header .container-logo {
-	padding-top: 0.1em;
-}
 
 .header .button {
-	border-color: #FFF;
+	border-color: #FFFFFF;
 	border-style: solid;
-	border-width: 0.1em;
+	border-width: 1px;
+	font-size: 18px;
 	line-height: 25px;
 	min-height: 25px;
 }
 
-.navbar {
+.header .button:hover {
+	opacity: 0.9;
+	background-color: #909090;
+}
+
+/*.navbar {
 	background-color: #000;
 }
 
@@ -171,6 +186,7 @@ a {
 	width: 2.5em;
 	height: 2.5em;
 }
+*/
 
 /**
  *  footer
@@ -178,10 +194,12 @@ a {
 
 .footer {
 	background-color: #000;
+	padding: 10px 30px;
 } 
 
 .footer > a, .footer .link-footer {
 	color: #909090 !important;
+	font-size: 18px;
 }
 
 .footer .link-footer-social {
@@ -193,7 +211,7 @@ a {
 }
 
 .footer .link-home-gym {
-	color: #707070 !important;
+	color: #FFFFFF !important;
 	font-size: 1.2em;
 }
 
@@ -202,52 +220,49 @@ a {
  */
 
 .home {
-	background: #fff;
+	background: #FFFFFF;
 	background-image: url(../assets/images/home.png);
 	background-position: center center;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
-	height: 40em;
 }
 
 .home .home-intro {
-	padding-left: 10em;
-	padding-right: 10em;
-	padding-top: 4em;
+	padding: 4em 10em 0 10em;
 	text-align: left;
 }
 
 .home .home-intro .title {
-	font-family: 'BebasNeueRegular';
-	font-size: 5em;
+	font-family: 'Bebas Neue';
+	font-size: 62px;
 	font-weight: 400;
-	line-height: 1;
 }
 
 .home .home-intro .subtitle {
 	font-family: 'Roboto', sans-serif;
 	font-size: 1.5em;
+	white-space: nowrap;
 }
 
 .home .home-intro .button {
-	background-color: rgba(224,224,224, 0.4);
+	background-color: rgba(6 , 6, 6, 0.4);
 	border-radius: 3px;
-	color: #444444;
+	color: #FFFFFF;
 	font-size: 1.2em;
 	margin: 0.3em 0;
-	width: 100%
+	width: 100%;
 }
 
 .home .home-intro .button:hover {
-	background-color: rgba(6 , 6, 6, 0.4);
-	color: #fff;
+	background-color: rgba(224,224,224, 0.4);
+	color: #444444;
 }
 
 /**
  *  Sign Up
  */
 
-.sign-up .image {
+/*.sign-up .image {
 	background: #fff;
 	background-image: url(../assets/images/sign-up.jpg);
 	background-position: center center;
@@ -271,7 +286,7 @@ a {
 	border-color: #94CF1A;
 	border-style: solid;
 	border-width: 0.2em;
-	font-family: 'BebasNeueRegular';
+	font-family: 'Bebas Neue';
 	font-size: 1.2em;
 	margin-left: 0;
 	margin-right: 0;
@@ -288,7 +303,7 @@ a {
 .sign-up .form .button-sign-up {
 	background-color: #656565;
 	color: #FFF;
-	font-family: 'BebasNeueRegular';
+	font-family: 'Bebas Neue';
 	font-size: 1.2em;
 	margin-left: 0;
 	margin-right: 0;
@@ -307,13 +322,13 @@ a {
 
 .sign-up .account-now {
 	font-size: 0.8em;
-}
+}*/
 
 /**
  *  Login
  */
 
-.login {
+/*.login {
 	background: #000;
 	background-image: url(../assets/images/login.jpg);
 	background-position: center center;
@@ -334,7 +349,7 @@ a {
 	border-style: solid;
 	border-width: 0.1em;
 	color: #fff;
-	font-family: 'BebasNeueRegular';
+	font-family: 'Bebas Neue';
 	font-size: 1.2em;
 	margin-left: 0;
 	margin-right: 0;
@@ -372,7 +387,7 @@ a {
 .login .form .button-login {
 	background-color: #000;
 	color: #FFF;
-	font-family: 'BebasNeueRegular';
+	font-family: 'Bebas Neue';
 	font-size: 1.2em;
 	margin-left: 0;
 	margin-right: 0;
@@ -382,12 +397,12 @@ a {
 .login .form .forgot-password-link {
 	font-size: 0.8em;
 }
-
+*/
 /**
  *  Weight Data
  */
 
-.weight-data .header {
+/*.weight-data .header {
 	background-color:  #94CF1A;
 	padding-bottom: 3em;
 	padding-top: 3em;
@@ -454,18 +469,18 @@ a {
 .weight-data .form-weight .button-weight {
 	background-color: #656565;
 	color: #FFF;
-	font-family: 'BebasNeueRegular';
+	font-family: 'Bebas Neue';
 	font-size: 1.2em;
 	margin-left: 0;
 	margin-right: 0;
 	width: 30%;
-}
+}*/
 
 /**
  *  Dashboard / My Status
  */
 
-.dashboard .user-info {
+/*.dashboard .user-info {
 	background-color: #2A2A2A;
 	padding-bottom: 2em;
 	padding-left: 10em;
@@ -643,25 +658,25 @@ a {
 	border-bottom-style: solid;
 	border-bottom-width: 1px;
 	font-size: 2em;
-	font-family: 'BebasNeueRegular';
+	font-family: 'Bebas Neue';
 	padding-right: 1em;
 	padding-bottom: 0.5em;
 }
 
 .dashboard .user-statistics .upload-weigth {
-	font-family: 'BebasNeueRegular';
+	font-family: 'Bebas Neue';
 	padding-top: 1em;
 }
 
 .dashboard .user-statistics .upload-weigth .button-upload-weigth {
 	background-color: #656565 !important;
 	width: 25%;
-}
+}*/
 
 /**
  *  My Routines 
  */
-.routines {
+/*.routines {
 	padding-bottom: 2em;
 	padding-left: 10em;
 	padding-right: 10em;
@@ -763,13 +778,13 @@ a {
 
 .routines .days .routine-day .routine-data .calorie {
 	font-size: 3em;
-}
+}*/
 
 /**
  *  Detail Routine
  */
 
-.detail-routine {
+/*.detail-routine {
 	background-color: #656565;
 	padding-left: 10em;
 	padding-right: 10em;
@@ -837,6 +852,6 @@ a {
 }
 
 
-/**
+*//**
  *  Diet 
  */

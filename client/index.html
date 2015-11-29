@@ -22,8 +22,9 @@
     <!-- build:css({.tmp,client}) app/app.css -->
     <!-- <link rel="stylesheet" href="app/app.css"> -->
       <!-- injector:css -->
+      <link rel="stylesheet" href="styles/app-mobile.css">
       <link rel="stylesheet" href="styles/app.css">
-      <link rel="stylesheet" href="styles/main.css">
+      <link rel="stylesheet" href="styles/reset.css">
       <!-- endinjector -->
     <!-- endbuild -->
 
@@ -53,9 +54,9 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div ui-view="header"></div>
-    <div ui-view="navbar"></div>
-    <div ui-view="content"></div>
+    <div class="header-content" ui-view="header"></div>
+    <div class="navbar-content" ui-view="navbar"></div>
+    <div class="content" ui-view="content"></div>
     <footer-site></footer-site>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
