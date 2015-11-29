@@ -20,6 +20,12 @@
 /**
  *  Navbar / Header
  */
+@media screen and (max-width:641px) { 
+	.navbar .container-logo {
+		padding-top: 0 !important;
+	}
+}
+.navbar .container-logo
 
 /**
  *  footer
@@ -82,5 +88,43 @@
 	}
 	.upload-weigth {
 		text-align: right;
+	}
+}
+
+/**
+ *  My Routines 
+ */
+
+@media screen and (max-width:641px) { 
+	.routines {
+		padding: 0 !important;
+	}
+	.routines .days .routine-day {
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+	.routines .days .routine-day .routine-data:not(:last-child){
+		border: none !important;
+	}
+	.routines .weeks .tabs {
+		border: none !important;
+	}
+	.routines .weeks .tabs md-tabs-canvas.md-center-tabs .md-tab:not(:last-child) {
+		border: none !important;
+		padding: 0.5em 0 !important;
+		font-size: 14px !important;
+	}
+}
+
+/**
+ *  Detail Routine
+ */
+
+@media screen and (max-width:641px) { 
+	.detail-routine {
+		padding: 0 !important;
+	}
+	.detail-routine .video {
+		padding: 0 !important;
 	}
 }

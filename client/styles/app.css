@@ -154,6 +154,8 @@ a {
 
 .navbar {
 	background-color: #000000;
+	font-size: 18px;
+	padding: 10px 30px;
 }
 
 .navbar .container-logo {
@@ -697,7 +699,9 @@ a {
 }
 
 .routines .weeks .tabs {
-	border: #94CF1A solid 0.2em;
+	border-top: #94CF1A solid 0.2em;
+	border-bottom: #94CF1A solid 0.2em;
+	border-left: #94CF1A solid 0.2em;
 }
 
 .routines .weeks .tabs md-pagination-wrapper.md-center-tabs {
@@ -715,7 +719,7 @@ a {
 	border-right-color: #94CF1A;
   border-right-style: solid;
   border-right-width: 0.2em;
-  font-size: 1.2em;
+  font-size: 18px;
   text-transform: none;
 }
 
@@ -782,14 +786,13 @@ a {
 }
 
 .detail-routine .video {
-	background-color: #1E1E1E;
+	background-color: #000000;
+	padding: 0 10px;
 	min-height: 100%;
 } 
 
 .detail-routine .detail {
-	min-height: 400px;
-	max-height: 400px;
-	height: 400px;
+	 background-color: #000000;
 }
 
 .detail-routine .detail .list-videos{

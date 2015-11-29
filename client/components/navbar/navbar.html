@@ -1,19 +1,19 @@
 <nav class="color-white navbar" layout-fill layout="row">
 		
-		<div class="cursor-pointer" flex="20" layout="column">
+		<div class="cursor-pointer" flex-gt-sm="20" flex-sm="50" layout="column">
 			<div class="container-logo" layout="row" ui-sref="home">
 				<img class="logo" src="../../assets/images/logo-verde.png" height="30" width="25" alt="">
 				<span class="title" layout="column" layout-align="end end">HomeGym</span>
 			</div>
 		</div>
 
-		<md-tabs class="tabs" md-stretch-tabs md-selected="selectedIndex" layout="row" flex>
+		<md-tabs class="tabs" md-stretch-tabs md-selected="selectedIndex" layout="row" flex hide-sm>
 	     <md-tab>  <a ui-sref="dashboard" class="color-gray">Mi Estado</a> </md-tab> 
 	     <md-tab>  <a ui-sref="routines" class="color-gray">Mis Rutinas</a> </md-tab>
 	     <!-- <md-tab>  <a ui-sref="diet" class="color-gray">Nutricion</a> </md-tab>   -->
 	  </md-tabs>
 
-	  <div flex="20" layout="column" layout-align="center end">
+	  <div flex-gt-sm="20" flex-sm="50" layout="column" layout-align="center end">
 		<md-button class="button" ui-sref="login">Cerrar Sesión</md-button>
 	</div>
 
@@ -23,3 +23,9 @@
 	  </div -->
 
 </nav>
+
+<!-- <md-tabs class="tabs" md-stretch-tabs md-selected="selectedIndex" layout="row" flex show-sm>
+   <md-tab>  <a ui-sref="dashboard" class="color-gray">Mi Estado</a> </md-tab> 
+   <md-tab>  <a ui-sref="routines" class="color-gray">Mis Rutinas</a> </md-tab>-->
+   <!-- <md-tab>  <a ui-sref="diet" class="color-gray">Nutricion</a> </md-tab>   -->
+<!--</md-tabs> -->
