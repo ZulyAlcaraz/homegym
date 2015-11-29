@@ -50,193 +50,196 @@
 				</div>
 			</div>
 
-			<div layout="row" class="weeks" hide-sm>
-				<div layout="column" layout-align="center center" flex>Semana 1</div>
-				<div layout="column" layout-align="center center" flex>Semana 2</div>
-				<div layout="column" layout-align="center center" flex>Semana 3</div>
-				<div layout="column" layout-align="center center" flex>Semana 4</div>
-			</div>
-
-			<div layout="row" layout-sm="column" class="calorie-progress">
-
-				<div layout="column" layout-sm="row" layout-align="center center" flex="25">
-					<div class="progress" layout="row" layout-align="center center">
-						<div class="progress-inside">
-							<div round-progress
-						    max="100"
-						    current="100"
-						    color="#909090"
-						    radius="80"
-						    stroke="2"
-						    semi="false"
-						    rounded="false"
-						    clockwise="true"
-						    responsive="false"
-						    duration="800"
-						    animation="easeInOutQuart">
-					    </div>
-						</div>
-						<div class="progress-outside">
-							<div round-progress
-						    max="100"
-						    current="100"
-						    color="#94CF1A"
-						    bgcolor="#eaeaea"
-						    radius="90"
-						    stroke="20"
-						    semi="false"
-						    rounded="false"
-						    clockwise="true"
-						    responsive="false"
-						    duration="800"
-						    animation="easeInOutQuart">
+			<div layout="row" layout-sm="column" class="weeks calorie-progress">
+				<div layout="column" layout-align="center center" flex>
+					<div layout="row" layout-align="center center">Semana 1</div>
+					<div layout="column" layout-sm="row" layout-align="center center" flex-gt-sm="25">
+						<div class="progress" layout="row" layout-align="center center">
+							<div class="progress-inside">
+								<div round-progress
+							    max="100"
+							    current="100"
+							    color="#909090"
+							    radius="80"
+							    stroke="2"
+							    semi="false"
+							    rounded="false"
+							    clockwise="true"
+							    responsive="false"
+							    duration="800"
+							    animation="easeInOutQuart">
+						    </div>
+							</div>
+							<div class="progress-outside">
+								<div round-progress
+							    max="100"
+							    current="100"
+							    color="#94CF1A"
+							    bgcolor="#eaeaea"
+							    radius="90"
+							    stroke="20"
+							    semi="false"
+							    rounded="false"
+							    clockwise="true"
+							    responsive="false"
+							    duration="800"
+							    animation="easeInOutQuart">
+								</div>
+							</div>
+							<div class="progress-info" layout="column" layout-align="center center">
+								<div class="total-calories color-green">
+									<i class="fa fa-fire"></i>
+									<span>160 cal</span>
+								</div>
+								<div class="status color-white">Completo</div>
 							</div>
 						</div>
-						<div class="progress-info" layout="column" layout-align="center center">
-							<div class="total-calories color-green">
-								<i class="fa fa-fire"></i>
-								<span>160 cal</span>
-							</div>
-							<div class="status color-white">Completo</div>
-						</div>
+						<md-button></md-button>
 					</div>
-					<md-button></md-button>
 				</div>
 
-				<div layout="column" layout-sm="row" layout-align="center center" flex="25">
-					<div class="progress" layout="row" layout-align="center center">
-						<div class="progress-inside">
-							<div round-progress
-						    max="100"
-						    current="100"
-						    color="#909090"
-						    radius="80"
-						    stroke="2"
-						    semi="false"
-						    rounded="false"
-						    clockwise="true"
-						    responsive="false"
-						    duration="800"
-						    animation="easeInOutQuart">
-					    </div>
-						</div>
-						<div class="progress-outside">
-							<div round-progress
-						    max="100"
-						    current="60"
-						    color="#94CF1A"
-						    bgcolor="#eaeaea"
-						    radius="90"
-						    stroke="20"
-						    semi="false"
-						    rounded="false"
-						    clockwise="true"
-						    responsive="false"
-						    duration="800"
-						    animation="easeInOutQuart">
+				<div layout="column" layout-sm="row" layout-align="center center" flex>
+					<div layout="row" layout-align="center center">Semana 2</div>
+					<div layout="column" layout-sm="row" layout-align="center center" flex="25">
+						<div class="progress" layout="row" layout-align="center center">
+							<div class="progress-inside">
+								<div round-progress
+							    max="100"
+							    current="100"
+							    color="#909090"
+							    radius="80"
+							    stroke="2"
+							    semi="false"
+							    rounded="false"
+							    clockwise="true"
+							    responsive="false"
+							    duration="800"
+							    animation="easeInOutQuart">
+						    </div>
+							</div>
+							<div class="progress-outside">
+								<div round-progress
+							    max="100"
+							    current="60"
+							    color="#94CF1A"
+							    bgcolor="#eaeaea"
+							    radius="90"
+							    stroke="20"
+							    semi="false"
+							    rounded="false"
+							    clockwise="true"
+							    responsive="false"
+							    duration="800"
+							    animation="easeInOutQuart">
+								</div>
+							</div>
+							
+							<div class="progress-info" layout="column" layout-align="center center">
+								<div class="total-calories color-green">
+									<i class="fa fa-fire"></i>
+									<span>412 cal</span>
+								</div>
+								<div class="status color-white">Incompleto</div>
 							</div>
 						</div>
-						
-						<div class="progress-info" layout="column" layout-align="center center">
-							<div class="total-calories color-green">
-								<i class="fa fa-fire"></i>
-								<span>412 cal</span>
-							</div>
-							<div class="status color-white">Incompleto</div>
-						</div>
+						<md-button class="button-complete">Completar</md-button>
 					</div>
-					<md-button class="button-complete">Completar</md-button>
 				</div>
 
-				<div layout="column" layout-sm="row" layout-align="center center" flex="25">
-					<div class="progress" layout="row" layout-align="center center">
-						<div class="progress-inside">
-							<div round-progress
-						    max="100"
-						    current="100"
-						    color="#909090"
-						    radius="80"
-						    stroke="2"
-						    semi="false"
-						    rounded="false"
-						    clockwise="true"
-						    responsive="false"
-						    duration="800"
-						    animation="easeInOutQuart">
-					    </div>
-						</div>
-						<div class="progress-outside">
-							<div round-progress
-						    max="100"
-						    current="50"
-						    color="#94CF1A"
-						    bgcolor="#eaeaea"
-						    radius="90"
-						    stroke="20"
-						    semi="false"
-						    rounded="false"
-						    clockwise="true"
-						    responsive="false"
-						    duration="800"
-						    animation="easeInOutQuart">
+				<div layout="column" layout-sm="row" layout-align="center center" flex>
+					<div layout="row" layout-align="center center">Semana 3</div>
+					<div layout="column" layout-sm="row" layout-align="center center" flex="25">
+						<div class="progress" layout="row" layout-align="center center">
+							<div class="progress-inside">
+								<div round-progress
+							    max="100"
+							    current="100"
+							    color="#909090"
+							    radius="80"
+							    stroke="2"
+							    semi="false"
+							    rounded="false"
+							    clockwise="true"
+							    responsive="false"
+							    duration="800"
+							    animation="easeInOutQuart">
+						    </div>
+							</div>
+							<div class="progress-outside">
+								<div round-progress
+							    max="100"
+							    current="50"
+							    color="#94CF1A"
+							    bgcolor="#eaeaea"
+							    radius="90"
+							    stroke="20"
+							    semi="false"
+							    rounded="false"
+							    clockwise="true"
+							    responsive="false"
+							    duration="800"
+							    animation="easeInOutQuart">
+								</div>
+							</div>
+							<div class="progress-info" layout="column" layout-align="center center">
+								<div class="total-calories color-green">
+									<i class="fa fa-fire"></i>
+									<span>160 cal</span>
+								</div>
+								<div class="status color-white">Actualmente</div>
 							</div>
 						</div>
-						<div class="progress-info" layout="column" layout-align="center center">
-							<div class="total-calories color-green">
-								<i class="fa fa-fire"></i>
-								<span>160 cal</span>
-							</div>
-							<div class="status color-white">Actualmente</div>
-						</div>
+						<md-button></md-button>
 					</div>
-					<md-button></md-button>
 				</div>
 
-				<div layout="column" layout-sm="row" layout-align="center center" flex="25">
-					<div class="progress" layout="row" layout-align="center center">
-						<div class="progress-inside">
-							<div round-progress
-						    max="100"
-						    current="100"
-						    color="#909090"
-						    radius="80"
-						    stroke="2"
-						    semi="false"
-						    rounded="false"
-						    clockwise="true"
-						    responsive="false"
-						    duration="800"
-						    animation="easeInOutQuart">
-					    </div>
-						</div>
-						<div class="progress-outside">
-							<div round-progress
-						    max="100"
-						    current="100"
-						    color="#FFFFFF"
-						    bgcolor="#eaeaea"
-						    radius="90"
-						    stroke="20"
-						    semi="false"
-						    rounded="false"
-						    clockwise="true"
-						    responsive="false"
-						    duration="800"
-						    animation="easeInOutQuart">
+				<div layout="column" layout-sm="row" layout-align="center center" flex>
+					<div layout="row" layout-align="center center">Semana 4</div>
+					<div layout="column" layout-sm="row" layout-align="center center" flex="25">
+						<div class="progress" layout="row" layout-align="center center">
+							<div class="progress-inside">
+								<div round-progress
+							    max="100"
+							    current="100"
+							    color="#909090"
+							    radius="80"
+							    stroke="2"
+							    semi="false"
+							    rounded="false"
+							    clockwise="true"
+							    responsive="false"
+							    duration="800"
+							    animation="easeInOutQuart">
+						    </div>
+							</div>
+							<div class="progress-outside">
+								<div round-progress
+							    max="100"
+							    current="100"
+							    color="#FFFFFF"
+							    bgcolor="#eaeaea"
+							    radius="90"
+							    stroke="20"
+							    semi="false"
+							    rounded="false"
+							    clockwise="true"
+							    responsive="false"
+							    duration="800"
+							    animation="easeInOutQuart">
+								</div>
+							</div>
+							
+							<div class="progress-info disable color-white" layout="column" layout-align="center center">
+								<div class="total-calories">
+									<i class="fa fa-fire"></i>
+									<span>412 cal</span>
+								</div>
+								<div class="status color-white"></div>
 							</div>
 						</div>
-						
-						<div class="progress-info disable color-white" layout="column" layout-align="center center">
-							<div class="total-calories">
-								<i class="fa fa-fire"></i>
-								<span>412 cal</span>
-							</div>
-							<div class="status color-white"></div>
-						</div>
+						<md-button class=""></md-button>
 					</div>
-					<md-button class=""></md-button>
 				</div>
-
 			</div>
 
 		</section>
@@ -246,7 +249,6 @@
 				<div >Peso Actual</div>
 			</div>
 
-			
 			<form novalidate layout-gt-sm="row" layout-sm="column">
 				<md-input-container flex-gt-sm="50">
 	        <label>Escribe tu peso actual</label>
@@ -259,8 +261,6 @@
 	      	<md-button class="button-upload-weigth color-white">ACTUALIZAR</md-button>
 	      </div>
 			</form>
-			
-
 		</section>
 
 	</section>
