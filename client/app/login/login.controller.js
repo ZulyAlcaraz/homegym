@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('homegymApp')
-  .controller('LoginCtrl', function ($scope, $state, localStorageService, LoginSrv, $location) {
+  .controller('LoginCtrl', function ($scope, $state, localStorageService, LoginSrv, $location, Principal) {
 
   	$scope.loginForm = {};
 
@@ -11,13 +11,18 @@ angular.module('homegymApp')
         return;
       }
 
+
     	LoginSrv.login($scope.user, function (data) {
         if (data.error) {
           $scope.messageError = data.error;
           return;
         }
+        var user = angular.merge({}, data, {
+          roles: ['User']
+        });
+        Principal.authenticate(user);
     		localStorageService.set('user', data);
-    		$state.go('dashboard', { id: data.uid });    		
+    		$state.go('site.dashboard', { id: data.uid });    		
       });
   	}
 
