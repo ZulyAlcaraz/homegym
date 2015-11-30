@@ -154,8 +154,14 @@ function searchRoutineMonth(id,year,month,callback){
   var isFirstDay=true;
   var rootDay;
   var progress = new Object();
+  var vectProgress = new Array();
   var percentageDay;
   var countDays;
+  var numWeek;
+  var percentage;
+  var vectNumDays = new Array();
+  var vectPercentage = new Array();
+
 
   ref.child("users").child(id).child("year").child(year).child("month").child(month).child("week").on("value", function(snapshot) {
    
@@ -169,25 +175,28 @@ function searchRoutineMonth(id,year,month,callback){
       itemWeek.ref().child("day").on("value", function(days) {
       countDays=0;
       percentageDay=0;
+      isFirstDay=true;
       days.forEach(function (itemDay) {
           countDays++;
           percentageDay += itemDay.val().percentage;
-          console.log("percentageDay es=" +itemDay.val().percentage);
           if(isFirstDay){
             orderDay[lastWeek][0] = itemDay.key();
             isFirstDay=false;
           }
           orderDay[lastWeek][1]=itemDay.key();
         });
-        progress.percentage = percentageDay / countDays;
+        percentage = percentageDay / countDays;
         week(1,month,year,function(nWeek){
-          progress.numWeek = lastWeek - nWeek;
-        });
-      });
+          numWeek = lastWeek - nWeek;
 
+        });
+        
+      });
+      vectNumDays.push(numWeek);
+      vectPercentage.push(percentage);
     });
    
-    callback(null,firstWeek,lastWeek,progress,orderDay,snapshot.val());
+    callback(null,firstWeek,lastWeek,vectNumDays,vectPercentage,orderDay,snapshot.val());
   }, function (errorObject) {
     callback("The read failed: " + errorObject.code,null);
   });

@@ -20,8 +20,8 @@ angular.module('homegymApp')
       localStorageService.set('routine-info', $scope.routine);
     });
 
-    $scope.calcPercentage = function(){
-      return $scope.routine.data[49].day[30].percentage;
+    $scope.calcPercentage = function(index){
+      return $scope.routine.percentage[index];
     }
 
 
