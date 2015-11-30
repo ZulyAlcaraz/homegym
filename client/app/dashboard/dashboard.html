@@ -43,12 +43,13 @@
 
 			</div>
 			<!--
-			<div ng-repeat="week in routine.data"> 
-				<div ng-repeat="day in week.day"> 
-					<span class="list-sicknesses">Día: {{day.name}}<br /> Url: {{day.url}}</span>
+				<div ng-repeat="week in routine.data"> 
+					<div ng-repeat="day in week.day"> 
+						<span class="list-sicknesses">Día: {{day.name}}<br /> Url: {{day.url}}</span>
+					</div>
 				</div>
-			</div>
 			-->
+
 		</section>
 	</header>
 
@@ -65,198 +66,61 @@
 			</div>
 
 			<div layout="row" layout-sm="column" class="weeks calorie-progress">
-
-
-
-				<div layout="column" layout-align="center center" flex>
-					<div layout="row" layout-align="center center">Semana 1</div>
-					<div layout="column" layout-sm="row" layout-align="center center" flex-gt-sm="25">
-						<div class="progress" layout="row" layout-align="center center">
-							<div class="progress-inside">
-								<div round-progress
-							    max="100"
-							    current="100"
-							    color="#909090"
-							    radius="80"
-							    stroke="2"
-							    semi="false"
-							    rounded="false"
-							    clockwise="true"
-							    responsive="false"
-							    duration="800"
-							    animation="easeInOutQuart">
-						    </div>
-							</div>
-							<div class="progress-outside">
-								<div round-progress
-							    max="100"
-							    current="calcPercentage()"
-							    color="#94CF1A"
-							    bgcolor="#eaeaea"
-							    radius="90"
-							    stroke="20"
-							    semi="false"
-							    rounded="false"
-							    clockwise="true"
-							    responsive="false"
-							    duration="800"
-							    animation="easeInOutQuart">
+					<div flex  ng-repeat="itemsNumDay in routine.numDays"> 
+		
+						<div layout="column"  layout-align="center center" flex >
+							<div layout="row" layout-align="center center">Semana {{itemsNumDay + 1}}</div>
+							<div layout="column" layout-sm="row" layout-align="center center" flex-gt-sm="25">
+								<div class="progress" layout="row" layout-align="center center">
+									<div class="progress-inside">
+										<div round-progress
+									    max="100"
+									    current="100"
+									    color="#909090"
+									    radius="80"
+									    stroke="2"
+									    semi="false"
+									    rounded="false"
+									    clockwise="true"
+									    responsive="false"
+									    duration="800"
+									    animation="easeInOutQuart">
+								    </div>
+									</div>
+									<div class="progress-outside">
+										<div round-progress
+									    max="100"
+									    current="calcPercentage($index)"
+									    color="#94CF1A"
+									    bgcolor="#eaeaea"
+									    radius="90"
+									    stroke="20"
+									    semi="false"
+									    rounded="false"
+									    clockwise="true"
+									    responsive="false"
+									    duration="800"
+									    animation="easeInOutQuart">
+										</div>
+									</div>
+									<div class="progress-info" layout="column" layout-align="center center">
+										<div class="total-calories color-green">
+											<i class="fa fa-fire"></i>
+											<span>160 cal</span>
+										</div>
+										<div  class="status color-white" ng-if="routine.percentage[$index] == 100">Completo</div>
+										<div  class="status color-white" ng-if="routine.percentage[$index] < 100 ">Incompleto</div>
+									</div>
 								</div>
-							</div>
-							<div class="progress-info" layout="column" layout-align="center center">
-								<div class="total-calories color-green">
-									<i class="fa fa-fire"></i>
-									<span>160 cal</span>
-								</div>
-								<div class="status color-white">Completo</div>
+								<md-button class="button-complete" ng-if="routine.percentage[$index] < 100 ">Completar</md-button>
 							</div>
 						</div>
-						<md-button></md-button>
-					</div>
-				</div>
+				
 
-				<div layout="column" layout-sm="row" layout-align="center center" flex>
-					<div layout="row" layout-align="center center">Semana 2</div>
-					<div layout="column" layout-sm="row" layout-align="center center" flex="25">
-						<div class="progress" layout="row" layout-align="center center">
-							<div class="progress-inside">
-								<div round-progress
-							    max="100"
-							    current="100"
-							    color="#909090"
-							    radius="80"
-							    stroke="2"
-							    semi="false"
-							    rounded="false"
-							    clockwise="true"
-							    responsive="false"
-							    duration="800"
-							    animation="easeInOutQuart">
-						    </div>
-							</div>
-							<div class="progress-outside">
-								<div round-progress
-							    max="100"
-							    current="60"
-							    color="#94CF1A"
-							    bgcolor="#eaeaea"
-							    radius="90"
-							    stroke="20"
-							    semi="false"
-							    rounded="false"
-							    clockwise="true"
-							    responsive="false"
-							    duration="800"
-							    animation="easeInOutQuart">
-								</div>
-							</div>
-							
-							<div class="progress-info" layout="column" layout-align="center center">
-								<div class="total-calories color-green">
-									<i class="fa fa-fire"></i>
-									<span>412 cal</span>
-								</div>
-								<div class="status color-white">Incompleto</div>
-							</div>
-						</div>
-						<md-button class="button-complete">Completar</md-button>
-					</div>
-				</div>
-
-				<div layout="column" layout-sm="row" layout-align="center center" flex>
-					<div layout="row" layout-align="center center">Semana 3</div>
-					<div layout="column" layout-sm="row" layout-align="center center" flex="25">
-						<div class="progress" layout="row" layout-align="center center">
-							<div class="progress-inside">
-								<div round-progress
-							    max="100"
-							    current="100"
-							    color="#909090"
-							    radius="80"
-							    stroke="2"
-							    semi="false"
-							    rounded="false"
-							    clockwise="true"
-							    responsive="false"
-							    duration="800"
-							    animation="easeInOutQuart">
-						    </div>
-							</div>
-							<div class="progress-outside">
-								<div round-progress
-							    max="100"
-							    current="50"
-							    color="#94CF1A"
-							    bgcolor="#eaeaea"
-							    radius="90"
-							    stroke="20"
-							    semi="false"
-							    rounded="false"
-							    clockwise="true"
-							    responsive="false"
-							    duration="800"
-							    animation="easeInOutQuart">
-								</div>
-							</div>
-							<div class="progress-info" layout="column" layout-align="center center">
-								<div class="total-calories color-green">
-									<i class="fa fa-fire"></i>
-									<span>160 cal</span>
-								</div>
-								<div class="status color-white">Actualmente</div>
-							</div>
-						</div>
-						<md-button></md-button>
-					</div>
-				</div>
-
-				<div layout="column" layout-sm="row" layout-align="center center" flex>
-					<div layout="row" layout-align="center center">Semana 4</div>
-					<div layout="column" layout-sm="row" layout-align="center center" flex="25">
-						<div class="progress" layout="row" layout-align="center center">
-							<div class="progress-inside">
-								<div round-progress
-							    max="100"
-							    current="100"
-							    color="#909090"
-							    radius="80"
-							    stroke="2"
-							    semi="false"
-							    rounded="false"
-							    clockwise="true"
-							    responsive="false"
-							    duration="800"
-							    animation="easeInOutQuart">
-						    </div>
-							</div>
-							<div class="progress-outside">
-								<div round-progress
-							    max="100"
-							    current="100"
-							    color="#FFFFFF"
-							    bgcolor="#eaeaea"
-							    radius="90"
-							    stroke="20"
-							    semi="false"
-							    rounded="false"
-							    clockwise="true"
-							    responsive="false"
-							    duration="800"
-							    animation="easeInOutQuart">
-								</div>
-							</div>
-							
-							<div class="progress-info disable color-white" layout="column" layout-align="center center">
-								<div class="total-calories">
-									<i class="fa fa-fire"></i>
-									<span>412 cal</span>
-								</div>
-								<div class="status color-white"></div>
-							</div>
-						</div>
-						<md-button class=""></md-button>
-					</div>
-				</div>
+		
+						
+					</span>
+	
 			</div>
 
 		</section>
