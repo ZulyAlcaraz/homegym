@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('homegymApp')
-  .controller('SignUpCtrl', function ($scope, $state, RegisterSrv, localStorageService) {
+  .controller('SignUpCtrl', function ($scope, $state, RegisterSrv, localStorageService, $location) {
 
   	$scope.signUpForm = {};
 
@@ -16,7 +16,6 @@ angular.module('homegymApp')
           $scope.messageError = data.error;
           return;
         }
-        console.log('data', data);
     		localStorageService.set('uid', data);
     		$state.go('weight-data', { id: data.uid });
       });

@@ -51,7 +51,7 @@ exports.searchRoutineMonth = function (req,res){
 }
 
 
-exports.logOut = function (req,res){
-  Service.logOut();
+exports.logout = function (req,res){
+  Service.logout();
 }
 

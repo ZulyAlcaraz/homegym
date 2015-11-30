@@ -10,7 +10,8 @@ angular.module('homegymApp', [
   'LocalStorageModule'
 ])
 
-  .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $mdThemingProvider, localStorageServiceProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, $locationProvider, 
+      $mdThemingProvider, localStorageServiceProvider) {
     $urlRouterProvider.otherwise('/');
     $locationProvider.html5Mode(true);
     localStorageServiceProvider.setPrefix('homegymApp');
@@ -123,6 +124,12 @@ angular.module('homegymApp', [
         auth: true
       });
   })
-  .run([function () {
-    
-  }]);
+  .run(function($rootScope, LoginSrv, localStorageService) {
+    $rootScope.logout = function () {
+      console.log('CERRAR SESION');
+      LoginSrv.logout({}, function () {
+        localStorageService.clearAll();
+        $state.go('login');       
+      });
+    };
+  });

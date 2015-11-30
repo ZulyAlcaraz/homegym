@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('homegymApp')
-  .controller('LoginCtrl', function ($scope, $state, localStorageService, LoginSrv) {
+  .controller('LoginCtrl', function ($scope, $state, localStorageService, LoginSrv, $location) {
 
   	$scope.loginForm = {};
 
