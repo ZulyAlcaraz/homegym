@@ -37,12 +37,13 @@ exports.searchRoutineMonth = function (req,res){
     console.log(data[i].day[j].name);
   }
 }*/
-  Service.searchRoutineMonth(req.body.id,req.body.year,req.body.month,function(error,firstWeek,lastWeek,days,data){
+  Service.searchRoutineMonth(req.body.userId,req.body.year,req.body.month,function(error,firstWeek,lastWeek,progress,days,data){
     res.json({
       error : error,
       firstWeek : firstWeek,
       lastWeek : lastWeek,
       days : days,
+      progress: progress,
       data : data
     });
   });

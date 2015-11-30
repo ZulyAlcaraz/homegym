@@ -28,14 +28,28 @@
 
 		</section>
 
-		<section class="user-sicknesses" layout="row">
+		<!--<section class="user-sicknesses" layout="row">
 			<span class="title">Enfermedades: </span>
 			<span class="list-sicknesses" ng-if="user.physicalCondition.illnesses.hipoglicemia">hipoglicemia</span>
 			<span class="list-sicknesses" ng-if="user.physicalCondition.illnesses.diabetes">diabetes</span>
 			<span class="list-sicknesses" ng-if="user.physicalCondition.illnesses.asma">Asma</span>
 			<span class="list-sicknesses" ng-if="user.physicalCondition.illnesses.sinusitis">sinusitis</span>
 		</section>
-		
+		-->
+		<section class="user-sicknesses" layout="row"> 
+			<span class="title">Enfermedades: </span>
+			<div ng-repeat="(key , illnesses) in user.physicalCondition.illnesses"> 
+				<span class="list-sicknesses" ng-show="{{illnesses}}">{{key}}{{$last ? '.' : ($index==user.physicalCondition.illnesses.length-2) ? 'and' : ',&nbsp'}}</span>
+
+			</div>
+			<!--
+			<div ng-repeat="week in routine.data"> 
+				<div ng-repeat="day in week.day"> 
+					<span class="list-sicknesses">Día: {{day.name}}<br /> Url: {{day.url}}</span>
+				</div>
+			</div>
+			-->
+		</section>
 	</header>
 
 	<section class="statistics">
@@ -51,6 +65,9 @@
 			</div>
 
 			<div layout="row" layout-sm="column" class="weeks calorie-progress">
+
+
+
 				<div layout="column" layout-align="center center" flex>
 					<div layout="row" layout-align="center center">Semana 1</div>
 					<div layout="column" layout-sm="row" layout-align="center center" flex-gt-sm="25">
@@ -73,7 +90,7 @@
 							<div class="progress-outside">
 								<div round-progress
 							    max="100"
-							    current="100"
+							    current="calcPercentage()"
 							    color="#94CF1A"
 							    bgcolor="#eaeaea"
 							    radius="90"
