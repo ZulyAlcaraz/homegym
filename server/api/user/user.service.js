@@ -105,8 +105,9 @@ function createRoutine (id){
     //$weekNum = date(“W”) – date(“W”,strtotime(date(“Y-m-01”))) + 1;
     actualDate = new Date();
     ref.child("users").child(id).child("year").child(year).child("month").child(month).child("week").child(numWeek).child("day").child(i).set({
-      url : "url"+i,
-      name : dayWord[f.getDay()]
+      url : "/assets/videos/url.mp4",
+      name : dayWord[f.getDay()],
+      percentage: 0
       },function(error) {
         
     });
@@ -152,32 +153,41 @@ function searchRoutineMonth(id,year,month,callback){
   var orderDay = new Array();
   var isFirstDay=true;
   var rootDay;
+  var progress = new Object();
+  var percentageDay;
+  var countDays;
+
   ref.child("users").child(id).child("year").child(year).child("month").child(month).child("week").on("value", function(snapshot) {
    
-    snapshot.forEach(function (week) {
+    snapshot.forEach(function (itemWeek) {
       if(firstWeek==-5){
-        firstWeek = week.key();
+        firstWeek = itemWeek.key();
       }
-      lastWeek = week.key();
+      lastWeek = itemWeek.key();
       isFirstDay = true;
       orderDay[lastWeek] = new Array();
-      week.ref().child("day").on("value", function(days) {
-       
-        days.forEach(function (itemDay) {
-          
+      itemWeek.ref().child("day").on("value", function(days) {
+      countDays=0;
+      percentageDay=0;
+      days.forEach(function (itemDay) {
+          countDays++;
+          percentageDay += itemDay.val().percentage;
+          console.log("percentageDay es=" +itemDay.val().percentage);
           if(isFirstDay){
             orderDay[lastWeek][0] = itemDay.key();
-      
             isFirstDay=false;
           }
           orderDay[lastWeek][1]=itemDay.key();
         });
-
+        progress.percentage = percentageDay / countDays;
+        week(1,month,year,function(nWeek){
+          progress.numWeek = lastWeek - nWeek;
+        });
       });
 
     });
    
-    callback(null,firstWeek,lastWeek,orderDay,snapshot.val());
+    callback(null,firstWeek,lastWeek,progress,orderDay,snapshot.val());
   }, function (errorObject) {
     callback("The read failed: " + errorObject.code,null);
   });
