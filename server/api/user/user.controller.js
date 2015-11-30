@@ -52,7 +52,11 @@ exports.searchRoutineMonth = function (req,res){
 }
 
 
-exports.logout = function (req,res){
-  Service.logout();
+exports.logout = function (req, res){
+  Service.logout({}, function (data, error) {
+    if (error) res.json(error);
+    res.json(data);
+  });
+
 }
 
