@@ -11,7 +11,6 @@ angular.module('homegymApp')
         return;
       }
 
-
     	LoginSrv.login($scope.user, function (data) {
         if (data.error) {
           $scope.messageError = data.error;

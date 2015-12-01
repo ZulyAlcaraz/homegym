@@ -239,8 +239,9 @@ function searchProgressInfo(id,year,month,callback){
   });
 }
 
-function logout () {
+function logout (data, callback) {
   ref.unauth();
+  callback(true);
 }
 
 

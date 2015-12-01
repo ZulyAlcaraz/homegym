@@ -160,10 +160,11 @@ angular.module('homegymApp', [
     }
   ])
 
-  .run(['$rootScope', '$state', '$stateParams', 'authorization', 'Principal', 'LoginSrv', 'localStorageService',
-    function($rootScope, $state, $stateParams, authorization, Principal, LoginSrv, localStorageService) {
+  .run(['$rootScope', '$state', '$stateParams', 'authorization', 'Principal', 'LoginSrv', 'localStorageService', '$q',
+    function($rootScope, $state, $stateParams, authorization, Principal, LoginSrv, localStorageService, $q) {
+      
       $rootScope.$on('$stateChangeStart', function(event, toState, toStateParams, fromState) {
-         
+         console.log('Principal.isAuthenticated', Principal.isAuthenticated());
         $rootScope.toState = toState;
         $rootScope.toStateParams = toStateParams;
 
@@ -171,6 +172,20 @@ angular.module('homegymApp', [
           authorization.authorize();
         }
       });
+
+      $rootScope.logout = function () {
+        LoginSrv.logout(function (data) {
+          localStorageService.clearAll();
+          sessionStorage.clear();
+          $q.defer().resolve();
+          $state.transitionTo('site.login', {}, {
+            reload: true,
+            inherit: false,
+            notify: true
+          });
+        });
+        
+      };
     }
   ])
 
