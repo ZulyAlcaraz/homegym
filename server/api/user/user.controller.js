@@ -28,7 +28,30 @@ exports.updateUser = function (req, res) {
   });
 }
 
-exports.searchRoutineMonth = function (req,res){
+/*exports.searchRoutineMonth = function (req,res){
+  /* console.log("hola" + firstWeek);
+  console.log(data[firstWeek].day[26]);
+  console.log(days);
+ for(i=firstWeek;i<=lastWeek;i++){
+  for(j=days[i][0];j<=days[i][1];j++){
+    console.log(data[i].day[j].name);
+  }
+}
+  Service.searchRoutineMonth(req.body.id,req.body.year,req.body.month,function(error,firstWeek,lastWeek,days,data){
+    res.json({
+      error : error,
+      firstWeek : firstWeek,
+      lastWeek : lastWeek,
+      days : days,
+      data : data
+    });
+  });
+
+  
+}*/
+
+
+exports.searchProgressInfo = function (req,res){
   /* console.log("hola" + firstWeek);
   console.log(data[firstWeek].day[26]);
   console.log(days);
@@ -37,14 +60,12 @@ exports.searchRoutineMonth = function (req,res){
     console.log(data[i].day[j].name);
   }
 }*/
-  Service.searchRoutineMonth(req.body.userId,req.body.year,req.body.month,function(error,firstWeek,lastWeek,numDays,percentage,days,data){
+  Service.searchProgressInfo(req.body.userId,req.body.year,req.body.month,function(error,vectWeekMonth,vectWeekYear,vectPercentage,data){
     res.json({
       error : error,
-      firstWeek : firstWeek,
-      lastWeek : lastWeek,
-      days : days,
-      numDays: numDays,
-      percentage: percentage,
+      vectWeekMonth : vectWeekMonth,
+      vectWeekYear: vectWeekYear,
+      vectPercentage: vectPercentage,
       data : data
     });
   });

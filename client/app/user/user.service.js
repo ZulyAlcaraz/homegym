@@ -11,7 +11,7 @@ angular.module('homegymApp')
 
 
 
-  	var Routine = $resource('/api/user/searchRoutineMonth');
+  	var Routine = $resource('/api/user/searchProgressInfo');
 
   	this.getRoutine = function (userId, cb) {
 
@@ -22,5 +22,6 @@ angular.module('homegymApp')
      	return Routine.save({userId: userId, year: year, month: month}, cb);
     };
 
+     
       
   });  

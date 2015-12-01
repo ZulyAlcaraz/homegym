@@ -134,7 +134,7 @@ function week(day,month,year,callback){
       day = 7;
   }
   if(month == 11 && day == 31 && dayf2 < 4 || month == 11 && day == 30 && dayf2 < 3 || month == 11 && day == 29 && dayf2 == 1)
-    return 1;
+    callback(1);
 
   if(dayf1 <5)
     var FW = parseInt(((Math.round(((f2-f1)/1000/60/60/24))+(dayf1-1))/7) + 1);
@@ -143,10 +143,7 @@ function week(day,month,year,callback){
   callback(FW);
 } 
 
-
-
-
-function searchRoutineMonth(id,year,month,callback){
+/*function searchRoutineMonth(id,year,month,callback){
   // Attach an asynchronous callback to read the data at our posts reference
   var firstWeek=-5;
   var lastWeek;
@@ -200,6 +197,46 @@ function searchRoutineMonth(id,year,month,callback){
   }, function (errorObject) {
     callback("The read failed: " + errorObject.code,null);
   });
+}*/
+
+function searchProgressInfo(id,year,month,callback){
+  // Attach an asynchronous callback to read the data at our posts reference
+  var lastWeek;
+  var percentageDay;
+  var countDays;
+  var numWeek;
+  var percentage;
+  var vectWeekMonth = new Array();
+  var vectPercentage = new Array();
+  var vectWeekYear = new Array();
+
+
+  ref.child("users").child(id).child("year").child(year).child("month").child(month).child("week").on("value", function(snapshot) {
+   
+    snapshot.forEach(function (itemWeek) {
+      lastWeek = itemWeek.key();
+      itemWeek.ref().child("day").on("value", function(days) {
+        countDays=0;
+        percentageDay=0;
+        days.forEach(function (itemDay) {
+            countDays++;
+            percentageDay += itemDay.val().percentage;
+          });
+          percentage = percentageDay / countDays;
+          week(1,month,year,function(nWeek){
+            numWeek = lastWeek - nWeek;
+          });
+        
+      });
+      vectWeekMonth.push(numWeek);
+      vectWeekYear.push(lastWeek);
+      vectPercentage.push(percentage);
+    });
+   
+    callback(null,vectWeekMonth,vectWeekYear,vectPercentage,snapshot.val());
+  }, function (errorObject) {
+    callback("The read failed: " + errorObject.code,null);
+  });
 }
 
 function logout () {
@@ -211,5 +248,5 @@ exports.createUserDB = createUserDB;
 exports.login = login;
 exports.searchUser = searchUser;
 exports.updateUser = updateUser;
-exports.searchRoutineMonth = searchRoutineMonth;
+exports.searchProgressInfo = searchProgressInfo;
 exports.logout = logout;

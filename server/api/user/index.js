@@ -8,7 +8,7 @@ var router = express.Router();
 router.post('/register', controller.registerUser);
 router.post('/login', controller.login);
 router.post('/update', controller.updateUser);
-router.post('/searchRoutineMonth',controller.searchRoutineMonth);
+router.post('/searchProgressInfo',controller.searchProgressInfo);
 router.post('/get', controller.searchUser);
 router.post('/logout', controller.logout);
 

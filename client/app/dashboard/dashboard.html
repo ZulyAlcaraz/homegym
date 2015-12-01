@@ -66,7 +66,7 @@
 			</div>
 
 			<div layout="row" layout-sm="column" class="weeks calorie-progress">
-					<div flex  ng-repeat="itemsNumDay in routine.numDays"> 
+					<div flex  ng-repeat="itemsNumDay in routine.vectWeekMonth"> 
 		
 						<div layout="column"  layout-align="center center" flex >
 							<div layout="row" layout-align="center center">Semana {{itemsNumDay + 1}}</div>
@@ -103,23 +103,25 @@
 									    animation="easeInOutQuart">
 										</div>
 									</div>
-									<div class="progress-info" layout="column" layout-align="center center">
+									<div  layout="column" ng-class="{'progress-info': isWeekEnable($index), 'progress-info disable color-white': !isWeekEnable($index)}" layout-align="center center">
 										<div class="total-calories color-green">
 											<i class="fa fa-fire"></i>
 											<span>160 cal</span>
 										</div>
-										<div  class="status color-white" ng-if="routine.percentage[$index] == 100">Completo</div>
-										<div  class="status color-white" ng-if="routine.percentage[$index] < 100 ">Incompleto</div>
+										<div  class="status color-white" ng-if="routine.vectPercentage[$index] == 100 && isWeekEnable($index)">Completo</div>
+										<div  class="status color-white" ng-if="routine.vectPercentage[$index] < 100 && isWeekEnable($index) && !isWeekActual($index)">Incompleto</div>
+										<div  class="status color-white" ng-if="isWeekActual($index)">Actualmente</div>
+							
 									</div>
 								</div>
-								<md-button class="button-complete" ng-if="routine.percentage[$index] < 100 ">Completar</md-button>
+								<md-button class="button-complete" ng-if="routine.vectPercentage[$index] < 100 && !isWeekActual($index)">Completar</md-button>
 							</div>
 						</div>
 				
 
 		
 						
-					</span>
+					</div>
 	
 			</div>
 
