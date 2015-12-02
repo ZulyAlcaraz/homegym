@@ -70,23 +70,23 @@
 		
 						<div layout="column"  layout-align="center center" flex >
 							<div layout="row" layout-align="center center">Semana {{itemsNumDay + 1}}</div>
-							<div layout="column" layout-sm="row" layout-align="center center" flex-gt-sm="25">
-								<div class="progress" layout="row" layout-align="center center">
+							<div layout="column" layout-sm="row" layout-align="center end" flex-gt-sm="25">
+								<div class="progress" layout="row" layout-align="start center">
 									<div class="progress-inside">
 										<div round-progress
-									    max="100"
-									    current="100"
-									    color="#909090"
-									    radius="80"
-									    stroke="2"
-									    semi="false"
-									    rounded="false"
-									    clockwise="true"
-									    responsive="false"
-									    duration="800"
-									    animation="easeInOutQuart">
-								    </div>
-									</div>
+										    max="100"
+										    current="100"
+										    color="#909090"
+										    radius="80"
+										    stroke="2"
+										    semi="false"
+										    rounded="false"
+										    clockwise="true"
+										    responsive="false"
+										    duration="800"
+										    animation="easeInOutQuart">
+								    	</div>
+							    	</div>
 									<div class="progress-outside">
 										<div round-progress
 									    max="100"
@@ -108,13 +108,14 @@
 											<i class="fa fa-fire"></i>
 											<span>160 cal</span>
 										</div>
-										<div  class="status color-white" ng-if="routine.vectPercentage[$index] == 100 && isWeekEnable($index)">Completo</div>
+										<div  layout-align="center end" class="status color-white" ng-if="routine.vectPercentage[$index] == 100 && isWeekEnable($index)">Completo</div>
 										<div  class="status color-white" ng-if="routine.vectPercentage[$index] < 100 && isWeekEnable($index) && !isWeekActual($index)">Incompleto</div>
 										<div  class="status color-white" ng-if="isWeekActual($index)">Actualmente</div>
 							
 									</div>
 								</div>
-								<md-button class="button-complete" ng-if="routine.vectPercentage[$index] < 100 && !isWeekActual($index)">Completar</md-button>
+								<md-button class="button-complete" ng-if="routine.vectPercentage[$index] < 100 && !isWeekActual($index) && 
+								isWeekEnable($index)">Completar</md-button>
 							</div>
 						</div>
 				
