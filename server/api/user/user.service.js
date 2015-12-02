@@ -56,11 +56,12 @@ function login (req, callback) {
 	  password : req.body.password
 	}, function(error, authData) {
 	  if (error)  {
-	  	error = 'Usuario o contraseña invalidos.'
+	  	error = 'Usuario o contraseña invalidos.';
 	  	callback(null, {error: error});
 	  }
 	  callback(authData);
   });
+  
 };
 
 function searchUser (req, callback) {

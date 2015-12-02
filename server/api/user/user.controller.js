@@ -10,7 +10,7 @@ exports.registerUser = function (req, res) {
 exports.login = function (req, res) {
 	Service.login(req, function (data, error){
   	if(error) res.json(error);
-    res.json(data);
+    else res.json(data);
   });
 }
 
