@@ -4,48 +4,50 @@
 		<i class="fa fa-angle-left previous"></i>
 		<span class="name">JUNIO 2015</span>
 		<i class="fa fa-angle-right next"></i>
+		{{routine.numWeekMonth | json}}
 	</section>
 	
 	<section class="weeks" layout="row">
+
 		<md-tabs class="tabs" md-stretch-tabs="auto" md-selected="selectedIndex" layout-fill>
-	     <md-tab>  <a ui-sref="routines" class="color-gray">Semana 1</a> </md-tab> 
-	     <md-tab>  <a ui-sref="routines" class="color-gray">Semana 2</a> </md-tab>
-	     <md-tab>  <a ui-sref="routines" class="color-gray">Semana 3</a> </md-tab>
-	     <md-tab>  <a ui-sref="routines" class="color-gray">Semana 4</a> </md-tab>  
+		 	<div ng-repeat="itemsNumDay in routine.vectWeekMonth.slice().reverse()">
+		   		 <md-tab ng-click="changeWeek(itemsNumDay)">  <a ui-sref="routines" class="color-gray" >Semana {{itemsNumDay + 1}}</a> </md-tab>
+		     <!-- 
+		     	<md-tab>  <a ui-sref="routines" class="color-gray">Semana 1</a> </md-tab> 
+		     <md-tab>  <a ui-sref="routines" class="color-gray">Semana 2</a> </md-tab>
+		     <md-tab>  <a ui-sref="routines" class="color-gray">Semana 3</a> </md-tab>
+		     <md-tab>  <a ui-sref="routines" class="color-gray">Semana 4</a> </md-tab>  
+		 	-->
+	      	</div>
 	  </md-tabs>
 	</section>
 
 	<section class="days" layout="column" layout-sm="row">
-		<tabs>
-  			<pane heading="Static title">Static content</pane>
-  			<pane ng-repeat="pane in panes"
-	        heading="{{pane.title}}"
-	        active="pane.active">
-	    {{pane.content}}
-	  </pane>
-</tabs>
-		<div class="routine-day" layout-sm="column">
-			<md-checkbox layout="row" ng-model="true" aria-label="Checkbox 1">
-	      Lunes
-	    </md-checkbox>
+		<div ng-repeat="week in routine.data" ng-show="isWeekSelected($index)">
+			<div ng-repeat="(key,day) in week.day" >
+				<div class="routine-day" layout-sm="column">
+					<md-checkbox layout="row"  aria-label="Checkbox 1">
 
-			<div layout="row" layout-sm="column">
-				<div class="routine-data" layout="column" layout-sm="row" layout-align="center center" ui-sref="detail-routine" flex>
-					<img src="../../assets/images/exercise-video.jpg" width="190">
+			      	{{day.name}} {{key}}
+			    </md-checkbox>
+
+					<div layout="row" layout-sm="column">
+						<div class="routine-data" layout="column" layout-sm="row" layout-align="center center" ui-sref="detail-routine" flex>
+							<img src="{{day.thumb}}" width="190">
+						</div>
+						<div class="routine-data" layout="column" layout-sm="row" layout-align="start start" flex>
+							<div class="title">En esta rutina vamos a trabajar:</div>
+							<div class="description" ng-repeat="bodyParts in day.bodyParts">{{bodyParts}}</div>
+
+						</div>
+						<div class="routine-data" layout="column" layout-sm="row" layout-align="start center" flex>
+							<div class="title">Calorias quemadas después de hacer esta rutina:</div>
+							<div class="description calorie">{{day.calories}}</div>
+						</div> 
+					</div>
 				</div>
-				<div class="routine-data" layout="column" layout-sm="row" layout-align="start start" flex>
-					<div class="title">En esta rutina vamos a trabajar:</div>
-					<div class="description">Cardio</div>
-					<div class="description">Cardio</div>
-					<div class="description">Abdomen</div>
-				</div>
-				<div class="routine-data" layout="column" layout-sm="row" layout-align="start center" flex>
-					<div class="title">Calorias quemadas después de hacer esta rutina:</div>
-					<div class="description calorie">200</div>
-				</div> 
 			</div>
 		</div>
-
 	</section>
 </section>
 <footer-site></footer-site>

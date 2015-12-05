@@ -123,8 +123,8 @@ angular.module('homegymApp', [
           url: '/dashboard/routines/:id',
           views: {
             'content@': {
-              templateUrl: 'app/routines/routines.html'
-              // controller: 'RoutinesController'
+              templateUrl: 'app/routines/routines.html',
+              controller: 'RoutinesCtrl'
             }
           },
           auth: true

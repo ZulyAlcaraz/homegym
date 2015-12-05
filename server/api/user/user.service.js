@@ -94,20 +94,29 @@ function createRoutine (id){
   var numWeek;
   var lastDayMounth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
   var dayWord = ["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"];
+  var calories = [100,110,120,130];
+  var thumb = ["/assets/images/thumb1.jpg","/assets/images/thumb2.jpg","/assets/images/thumb3.jpg","/assets/images/thumb4.jpg"];
+  var bodyParts = [["Abdomen","Cintura"],["Glúteos","Abdomen"],["Glúteos","Abdomen","Piernas"],["Cintura","Abdomen"]];
   var day = f.getDate();
   var month = f.getMonth();
   var year = f.getFullYear();
+  var numRandom;
+
 
   for(var i=day;i<=lastDayMounth[month];i++){
      week(i,month,year,function(nWeek){
       numWeek = nWeek;
      });
      f.setDate(i);
+     numRandom = random(0,3);
     //$weekNum = date(“W”) – date(“W”,strtotime(date(“Y-m-01”))) + 1;
     actualDate = new Date();
-    ref.child("users").child(id).child("year").child(year).child("month").child(month).child("week").child(numWeek).child("day").child(i).set({
+    ref.child("users").child(id).child("year").child(year+" ").child("month").child(month+" ").child("week").child(numWeek+" ").child("day").child(i+" ").set({
       url : "/assets/videos/url.mp4",
       name : dayWord[f.getDay()],
+      calories: calories[numRandom],
+      thumb: thumb[numRandom],
+      bodyParts: bodyParts[numRandom],
       percentage: 0
       },function(error) {
         
@@ -144,6 +153,10 @@ function week(day,month,year,callback){
   callback(FW);
 } 
 
+
+function random(a,b) {
+  return Math.round(Math.random()*(b-a)+parseInt(a));
+}
 /*function searchRoutineMonth(id,year,month,callback){
   // Attach an asynchronous callback to read the data at our posts reference
   var firstWeek=-5;
@@ -212,7 +225,7 @@ function searchProgressInfo(id,year,month,callback){
   var vectWeekYear = new Array();
 
 
-  ref.child("users").child(id).child("year").child(year).child("month").child(month).child("week").on("value", function(snapshot) {
+  ref.child("users").child(id).child("year").child(year+" ").child("month").child(month+" ").child("week").on("value", function(snapshot) {
    
     snapshot.forEach(function (itemWeek) {
       lastWeek = itemWeek.key();
