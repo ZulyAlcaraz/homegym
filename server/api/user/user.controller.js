@@ -10,7 +10,14 @@ exports.registerUser = function (req, res) {
 exports.login = function (req, res) {
 	Service.login(req, function (data, error){
   	if(error) res.json(error);
-    else res.json(data);
+    res.json(data);
+  });
+}
+
+exports.logout = function (req, res){
+  Service.logout({}, function (data, error) {
+    if (error) res.json(error);
+    res.json(data);
   });
 }
 
@@ -69,16 +76,4 @@ exports.searchProgressInfo = function (req,res){
       data : data
     });
   });
-
-  
 }
-
-
-exports.logout = function (req, res){
-  Service.logout({}, function (data, error) {
-    if (error) res.json(error);
-    res.json(data);
-  });
-
-}
-

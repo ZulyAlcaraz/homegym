@@ -65,10 +65,8 @@ function login (req, callback) {
 };
 
 function searchUser (req, callback) {
-  console.log('req.body', req.body);
 	var usersRef = ref.child('users').child(req.body.userId);
   usersRef.on('value', function(snapshot) {
-    console.log('snapshot', snapshot.val());
     callback(snapshot.val());
   });
 }

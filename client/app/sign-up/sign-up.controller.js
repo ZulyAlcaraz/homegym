@@ -17,7 +17,7 @@ angular.module('homegymApp')
           return;
         }
     		localStorageService.set('uid', data);
-    		$state.go('weight-data', { id: data.uid });
+    		$state.go('site.weight-data', { id: data.uid });
       });
     }
 			

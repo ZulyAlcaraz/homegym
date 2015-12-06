@@ -2,16 +2,13 @@
 
 angular.module('homegymApp')
   .controller('DashboardCtrl', function ($scope, $state, localStorageService, UserSrv) {
+    
     $scope.userId = $state.params.id;
-
-    console.log('$scope.userId',   $scope.userId);
     $scope.user = localStorageService.get('user-info');
     $scope.routine = localStorageService.get('routine-info');
-    console.log('$scope.user',   $scope.user);
 
     UserSrv.getUser($scope.userId, function (user) {
       $scope.user = user;
-      console.log('$scope.user',   $scope.user);
       localStorageService.set('user-info', $scope.user);
     });
 
@@ -44,17 +41,8 @@ angular.module('homegymApp')
   
         return (true);
       }
-      // alert("weekActual: "+week(day,month,year) + " weekSemana " +  $scope.routine.vectWeekMonth[index]);
       return (false);
-     
-
     }
-
-   
-    
-
-   
-
   });
 
 

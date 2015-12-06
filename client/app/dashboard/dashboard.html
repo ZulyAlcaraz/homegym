@@ -28,14 +28,6 @@
 
 		</section>
 
-		<!--<section class="user-sicknesses" layout="row">
-			<span class="title">Enfermedades: </span>
-			<span class="list-sicknesses" ng-if="user.physicalCondition.illnesses.hipoglicemia">hipoglicemia</span>
-			<span class="list-sicknesses" ng-if="user.physicalCondition.illnesses.diabetes">diabetes</span>
-			<span class="list-sicknesses" ng-if="user.physicalCondition.illnesses.asma">Asma</span>
-			<span class="list-sicknesses" ng-if="user.physicalCondition.illnesses.sinusitis">sinusitis</span>
-		</section>
-		-->
 		<section class="user-sicknesses" layout="row"> 
 			<span class="title">Enfermedades: </span>
 			<div ng-repeat="(key , illnesses) in user.physicalCondition.illnesses"> 
@@ -49,7 +41,6 @@
 					</div>
 				</div>
 			-->
-
 		</section>
 	</header>
 
@@ -70,8 +61,8 @@
 		
 						<div layout="column"  layout-align="center center" flex >
 							<div layout="row" layout-align="center center">Semana {{itemsNumDay + 1}}</div>
-							<div layout="column" layout-sm="row" layout-align="center end" flex-gt-sm="25">
-								<div class="progress" layout="row" layout-align="start center">
+							<div class="progress" layout="column" layout-sm="row" layout-align="center end" flex-gt-sm="25">
+								<div layout="row" layout-align="start center">
 									<div class="progress-inside">
 										<div round-progress
 										    max="100"
@@ -118,14 +109,9 @@
 								isWeekEnable($index)">Completar</md-button>
 							</div>
 						</div>
-				
-
-		
-						
 					</div>
-	
-			</div>
 
+			</div>
 		</section>
 
 		<section class="user-statistics">
@@ -148,6 +134,5 @@
 		</section>
 
 	</section>
-
 </section>
 <footer-site></footer-site>

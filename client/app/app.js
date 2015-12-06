@@ -56,7 +56,7 @@ angular.module('homegymApp', [
         .state('site.sign-up', {
           parent: 'header',
           data: {
-            roles: ['User']
+            roles: []
           },
           url: '/sign-up',
           views: {
@@ -69,7 +69,7 @@ angular.module('homegymApp', [
         .state('site.login', {
           parent: 'header',
           data: {
-            roles: ['User']
+            roles: []
           },
           url: '/login',
           views: {
@@ -164,7 +164,6 @@ angular.module('homegymApp', [
     function($rootScope, $state, $stateParams, authorization, Principal, LoginSrv, localStorageService, $q) {
       
       $rootScope.$on('$stateChangeStart', function(event, toState, toStateParams, fromState) {
-         console.log('Principal.isAuthenticated', Principal.isAuthenticated());
         $rootScope.toState = toState;
         $rootScope.toStateParams = toStateParams;
 
@@ -184,7 +183,6 @@ angular.module('homegymApp', [
             notify: true
           });
         });
-        
       };
     }
   ])
@@ -225,12 +223,12 @@ angular.module('homegymApp', [
         isAuthenticated: function() {
           return _authenticated;
         },
-        isInRole: function(role) {
+        isInRole: function (role) {
           if (!_authenticated || !_identity.roles) return false;
 
           return _identity.roles.indexOf(role) != -1;
         },
-        isInAnyRole: function(roles) {
+        isInAnyRole: function (roles) {
           if (!_authenticated || !_identity.roles) return false;
 
           for (var i = 0; i < roles.length; i++) {
@@ -239,14 +237,14 @@ angular.module('homegymApp', [
 
           return false;
         },
-        authenticate: function(identity) {
+        authenticate: function (identity) {
           _identity = identity;
           _authenticated = identity != null;
 
           if (identity) sessionStorage.setItem("identity", angular.toJson(identity));
           else sessionStorage.removeItem("identity");
         },
-        identity: function(force) {
+        identity: function (force) {
           var deferred = $q.defer();
 
           if (force === true) _identity = undefined;

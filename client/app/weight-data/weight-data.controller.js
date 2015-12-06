@@ -7,15 +7,13 @@ angular.module('homegymApp')
 
   	$scope.save = function () {
       if (!$scope.weightDataForm.$valid) {
-        console.log('Error');
       	$scope.submitted = true;
         return;
       }
       $scope.user.id = $state.params.id;
-      console.log('user', $scope.user);
       WeightDataSrv.updateData($scope.user, function (data) {
           localStorageService.set('user', data);
-          $state.go('dashboard', { id: $state.params.id });
+          $state.go('site.dashboard', { id: $state.params.id });
       });
     }
       
