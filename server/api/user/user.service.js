@@ -99,6 +99,7 @@ function createRoutine (id){
   var month = f.getMonth();
   var year = f.getFullYear();
   var numRandom;
+  var prefixDay="";
 
 
   for(var i=day;i<=lastDayMounth[month];i++){
@@ -109,7 +110,13 @@ function createRoutine (id){
      numRandom = random(0,3);
     //$weekNum = date(“W”) – date(“W”,strtotime(date(“Y-m-01”))) + 1;
     actualDate = new Date();
-    ref.child("users").child(id).child("year").child(year+" ").child("month").child(month+" ").child("week").child(numWeek+" ").child("day").child(i+" ").set({
+    if (i<=9) {
+      prefixDay="0";
+    }
+    else {
+      prefixDay="";
+    }
+    ref.child("users").child(id).child("year").child(year+" ").child("month").child(month+" ").child("week").child(numWeek+" ").child("day").child(prefixDay+ i +" ").set({
       url : "/assets/videos/url.mp4",
       name : dayWord[f.getDay()],
       calories: calories[numRandom],
