@@ -12,7 +12,7 @@
 		<md-tabs class="tabs" md-stretch-tabs="auto" layout-fill >
 			<!--ng-click="changeWeek(itemsNumDay)"-->
 		  <md-tab ng-repeat="itemsNumDay in routine.vectWeekMonth">
-		  <a href=""  ng-click="changeWeek(itemsNumDay)"> Semana {{itemsNumDay + 1}}</a>
+		  	<a ng-click="changeWeek(itemsNumDay)"> Semana {{itemsNumDay + 1}}</a>
 		  </md-tab>
 	 
 	  </md-tabs>
@@ -23,7 +23,7 @@
 			<div ng-repeat="week in routine.data" role="tabpanel" id="{{week.number}}" ng-if="weekSelected == week.number">
 				<md-content>
 					<div ng-repeat="(key, day) in week.day">
-						<div class="routine-day" layout-sm="column">
+						<div class="routine-day" layout-sm="column" ng-click="goToRoutine(day)">
 							<md-checkbox layout="row"  aria-label="Checkbox 1">
 					      	{{day.name}} {{key}}
 					    </md-checkbox>

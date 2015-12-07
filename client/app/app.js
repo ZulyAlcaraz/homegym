@@ -134,11 +134,11 @@ angular.module('homegymApp', [
           data: {
             roles: ['User']
           },
-          url: '/dashboard/routines/detail-routine',
+          url: '/dashboard/routines/:id/detail-routine',
           views: {
             'content@': {
-              templateUrl: 'app/routines/detail-routine/detail-routine.html'
-              // controller: 'RoutinesDetailController'
+              templateUrl: 'app/routines/detail-routine/detail-routine.html',
+              controller: 'RoutinesDetailCtrl'
             }
           },
           auth: true

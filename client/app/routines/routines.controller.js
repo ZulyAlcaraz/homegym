@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('homegymApp')
-  .controller('RoutinesCtrl', function ($scope, $state, localStorageService, UserSrv)  {
+  .controller('RoutinesCtrl', function ($scope, $rootScope, $state, localStorageService, UserSrv)  {
     $scope.weekSelected = 0;
     $scope.userId = $state.params.id;
     $scope.weekSelected = 1;
@@ -28,10 +28,15 @@ angular.module('homegymApp')
       if($scope.weekSelected == $scope.routine.vectWeekMonth[index]) return (true)
       else return (false)
 
-    }
-
+    };
 
     $scope.changeWeek = function (index){
       $scope.weekSelected = index+1;
-    }
+    };
+
+    $scope.goToRoutine =  function (routine) {
+      $rootScope.detailRoutine = routine;
+      $state.go('site.detail-routine', {id: $scope.userId});
+    };
+
   });
