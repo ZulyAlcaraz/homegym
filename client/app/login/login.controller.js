@@ -20,7 +20,8 @@ angular.module('homegymApp')
           roles: ['User']
         });
         Principal.authenticate(user);
-    		localStorageService.set('user', data);
+    		localStorageService.set('user-auth', data);
+        console.log(localStorageService.get('user-auth'));
     		$state.go('site.dashboard', { id: data.uid });    		
       });
   	}

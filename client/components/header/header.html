@@ -5,7 +5,10 @@
 			<span class="title" layout="column" layout-align="end end">HomeGym</span>
 		</div>
 	</div>
-	<div flex="50" layout="column" layout-align="center end">
+	<div flex="50" layout="column" layout-align="center end" ng-if="!isAuthenticated()">
 		<md-button class="button" ui-sref="site.login">Inicia sesión</md-button>
+	</div>
+	<div flex="50" layout="column" layout-align="center end" ng-if="isAuthenticated()">
+		<md-button class="button" ng-click="logout()">Cerrar Sesión</md-button>
 	</div>
 </header>

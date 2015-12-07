@@ -167,6 +167,10 @@ angular.module('homegymApp', [
         $rootScope.toState = toState;
         $rootScope.toStateParams = toStateParams;
 
+        if (localStorageService.get('user-auth')) {
+          $rootScope.userId = localStorageService.get('user-auth').uid;
+        }
+
         if (Principal.isIdentityResolved()) {
           authorization.authorize();
         }

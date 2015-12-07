@@ -12,6 +12,4 @@ router.post('/update', controller.updateUser);
 router.post('/get', controller.searchUser);
 router.post('/searchProgressInfo',controller.searchProgressInfo);
 
-
-
 module.exports = router;

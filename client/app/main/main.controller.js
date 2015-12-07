@@ -1,7 +1,17 @@
 'use strict';
 
 angular.module('homegymApp')
-  .controller('MainCtrl', function ($scope, $http, $resource) {
+  .controller('MainCtrl', function ($rootScope, $scope, Principal, localStorageService) {
+
+    $scope.user = localStorageService.get('user-info');
+    $scope.userId = $scope.user.uid;
+    
+    $scope.isAuthenticated =  function () {
+      return Principal.isAuthenticated();
+    };
+
+    
+
     // $scope.awesomeThings = [];
 
     // $http.get('/api/things').success(function(awesomeThings) {
