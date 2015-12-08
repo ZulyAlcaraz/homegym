@@ -6,6 +6,7 @@ angular.module('homegymApp')
     $scope.userId = $state.params.id;
     $scope.user = localStorageService.get('user-info');
     $scope.routine = localStorageService.get('routine-info');
+    $scope.actualDate = new Date();
 
     UserSrv.getUser($scope.userId, function (user) {
       $scope.user = user;

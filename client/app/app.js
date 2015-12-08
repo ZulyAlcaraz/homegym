@@ -7,7 +7,8 @@ angular.module('homegymApp', [
   'ui.router',
   'ngMaterial',
   'angular-svg-round-progress',
-  'LocalStorageModule'
+  'LocalStorageModule',
+  'ngYoutubeEmbed'
 ])
 
   .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$mdThemingProvider', 'localStorageServiceProvider', 

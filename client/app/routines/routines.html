@@ -1,9 +1,9 @@
 <section class="routines" layout="column">
 	
 	<section class="month" layout="row" layout-align="start center">
-		<i class="fa fa-angle-left previous"></i>
-		<span class="name">JUNIO 2015</span>
-		<i class="fa fa-angle-right next"></i>
+		<!-- <i class="fa fa-angle-left previous"></i> -->
+		<span class="name"> {{actualDate | date:'MMMM yyyy'}}</span>
+		<!-- <i class="fa fa-angle-right next"></i> -->
 		{{routine.numWeekMonth | json}}
 	</section>
 	
@@ -23,14 +23,14 @@
 			<div ng-repeat="week in routine.data" role="tabpanel" id="{{week.number}}" ng-if="weekSelected == week.number">
 				<md-content>
 					<div ng-repeat="(key, day) in week.day">
-						<div class="routine-day" layout-sm="column" ng-click="goToRoutine(day)">
+						<div class="routine-day" layout-sm="column" ng-click="goToRoutine(day, week.number)">
 							<md-checkbox layout="row"  aria-label="Checkbox 1">
 					      	{{day.name}} {{key}}
 					    </md-checkbox>
 
 							<div layout="row" layout-sm="column">
 								<div class="routine-data" layout="column" layout-sm="row" layout-align="center center" flex>
-									<img src="{{day.thumb}}" width="190">
+									<img ng-src="{{day.thumb}}" width="190">
 								</div>
 								<div class="routine-data" layout="column" layout-sm="row" layout-align="start start" flex>
 									<div class="title">En esta rutina vamos a trabajar:</div>

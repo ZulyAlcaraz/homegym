@@ -1,57 +1,42 @@
 <section class="detail-routine">
-	<section class="detail" layout-gt-sm="row" layout-sm="column" layout-align="center center">
+	<section class="detail" layout-gt-sm="row" layout-sm="column" layout-align="start start">
 		
 		<div class="video" layout="column" layout-align="center center" flex="60">
-			<img ng-src="{{routine.url}}" width="100%" height="100%">
+			<ng-youtube-embed 
+			    url="link" 
+			    autoplay="true"
+			    color="white"
+			    disablekb="true">
+			</ng-youtube-embed>
 		</div>
 
 		<div class="list-videos" layout="column" layout-align="start start" flex="40">
-			<div class="title color-green" layout="row" layout-padding>CARDIO</div>
-			<div class="subtitle color-white" layout="row" layout-padding>Semana 1 / SEP 2015</div>
+			<div class="title color-green" layout="row" layout-padding>
+				<span ng-repeat="(key, part) in routine.bodyParts">
+					{{part}}{{$last ? '.' : ($index==routine.bodyParts.length-1) ? 'and' : ',&nbsp'}}
+				</span>
+			</div>
+
+			<div class="subtitle color-white" layout="row" layout-padding>
+				Semana {{routine.week}} / {{actualDate | date:'MMMM yyyy' | capitalize}}
+			</div>
 
 			<div class="content-list" layout="row">
-				<md-list class="list"  layout="column">
+				<md-list class="list"  layout="column" 
+					ng-repeat="routineW in routines.data"
+					ng-if="routineW.number == routine.week">
 
-		      <md-list-item class="md-3-line item" layout="row">
+		      <md-list-item ng-repeat="(key, day) in routineW.day" class="md-3-line item" layout="row">
 		      	<div layout="column" layout-align="center center" flex="50">
-		      		 <img ng-src="../../../assets/images/exercise-video.jpg" width="90%">
+		      		 <img ng-src="{{day.thumb}}" width="90%">
 		      	</div>
 		        <div class="md-list-item-text" layout="column" flex="50">
-		          <h3>Rutina de cardio</h3>
-		          <h4>00:30  min</h4>
-		        </div>
-		      </md-list-item>
-		      <md-divider></md-divider>
-
-		      <md-list-item class="md-3-line item" layout="row">
-		        <div layout="column" layout-align="center center" flex="50">
-		      		 <img ng-src="../../../assets/images/exercise-video.jpg" width="90%">
-		      	</div>
-		        <div class="md-list-item-text" layout="column" flex="50">
-		          <h3>Rutina de cardio</h3>
-		          <h4>00:30  min</h4>
-		        </div>
-		      </md-list-item>
-		      <md-divider></md-divider>
-
-		      <md-list-item class="md-3-line item" layout="row">
-		        <div layout="column" layout-align="center center" flex="50">
-		      		 <img ng-src="../../../assets/images/exercise-video.jpg" width="90%">
-		      	</div>
-		        <div class="md-list-item-text" layout="column" flex="50">
-		          <h3>Rutina de cardio</h3>
-		          <h4>00:30  min</h4>
-		        </div>
-		      </md-list-item>
-		      <md-divider></md-divider>
-
-		      <md-list-item class="md-3-line item" layout="row">
-		        <div layout="column" layout-align="center center" flex="50">
-		      		 <img ng-src="../../../assets/images/exercise-video.jpg" width="90%">
-		      	</div>
-		        <div class="md-list-item-text" layout="column" flex="50">
-		          <h3>Rutina de cardio</h3>
-		          <h4>00:30  min</h4>
+		          <h3>
+		          	<span ng-repeat="bodyParts in day.bodyParts">
+		          		{{bodyParts}}{{$last ? '.' : ($index==routine.bodyParts.length-1) ? 'and' : ',&nbsp'}}
+		          	</span>
+		          </h3>
+		          <h4>{{day.calories}} Calorías</h4>
 		        </div>
 		      </md-list-item>
 		      <md-divider></md-divider>
