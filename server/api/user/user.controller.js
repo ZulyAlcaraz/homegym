@@ -2,36 +2,36 @@ var Service = require('./user.service');
 
 exports.registerUser = function (req, res) {
   Service.createUserDB(req, function (data, error){
-  	if(error) res.status(400).json(error).end();
-    else res.status(200).json(data).end();
+  	if (error) res.status(400).json(error).end();
+    else res.status(200).json(data);
   });
 }
 
 exports.login = function (req, res) {
 	Service.login(req, function (data, error){
   	if(error) res.status(400).json(error).end();
-    else res.status(200).json(data).end();
+    else res.status(200).json(data);
   });
 }
 
 exports.logout = function (req, res){
   Service.logout({}, function (data, error) {
-    if (error) res.status(400).json(error).end();
-    else res.status(200).json(data).end();
+    if (error) res.status(400).json(error);
+    else res.status(200).json(data);
   });
 }
 
 exports.searchUser = function (req, res) {
   Service.searchUser(req, function (data, error){
-  	if(error) res.status(400).json(error).end();
-    else res.status(200).json(data).end();
+  	if(error) res.status(400).json(error);
+    else res.status(200).json(data);
   });
 }
 
 exports.updateUser = function (req, res) {
   Service.updateUser(req, function (data, error){
-  	if(error) res.status(400).json(error).end();
-    else res.status(200).json(data).end();
+  	if(error) res.status(400).json(error);
+    else res.status(200).json(data);
   });
 }
 
@@ -53,8 +53,6 @@ exports.updateUser = function (req, res) {
       data : data
     });
   });
-
-  
 }*/
 
 
@@ -74,6 +72,6 @@ exports.searchProgressInfo = function (req,res){
       vectWeekYear: vectWeekYear,
       vectPercentage: vectPercentage,
       data : data
-    }).end();
+    });
   });
 }

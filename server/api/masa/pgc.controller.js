@@ -22,5 +22,5 @@ exports.index = function (valor, resultado) {
   res.status(200).json({
 		valor: imc,
 		resultado: clasificacion,
-  }).end();
+  });
 };

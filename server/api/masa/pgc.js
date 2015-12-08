@@ -7,7 +7,4 @@ var router = express.Router();
 
 router.get('/pgc', controller.index);
 
-
-
-
 module.exports = router;
