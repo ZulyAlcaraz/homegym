@@ -15,7 +15,7 @@ angular.module('homegymApp')
     UserSrv.getRoutine($scope.userId, function (routine) {
       $scope.routine = routine;
       $scope.totalWeeks = $scope.routine.vectWeekMonth;
-      var semana = 0;
+      var semana = $scope.routine.vectWeekMonth[0];
 
       angular.forEach($scope.routine.data, function (element, index) {
         $scope.routine.data[index].number = String(semana + 1);
@@ -23,6 +23,7 @@ angular.module('homegymApp')
       });
 
       localStorageService.set('routine-info', $scope.routine);
+      $scope.weekSelected = $scope.routine.vectWeekMonth[0] + 1;
     });
 
     $scope.isWeekSelected = function (index) {
@@ -35,7 +36,7 @@ angular.module('homegymApp')
     };
 
     $scope.goToRoutine =  function (routine, week) {
-      routine.week = parseInt(week) + 1;
+      routine.week = parseInt(week);
       localStorageService.set('detail-routine-info', routine);
       $state.go('site.detail-routine', {id: $scope.userId});
     };
