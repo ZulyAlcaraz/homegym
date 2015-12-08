@@ -559,6 +559,12 @@ a {
 	background-color: #F0F0F0;
 	font-family: 'Roboto', sans-serif;
 	padding: 2em 30px;
+	text-align: center;
+}
+
+.dashboard .weight-ideal h1 {
+	font-size: 25px;
+	padding: 1em 10em;
 }
 
 .dashboard .weight-ideal .data {
@@ -567,7 +573,8 @@ a {
 
 .dashboard .weight-ideal .data .description {
 	color: #FFFFFF;
-	background-color: #1D1D1D;
+	background-color: orange;
+	font-size: 20px;
 	padding: 0.5em;
 	text-align: center;
 }

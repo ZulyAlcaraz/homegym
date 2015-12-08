@@ -44,18 +44,21 @@
 	</header>
 
 	<section class="weight-ideal">
-		<div layout="row" layout-align="start center">
-			<div flex-gt-sm="60" flex-sm="100" class="color-green" layout="column" layout-align="center center">
-				La primera riqueza es la salud, por lo cual HomeGym te evalua a diario
+		<div layout="column" layout-align="start center">
+			<div flex-gt-sm="60" flex-sm="100" class="color-green" layout="row" layout-align="center center">
+				<h1>La primera riqueza es la salud, por lo cual HomeGym te evalua a diario</h1>
 			</div>
-			<div class="data" layout="column" flex-gt-sm="20" flex-sm="20">
-				<div class="description" flex="20">Tipo de peso</div>
-				<div class="value" flex>{{user.physicalCondition.type}}</div>
+			<div flex-gt-sm="100" flex-sm="100"  layout="row" layout-align="center center">
+				<div class="data" layout="column" >
+					<div class="description" flex="20">Tipo de peso</div>
+					<div class="value" flex>{{user.physicalCondition.type}}</div>
+				</div>
+				<div class="data" layout="column">
+					<div class="description" flex="20">Masa Corporal Ideal</div>
+					<div class="value" flex>Menor a 25</div>
+				</div>
 			</div>
-			<div class="data" layout="column" flex-gt-sm="20" flex-sm="20">
-				<div class="description" flex="20">Masa Corporal Ideal</div>
-				<div class="value" flex>Menor que 25</div>
-			</div>
+			
 		</div>
 	</section>
 

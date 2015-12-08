@@ -89,6 +89,9 @@
 	.upload-weigth {
 		text-align: right;
 	}
+	.dashboard .weight-ideal h1 {
+		padding: 0 !important;
+	}
 }
 
 /**
