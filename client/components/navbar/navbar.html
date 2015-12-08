@@ -1,26 +1,25 @@
 <nav class="color-white navbar" layout-fill layout="row">
 		
-		<div class="cursor-pointer" flex-gt-sm="20" flex-sm="50" layout="column">
-			<div class="container-logo" layout="row" ui-sref="site.home">
-				<img class="logo" src="../../assets/images/logo-verde.png" height="30" width="25" alt="">
-				<span class="title" layout="column" layout-align="end end">HomeGym</span>
-			</div>
+	<div class="cursor-pointer" flex-gt-sm="20" flex-sm="50" layout="column">
+		<div class="container-logo" layout="row" ui-sref="site.home">
+			<img class="logo" src="../../assets/images/logo-verde.png" height="30" width="25" alt="">
+			<span class="title" layout="column" layout-align="end end">HomeGym</span>
 		</div>
+	</div>
 
-		<md-tabs class="tabs" md-stretch-tabs md-selected="selectedIndex" layout="row" flex hide-sm>
-	     <md-tab>  <a ui-sref="site.dashboard({id: userId})" class="color-gray">Mi Estado</a> </md-tab> 
-	     <md-tab>  <a ui-sref="site.routines({id: userId})" class="color-gray">Mis Rutinas</a> </md-tab>
-	     <!-- <md-tab>  <a ui-sref="site.diet" class="color-gray">Nutricion</a> </md-tab>   -->
-	  </md-tabs>
+	<md-tabs class="tabs" md-stretch-tabs md-selected="selectedIndex" layout="row" flex hide-sm>
+    <md-tab>  <a ui-sref="site.dashboard({id: userId})" class="color-gray">Mi Estado - {{userId}}</a> </md-tab>
+    <md-tab>  <a ui-sref="site.routines({id: userId})" class="color-gray">Mis Rutinas</a> </md-tab>
+  </md-tabs>
 
-	  <div flex-gt-sm="20" flex-sm="50" layout="column" layout-align="center end">
+  <div flex-gt-sm="20" flex-sm="50" layout="column" layout-align="center end">
 		<md-button class="button" ng-click="logout()">Cerrar Sesión</md-button>
 	</div>
 
-	  <!-- <div flex="20" layout="row" layout-align="end center">
-      <img src="../../assets/images/home.png" class="profile-picture">	
-      <i class="fa fa-chevron-down color-green"></i>  	
-	  </div -->
+  <!-- <div flex="20" layout="row" layout-align="end center">
+    <img src="../../assets/images/home.png" class="profile-picture">	
+    <i class="fa fa-chevron-down color-green"></i>  	
+  </div -->
 
 </nav>
 

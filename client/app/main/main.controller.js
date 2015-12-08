@@ -3,14 +3,10 @@
 angular.module('homegymApp')
   .controller('MainCtrl', function ($rootScope, $scope, Principal, localStorageService) {
 
-    $scope.user = localStorageService.get('user-info');
-    $scope.userId = $scope.user.uid;
     
-    $scope.isAuthenticated =  function () {
+    $rootScope.isAuthenticated =  function () {
       return Principal.isAuthenticated();
     };
-
-    
 
     // $scope.awesomeThings = [];
 

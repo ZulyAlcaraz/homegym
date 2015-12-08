@@ -21,7 +21,6 @@ angular.module('homegymApp')
         });
         Principal.authenticate(user);
     		localStorageService.set('user-auth', data);
-        console.log(localStorageService.get('user-auth'));
     		$state.go('site.dashboard', { id: data.uid });    		
       });
   	}

@@ -17,8 +17,6 @@ var calculadora = require('./calculadora.js');
 
 
 exports.index = function(req, res) {
-	console.log('req.params', req.params);
-	console.log('req.query', req.query);
 
 	// GET
   // var altura = req.query.altura;	//en metros
@@ -29,11 +27,10 @@ exports.index = function(req, res) {
   var peso = req.body.peso;		//en kilogramos
 
   calculadora.imc(altura,peso,function (imc,clasificacion){
-
-		res.json({
+		res.status(200).json({
 			valor: imc,
 			resultado: clasificacion,
-		});
+		}).end();
   });
   
 };

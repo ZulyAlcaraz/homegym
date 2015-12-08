@@ -16,7 +16,7 @@ angular.module('homegymApp')
           $scope.messageError = data.error;
           return;
         }
-    		localStorageService.set('uid', data);
+    		localStorageService.set('user-auth', data);
     		$state.go('site.weight-data', { id: data.uid });
       });
     }

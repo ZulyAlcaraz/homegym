@@ -2,36 +2,36 @@ var Service = require('./user.service');
 
 exports.registerUser = function (req, res) {
   Service.createUserDB(req, function (data, error){
-  	if(error) res.json(error);
-    res.json(data);
+  	if(error) res.status(400).json(error).end();
+    else res.status(200).json(data).end();
   });
 }
 
 exports.login = function (req, res) {
 	Service.login(req, function (data, error){
-  	if(error) res.json(error);
-    res.json(data);
+  	if(error) res.status(400).json(error).end();
+    else res.status(200).json(data).end();
   });
 }
 
 exports.logout = function (req, res){
   Service.logout({}, function (data, error) {
-    if (error) res.json(error);
-    res.json(data);
+    if (error) res.status(400).json(error).end();
+    else res.status(200).json(data).end();
   });
 }
 
 exports.searchUser = function (req, res) {
   Service.searchUser(req, function (data, error){
-  	if(error) res.json(error);
-    res.json(data);
+  	if(error) res.status(400).json(error).end();
+    else res.status(200).json(data).end();
   });
 }
 
 exports.updateUser = function (req, res) {
   Service.updateUser(req, function (data, error){
-  	if(error) res.json(error);
-    res.json(data);
+  	if(error) res.status(400).json(error).end();
+    else res.status(200).json(data).end();
   });
 }
 
@@ -68,12 +68,12 @@ exports.searchProgressInfo = function (req,res){
   }
 }*/
   Service.searchProgressInfo(req.body.userId,req.body.year,req.body.month,function(error,vectWeekMonth,vectWeekYear,vectPercentage,data){
-    res.json({
+    res.status(200).json({
       error : error,
       vectWeekMonth : vectWeekMonth,
       vectWeekYear: vectWeekYear,
       vectPercentage: vectPercentage,
       data : data
-    });
+    }).end();
   });
 }

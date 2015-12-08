@@ -14,7 +14,9 @@ angular.module('homegymApp', [
     function ($stateProvider, $urlRouterProvider, $locationProvider, $mdThemingProvider, localStorageServiceProvider) {
       $urlRouterProvider.otherwise('/');
       $locationProvider.html5Mode(true);
-      localStorageServiceProvider.setPrefix('homegymApp');
+      localStorageServiceProvider
+        .setPrefix('homegymApp')
+        .setStorageType('sessionStorage');
 
       $mdThemingProvider.theme('default')
         .accentPalette('lime', {
