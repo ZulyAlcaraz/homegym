@@ -3,7 +3,7 @@
 		
 		<div class="video" layout="column" layout-align="center center" flex="60">
 			<ng-youtube-embed 
-			    url="link" 
+			    url="routine.url" 
 			    autoplay="true"
 			    color="white"
 			    disablekb="true">
@@ -26,7 +26,7 @@
 					ng-repeat="routineW in routines.data"
 					ng-if="routineW.number == routine.week">
 
-		      <md-list-item ng-repeat="(key, day) in routineW.day" class="md-3-line item" layout="row">
+		      <md-list-item ng-repeat="(key, day) in routineW.day" ng-click="changeRoutine(day, routine.week)" class="md-3-line item" layout="row">
 		      	<div layout="column" layout-align="center center" flex="50">
 		      		 <img ng-src="{{day.thumb}}" width="90%">
 		      	</div>
