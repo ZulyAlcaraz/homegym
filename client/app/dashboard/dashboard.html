@@ -25,7 +25,6 @@
 				<div class="description" flex="20">Masa muscular</div>
 				<div class="value" flex>{{user.physicalCondition.imc | number : 2}}</div>
 			</div>
-
 		</section>
 
 		<section class="user-sicknesses" layout="row"> 
@@ -43,6 +42,22 @@
 			-->
 		</section>
 	</header>
+
+	<section class="weight-ideal">
+		<div layout="row" layout-align="start center">
+			<div flex-gt-sm="60" flex-sm="100" class="color-green" layout="column" layout-align="center center">
+				La primera riqueza es la salud, por lo cual HomeGym te evalua a diario
+			</div>
+			<div class="data" layout="column" flex-gt-sm="20" flex-sm="20">
+				<div class="description" flex="20">Tipo de peso</div>
+				<div class="value" flex>{{user.physicalCondition.type}}</div>
+			</div>
+			<div class="data" layout="column" flex-gt-sm="20" flex-sm="20">
+				<div class="description" flex="20">Masa Corporal Ideal</div>
+				<div class="value" flex>Menor que 25</div>
+			</div>
+		</div>
+	</section>
 
 	<section class="statistics">
 		<section class="calorie-statistics">

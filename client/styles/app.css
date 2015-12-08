@@ -555,6 +555,32 @@ a {
  margin: 0;	
 }
 
+.dashboard .weight-ideal {
+	background-color: #F0F0F0;
+	font-family: 'Roboto', sans-serif;
+	padding: 2em 30px;
+}
+
+.dashboard .weight-ideal .data {
+	padding: 0.1em;
+}
+
+.dashboard .weight-ideal .data .description {
+	color: #FFFFFF;
+	background-color: #1D1D1D;
+	padding: 0.5em;
+	text-align: center;
+}
+
+.dashboard .weight-ideal .data .value {
+	color: #FFFFFF;
+	background-color: #94CF1A;
+	font-size: 32px;
+	font-weight: 600;
+	padding: 0.5em;
+	text-align: center;
+}
+
 .dashboard .statistics {
 	padding: 2em 30px;
 }
