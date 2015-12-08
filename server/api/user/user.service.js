@@ -95,6 +95,7 @@ function createRoutine (id){
   var calories = [100,110,120,130];
   var thumb = ["/assets/images/thumb1.jpg","/assets/images/thumb2.jpg","/assets/images/thumb3.jpg","/assets/images/thumb4.jpg"];
   var bodyParts = [["Abdomen","Cintura"],["Glúteos","Abdomen"],["Glúteos","Abdomen","Piernas"],["Cintura","Abdomen"]];
+  var urls = ["https://www.youtube.com/watch?v=xAOWFofzvI8","https://www.youtube.com/watch?v=vjFpueJUouY","https://www.youtube.com/watch?v=CItsyCTMlcY","https://www.youtube.com/watch?v=FavbJuIzEXE"];
   var day = f.getDate();
   var month = f.getMonth();
   var year = f.getFullYear();
@@ -117,7 +118,7 @@ function createRoutine (id){
       prefixDay="";
     }
     ref.child("users").child(id).child("year").child(year+" ").child("month").child(month+" ").child("week").child(numWeek+" ").child("day").child(prefixDay+ i +" ").set({
-      url : "/assets/videos/url.mp4",
+      url : urls[numRandom],
       name : dayWord[f.getDay()],
       calories: calories[numRandom],
       thumb: thumb[numRandom],
