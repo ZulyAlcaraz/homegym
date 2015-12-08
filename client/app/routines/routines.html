@@ -4,7 +4,7 @@
 		<!-- <i class="fa fa-angle-left previous"></i> -->
 		<span class="name"> {{actualDate | date:'MMMM yyyy'}}</span>
 		<!-- <i class="fa fa-angle-right next"></i> -->
-		{{routine.numWeekMonth | json}}
+	
 	</section>
 	
 	<section class="weeks" layout="row">
@@ -27,7 +27,6 @@
 							<md-checkbox layout="row"  aria-label="Checkbox 1">
 					      	{{day.name}} {{key}}
 					    </md-checkbox>
-
 							<div layout="row" layout-sm="column">
 								<div class="routine-data" layout="column" layout-sm="row" layout-align="center center" flex>
 									<img ng-src="{{day.thumb}}" width="190">
