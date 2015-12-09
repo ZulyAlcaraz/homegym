@@ -70,7 +70,7 @@ function searchUser (req, callback) {
     callback(snapshot.val());
   });
 }
-
+/*
 function updateUser (req, callback) {
   ServiceMasa.imc(req.body.height, req.body.weight, function (imc, type) {
     ref.child("users").child(req.body.id).child("physicalCondition").set({
@@ -86,6 +86,28 @@ function updateUser (req, callback) {
   });
   
 }
+*/
+function updateUser (req, callback) {
+  ServiceMasa.imc(req.body.height, req.body.weight, function (imc, type) {
+    ref.child("users").child(req.body.id).child("physicalCondition").update(
+      req.body
+    , function (error, data) {
+      if (error) callback(null, error);
+
+    });
+
+    ref.child("users").child(req.body.id).child("physicalCondition").update(
+      {imc: imc, type: type}
+    , function (error, data) {
+      if (error) callback(null, error);
+      ref.child("users").child(req.body.id).child("physicalCondition").child("id").remove();
+      callback(data);
+    });
+
+  });
+  
+}
+
 
 function createRoutine (id){
   var f = new Date();
