@@ -190,6 +190,10 @@ a {
 	height: 2.5em;
 }
 
+.navbar md-tabs md-tabs-wrapper {
+	width: 100%;
+}
+
 /**
  *  footer
  */
@@ -735,6 +739,7 @@ a {
 	border-top: #94CF1A solid 0.2em;
 	border-bottom: #94CF1A solid 0.2em;
 	border-left: #94CF1A solid 0.2em;
+	border-right: #94CF1A solid 0.2em;
 }
 
 .routines .weeks .tabs md-pagination-wrapper.md-center-tabs {
@@ -744,7 +749,12 @@ a {
 	width: 100% !important;
 }
 
-.routines .weeks .tabs md-tabs-canvas.md-center-tabs .md-tab {
+.routines .weeks .tabs md-tabs-canvas md-pagination-wrapper {
+	width: 100%;
+}
+
+.routines .weeks .tabs md-tabs-canvas.md-center-tabs .md-tab,
+.routines .weeks .tabs md-tabs-canvas md-tab-item.md-tab{
 	width: 25% !important;
 }
 
